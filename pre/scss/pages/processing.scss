@@ -1,0 +1,64 @@
+@import "../variable";
+
+main.processing {
+    width: 500px;
+    margin: 20vh auto 0 auto;
+    text-align: center;
+
+    img {
+        margin: 0 auto 24px auto;
+    }
+
+    h2 {
+        margin-bottom: 4px;
+    }
+
+    p.withdraw {
+        width: 290px;
+        margin: 0 auto;
+        font-size: calc($fontSize * 1.2);
+        color: $lighter;
+    }
+
+    .check {
+        width: 200px;
+        margin: 28px auto;
+    }
+
+    .btns {
+        margin-top: 66px;
+        display: flex;
+        gap: 16px;
+        font-size: calc($fontSize * 1.2);
+        font-weight: $UltraBold;
+        justify-content: center;
+
+        a {
+            flex: 1;
+            display: inline-block;
+            text-align: center;
+            line-height: 44px;
+            height: 44px;
+        }
+    }
+}
+
+@media screen and (max-width: 515px) {
+    main.processing {
+        max-width: 90vw;
+
+        p.withdraw {
+            max-width: 80vw;
+        }
+
+        .btns {
+            flex-wrap: wrap;
+            flex-direction: column-reverse;
+
+            a {
+                flex: 100%;
+                max-width: 85vw;
+            }
+        }
+    }
+}

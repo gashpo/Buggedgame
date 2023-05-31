@@ -1,0 +1,282 @@
+@import "../variable";
+@import "../mixin";
+
+main.withdraw {
+    width: 490px;
+    max-width: calc(100vw - 40px);
+    margin: 0 auto;
+
+    h2 {
+        text-align: center;
+        margin-bottom: 36px;
+    }
+
+    a {
+        @include a-color($primaryC);
+        font-weight: $Bold;
+        transition: all .15s ease;
+    }
+
+    form {
+        .input-group {
+            margin-bottom: 36px;
+            position: relative;
+
+            * {
+                margin: 6px 0;
+            }
+
+            &:first-child:after {
+                content: 'BUG';
+                position: absolute;
+                top: 40px;
+                right: 24px;
+                color: $white;
+            }
+        }
+
+        label {
+            input {
+                position: relative;
+                width: 100%;
+                background-color: transparent;
+                height: 44px;
+                border-radius: 22px;
+                border: 1px solid $dark;
+                padding: 0 24px;
+
+                &[disabled] {
+                    background-color: $frameBg !important;
+                    color: $lighter !important;
+                }
+            }
+        }
+
+        .agree {
+            margin: 6px 0;
+        }
+
+        input {
+            &[type=submit] {
+                margin: 10px 0 28px 0;
+                background: $gradient;
+                display: block;
+                width: 100%;
+                line-height: 1;
+                border-radius: 24px;
+                font-weight: $UltraBold;
+                text-shadow: 0 0 12 rgba(#000000, .5);
+                cursor: pointer;
+
+                &:hover {
+                    background: $gradient-hover;
+                }
+
+                &[disabled] {
+                    background: $dark;
+                    cursor: default;
+                }
+            }
+        }
+    }
+
+    ul {
+        width: 100%;
+        list-style-type: none;
+        margin-bottom: 36px;
+
+        li {
+            display: flex;
+            justify-content: space-between;
+            margin: 2px 0;
+        }
+
+        h4 {
+            color: $primaryC;
+            font-weight: $UltraBold;
+        }
+    }
+}
+
+#notice--popUp,
+#privacy--popUp {
+    .popUp--container {
+        color: $lighter;
+
+        h2 {
+            color: $lightGrey;
+        }
+
+        .content--scroll {
+            p {
+                text-align: left;
+
+                &.bold {
+                    margin-top: 20px;
+                }
+            }
+
+            ol {
+                &.list--cht {
+                    list-style-type: cjk-ideographic;
+                    text-align: left;
+                    padding-left: 4em;
+                    font-size: calc($fontSize * 1.4);
+
+                    li {
+                        padding: 4px 0;
+                    }
+                }
+
+                &.bracket {
+                    list-style-type: none;
+                    padding-left: 2.5em;
+
+                    li {
+                        text-indent: -3em;
+                        padding: 0;
+                    }
+                }
+
+                &.number {
+                    list-style-type: decimal;
+                    padding-left: 1.5em;
+
+                    li {
+                        text-indent: 0;
+                    }
+                }
+            }
+        }
+    }
+}
+
+#withdraw--popUp {
+    form {
+        margin: 28px 0 12px 0;
+
+        .flex {
+            display: flex;
+            justify-content: space-between;
+            margin: 6px 0;
+
+            input {
+                flex: 1;
+                width: 56px;
+                height: 56px;
+                border-radius: 12px;
+                border: 1px solid $grey;
+                margin-right: 16px;
+                padding: 0;
+                background-color: transparent;
+                text-align: center;
+                font-size: 24px;
+                font-weight: $UltraBold;
+                -moz-appearance: textfield;
+
+                &::-webkit-inner-spin-button,
+                &::-webkit-outer-spin-button {
+                    -webkit-appearance: none;
+                    margin: 0;
+                }
+
+                &:last-child {
+                    margin-right: 0;
+                }
+            }
+
+            &.note {
+
+                .warning,
+                .forgot {
+                    font-size: calc($fontSize * 1.2);
+                    font-weight: $Regular;
+                }
+
+                .warning {
+                    color: $warning;
+                }
+
+                .forgot {
+                    text-decoration: underline;
+                    text-align: right;
+                    @include a-color($lighter, $grey);
+                }
+            }
+        }
+
+        input[type=submit] {
+            width: 100%;
+            margin-top: 28px;
+            background: $gradient;
+            height: 40px;
+            border-radius: 24px;
+            padding: 13px 24px;
+            font-weight: $UltraBold;
+            line-height: .8;
+            text-shadow: 0 0 12px rgba(#000000, .4);
+
+            &:hover {
+                background: $gradient-hover;
+            }
+
+            &[disabled] {
+                background: $dark;
+                cursor: default;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 515px) {
+    main.withdraw {
+        width: calc(100vw - 3.5rem);
+        margin: 0 auto;
+
+        form {
+            .agree {
+                span {
+                    font-size: calc($fontSize * 1.4);
+                }
+            }
+        }
+    }
+
+    #withdraw--popUp {
+        form {
+            .flex {
+                input {
+                    width: calc((100vw - 136px)/6);
+                    height: calc((100vw - 136px)/6);
+                    margin-right: 8px;
+                    padding: 0;
+
+                    &:last-child {
+                        margin-right: 0;
+                    }
+                }
+
+                &.note {
+                    flex-wrap: wrap;
+
+                    .warning,
+                    .forgot {
+                        font-size: calc($fontSize * 1.4);
+                        flex: 100%;
+                        max-width: 100%;
+                    }
+
+                    .warning {
+                        text-align: left;
+                    }
+
+                    .forgot {
+                        text-align: right;
+                    }
+                }
+            }
+        }
+    }
+}
+
+// mobile

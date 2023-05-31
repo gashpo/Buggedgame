@@ -1,0 +1,226 @@
+main.withdraw {
+  width: 490px;
+  max-width: calc(100vw - 40px);
+  margin: 0 auto;
+}
+main.withdraw h2 {
+  text-align: center;
+  margin-bottom: 36px;
+}
+main.withdraw a {
+  color: #8AA3FF;
+  transition: color 0.5s;
+  font-weight: 600;
+  transition: all 0.15s ease;
+}
+main.withdraw a:hover {
+  color: #718fff;
+}
+main.withdraw form .input-group {
+  margin-bottom: 36px;
+  position: relative;
+}
+main.withdraw form .input-group * {
+  margin: 6px 0;
+}
+main.withdraw form .input-group:first-child:after {
+  content: "BUG";
+  position: absolute;
+  top: 40px;
+  right: 24px;
+  color: #ffffff;
+}
+main.withdraw form label input {
+  position: relative;
+  width: 100%;
+  background-color: transparent;
+  height: 44px;
+  border-radius: 22px;
+  border: 1px solid #353535;
+  padding: 0 24px;
+}
+main.withdraw form label input[disabled] {
+  background-color: #1F1F1F !important;
+  color: #BDBDBD !important;
+}
+main.withdraw form .agree {
+  margin: 6px 0;
+}
+main.withdraw form input[type=submit] {
+  margin: 10px 0 28px 0;
+  background: linear-gradient(to right, #E63EB6, #749FF5);
+  display: block;
+  width: 100%;
+  line-height: 1;
+  border-radius: 24px;
+  font-weight: 700;
+  text-shadow: 0 0 12 rgba(0, 0, 0, 0.5);
+  cursor: pointer;
+}
+main.withdraw form input[type=submit]:hover {
+  background: linear-gradient(to right, #cf36a3, #658ad6);
+}
+main.withdraw form input[type=submit][disabled] {
+  background: #353535;
+  cursor: default;
+}
+main.withdraw ul {
+  width: 100%;
+  list-style-type: none;
+  margin-bottom: 36px;
+}
+main.withdraw ul li {
+  display: flex;
+  justify-content: space-between;
+  margin: 2px 0;
+}
+main.withdraw ul h4 {
+  color: #8AA3FF;
+  font-weight: 700;
+}
+
+#notice--popUp .popUp--container,
+#privacy--popUp .popUp--container {
+  color: #BDBDBD;
+}
+#notice--popUp .popUp--container h2,
+#privacy--popUp .popUp--container h2 {
+  color: #EFEFEF;
+}
+#notice--popUp .popUp--container .content--scroll p,
+#privacy--popUp .popUp--container .content--scroll p {
+  text-align: left;
+}
+#notice--popUp .popUp--container .content--scroll p.bold,
+#privacy--popUp .popUp--container .content--scroll p.bold {
+  margin-top: 20px;
+}
+#notice--popUp .popUp--container .content--scroll ol.list--cht,
+#privacy--popUp .popUp--container .content--scroll ol.list--cht {
+  list-style-type: cjk-ideographic;
+  text-align: left;
+  padding-left: 4em;
+  font-size: 14px;
+}
+#notice--popUp .popUp--container .content--scroll ol.list--cht li,
+#privacy--popUp .popUp--container .content--scroll ol.list--cht li {
+  padding: 4px 0;
+}
+#notice--popUp .popUp--container .content--scroll ol.bracket,
+#privacy--popUp .popUp--container .content--scroll ol.bracket {
+  list-style-type: none;
+  padding-left: 2.5em;
+}
+#notice--popUp .popUp--container .content--scroll ol.bracket li,
+#privacy--popUp .popUp--container .content--scroll ol.bracket li {
+  text-indent: -3em;
+  padding: 0;
+}
+#notice--popUp .popUp--container .content--scroll ol.number,
+#privacy--popUp .popUp--container .content--scroll ol.number {
+  list-style-type: decimal;
+  padding-left: 1.5em;
+}
+#notice--popUp .popUp--container .content--scroll ol.number li,
+#privacy--popUp .popUp--container .content--scroll ol.number li {
+  text-indent: 0;
+}
+
+#withdraw--popUp form {
+  margin: 28px 0 12px 0;
+}
+#withdraw--popUp form .flex {
+  display: flex;
+  justify-content: space-between;
+  margin: 6px 0;
+}
+#withdraw--popUp form .flex input {
+  flex: 1;
+  width: 56px;
+  height: 56px;
+  border-radius: 12px;
+  border: 1px solid #898989;
+  margin-right: 16px;
+  padding: 0;
+  background-color: transparent;
+  text-align: center;
+  font-size: 24px;
+  font-weight: 700;
+  -moz-appearance: textfield;
+}
+#withdraw--popUp form .flex input::-webkit-inner-spin-button, #withdraw--popUp form .flex input::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+#withdraw--popUp form .flex input:last-child {
+  margin-right: 0;
+}
+#withdraw--popUp form .flex.note .warning,
+#withdraw--popUp form .flex.note .forgot {
+  font-size: 12px;
+  font-weight: 400;
+}
+#withdraw--popUp form .flex.note .warning {
+  color: #E08083;
+}
+#withdraw--popUp form .flex.note .forgot {
+  text-decoration: underline;
+  text-align: right;
+  color: #BDBDBD;
+  transition: color 0.5s;
+}
+#withdraw--popUp form .flex.note .forgot:hover {
+  color: #898989;
+}
+#withdraw--popUp form input[type=submit] {
+  width: 100%;
+  margin-top: 28px;
+  background: linear-gradient(to right, #E63EB6, #749FF5);
+  height: 40px;
+  border-radius: 24px;
+  padding: 13px 24px;
+  font-weight: 700;
+  line-height: 0.8;
+  text-shadow: 0 0 12px rgba(0, 0, 0, 0.4);
+}
+#withdraw--popUp form input[type=submit]:hover {
+  background: linear-gradient(to right, #cf36a3, #658ad6);
+}
+#withdraw--popUp form input[type=submit][disabled] {
+  background: #353535;
+  cursor: default;
+}
+
+@media screen and (max-width: 515px) {
+  main.withdraw {
+    width: calc(100vw - 3.5rem);
+    margin: 0 auto;
+  }
+  main.withdraw form .agree span {
+    font-size: 14px;
+  }
+  #withdraw--popUp form .flex input {
+    width: calc((100vw - 136px) / 6);
+    height: calc((100vw - 136px) / 6);
+    margin-right: 8px;
+    padding: 0;
+  }
+  #withdraw--popUp form .flex input:last-child {
+    margin-right: 0;
+  }
+  #withdraw--popUp form .flex.note {
+    flex-wrap: wrap;
+  }
+  #withdraw--popUp form .flex.note .warning,
+  #withdraw--popUp form .flex.note .forgot {
+    font-size: 14px;
+    flex: 100%;
+    max-width: 100%;
+  }
+  #withdraw--popUp form .flex.note .warning {
+    text-align: left;
+  }
+  #withdraw--popUp form .flex.note .forgot {
+    text-align: right;
+  }
+}

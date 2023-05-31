@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="format-detection" content="telephone=no">
+    <title>遊戲完蛋了</title>
+    <link rel="shortcut icon" href="images/icon/favicon.ico" type="images/icon/favicon.ico" />
+
+    <!-- share info -->
+    <meta property="og:url" content="https://buggedgame.io/" />
+    <meta property="og:locale" content="zh-Hant" />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="遊戲完蛋了! The Game is Bugged!" />
+    <meta property="og:description" content="樂玩享賺！ Play for Fun & Earn!" />
+    <meta property="og:image" content="https://g-jiuyang.github.io/buggedgame/images/og-img.png" />
+    <meta property="og:image:type" content="image/png" />
+    <meta property="og:image:width" content="1400" />
+    <meta property="og:image:height" content="770" />
+
+    <!-- tailwind css -->
+    <link rel="stylesheet" href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css">
+
+    <!-- Custom styles -->
+    <link rel="stylesheet" href="css/custom-style.css">
+    <link rel="stylesheet" href="css/custom-animation.css">
+    <link rel="stylesheet" href="css/global.css">
+    <link rel="stylesheet" href="css/maintenance.css">
+
+    <!-- jQuery -->
+    <script src="js/jquery-3.4.1.min.js"></script>
+
+    <!-- tailwind js -->
+    <!-- <script src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.3.5/dist/alpine.min.js" defer></script> -->
+
+    <script src="js/cookie.js"></script>
+    <script src="js/step.js"></script>
+    <script src="js/tabs.js"></script>
+    <script src="js/switch.js"></script>
+    <script src="js/dropdown.js"></script>
+    <script src="js/mobile-menu.js"></script>
+    <script src="js/mobile-wallet.js"></script>
+    <script src="js/wallet-text-change.js"></script>
+    <script src="js/faq.js"></script>
+    <script src="js/table-show.js"></script>
+    <script src="js/nav-blur.js"></script>
+    <script src="js/popup.js"></script>
+</head>
+
+<body class="overflow-x-hidden bg-121212">
+
+    <!-- header -->
+    <div class="min-h-full">
+        <!-- 20220620 -->
+        <nav id="navH" class="bg-opacity-0 w-full fixed top-0 z-10">
+            <div class="max-w-7xl mx-auto px-5 sm:px-6 lg:px-8">
+                <div class="flex items-center h-20">
+                    <div class="flex items-center justify-between w-full">
+                        <!-- 20220628 20220629-->
+                        <div class="w-24 lg:w-32 flex-shrink-0 lg:w-auto">
+                            <a href="index.html">
+                                <img src="images/product/logo.png">
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </div>
+
+    <!-- 背景漸層色 -->
+    <div class="w-full absolute top-0 left-0 -z-1">
+        <img src="images/product/bg-gradient.svg" class="w-full">
+    </div>
+
+    <!-- <div class="flex flex-wrap items-center justify-center text-center"
+        style="height: calc(100svh - 200px); margin: 80px 0 -228px;">
+        <div>
+            <div class="mb-12" style="flex: 100%">
+                <img src="images/maintenance.png" class="mx-auto w-72">
+            </div>
+            <div class="mb-7" style="flex: 100%">
+                <div class="font-bold text-2xl mb-4 color-efefef">系統維護中</div>
+                <div class="font-noraml text-sm color-efefef">將於 2023/4/14 11:00 AM 維護完畢！</div>
+            </div>
+        </div>
+    </div> -->
+
+    <div class="maintenance">
+        <div>
+            <img src="images/maintenance.png">
+            <h2>系統維護中</h2>
+            <p>將於 2023/4/14 11:00 AM 維護完畢！</p>
+        </div>
+    </div>
+
+
+
+    <!-- footer -->
+    <footer>
+        <div class="copyright">
+            <dl>
+                <dt><img src="images/product/Logo_GASH.png"></dt>
+                <dt><img src="images/product/Logo_Naddic.png"></dt>
+                <dd>© 2022 GASH POINT Co., Ltd. All right reserved <br>商家名稱：樂點股份有限公司 | 統一編號：53209324</dd>
+            </dl>
+            <div><img src="images/icon/icon-pg-12.svg"></div>
+        </div>
+    </footer>
+</body>
+
+<!-- popup bg-->
+<!-- 20220704 -->
+<div class="hidden w-full h-full fixed top-0 left-0 z-40 opacity-88 bg-121212 popup-bg"></div>
+
+</html>

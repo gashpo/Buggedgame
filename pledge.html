@@ -1,0 +1,733 @@
+<!DOCTYPE html>
+<html lang="ch-Hant">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="format-detection" content="telephone=no">
+    <title>遊戲完蛋了</title>
+    <link rel="icon" href="images/icon/favicon.ico" type="images/icon/favicon.ico" />
+    <link rel="shortcut icon" href="images/icon/favicon.ico" type="images/icon/favicon.ico" />
+    <!-- tailwind css -->
+    <link rel="stylesheet" href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css">
+    <link rel="stylesheet" href="css/custom-style.css">
+    <link rel="stylesheet" href="css/custom-animation.css">
+    <link rel="stylesheet" href="css/global.css">
+    <link rel="stylesheet" href="css/pledge.css">
+    <link rel="stylesheet" href="css/pop-up.css">
+
+    <script src="js/jquery-3.4.1.min.js"></script>
+    <!-- tailwind js -->
+    <!-- <script src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.3.5/dist/alpine.min.js" defer></script> -->
+    <script src="js/cookie.js"></script>
+    <script src="js/step.js"></script>
+    <script src="js/tabs.js"></script>
+    <script src="js/switch.js"></script>
+    <script src="js/dropdown.js"></script>
+    <script src="js/mobile-menu.js"></script>
+    <script src="js/mobile-wallet.js"></script>
+    <script src="js/wallet-text-change.js"></script>
+    <script src="js/faq.js"></script>
+    <script src="js/table-show.js"></script>
+    <script src="js/nav-blur.js"></script>
+    <script src="js/popup.js"></script>
+</head>
+
+<body class="font-sans overflow-x-hidden bg-121212">
+
+    <!-- header -->
+    <div class="min-h-full">
+        <!-- 20220620 -->
+        <nav id="navH" class="bg-opacity-0 w-full fixed top-0 z-10">
+            <div class="max-w-7xl mx-auto px-5 sm:px-6 lg:px-8">
+                <div class="flex items-center h-20">
+                    <div class="flex items-center justify-between w-full">
+                        <!-- 20220628 20220629-->
+                        <div class="w-24 lg:w-32 flex-shrink-0 lg:w-auto">
+                            <a href="index.html">
+                                <img src="images/product/logo.png">
+                            </a>
+                        </div>
+                        <!-- pc and mobile menu -->
+                        <div class="flex items-center">
+                            <ul class="items-center text-base text-white font-bold hidden lg:flex">
+                                <!-- pc -->
+                                <li class="-ty-3">
+                                    <a href="shop.html" class="block px-5">商城</a>
+                                </li>
+                                <li class="-ty-3">
+                                    <a href="##" class="block px-5">白皮書</a>
+                                </li>
+                                <li class="-ty-3">
+                                    <a href="pledge.html" class="block px-5">質押</a>
+                                </li>
+                                <li class="-ty-3">
+                                    <a href="##" class="block px-5">DEX</a>
+                                </li>
+                                <li class="relative font-bold">
+                                    <a href="##" class="px-5 flex items-center space-x-1 btn-language">
+                                        <img src="images/icon/icon-language.svg">
+                                        <span class="text-sm">繁體中文</span>
+                                        <img src="images/icon/icon-arrow-bottom.svg" class="icon-arrow-bottom">
+                                    </a>
+                                    <ul
+                                        class="hidden w-40 py-6 text-center font-bold mt-3 border border-solid text-sm absolute top-9 left-1/2 transform -translate-x-1/2 rounded-xl bg-1f1f1f border-color-353535 color-898989 language-menu">
+                                        <li>
+                                            <a href="##" class="block p-2 text-white">繁體中文</a>
+                                        </li>
+                                        <li>
+                                            <a href="##" class="block p-2 text-white">简体中文</a>
+                                        </li>
+                                        <li>
+                                            <a href="##" class="block p-2 text-white">English</a>
+                                        </li>
+                                        <li>
+                                            <a href="##" class="block p-2 text-white">한국어</a>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li class="hidden mr-10 relative font-normal coin-box">
+                                    <span class="flex space-x-2">
+                                        <span><img src="images/icon/icon-coin.svg"></span>
+                                        <span class="coin">300,000.00</span>
+                                    </span>
+                                    <div
+                                        class="hidden absolute left-1/2 top-9 transform -translate-x-1/2 z-20 coin-info">
+                                        <div class="relative left-1/2 top-px transform -translate-x-1/2 z-30 triangle">
+                                        </div>
+                                        <div
+                                            class="w-56 px-6 py-5 text-sm font-normal rounded-xl absolute left-1/2 transform -translate-x-1/2 z-20 bg-1f1f1f border border-solid border-color-353535">
+                                            唉呀~您已少賺了6,666顆蛋幣，趕快來 Play and Earn! <a href="shop.html"
+                                                class="font-bold color-7e97f0">我想賺幣！</a></div>
+                                    </div>
+                                </li>
+                            </ul>
+                            <ul class="flex items-center sm:flex lg:hidden">
+                                <!-- mobile -->
+                                <!-- 20220621 -->
+                                <li class="flex justify-center items-center w-10 h-10 mx-1 block">
+                                    <a href="##" class="block w-full" target="_blank">
+                                        <img src="images/icon/icon-discord.svg" class="w-full">
+                                    </a>
+                                </li>
+                                <li class="flex justify-center items-center w-10 h-10 mx-1 btn-hamburger">
+                                    <a href="##" class="block w-full">
+                                        <img src="images/icon/icon-menu.svg" class="w-full">
+                                    </a>
+                                </li>
+                                <li class="flex justify-center items-center w-11 h-11 mx-1 mr-0 hidden">
+                                    <a href="##" class="w-full">
+                                        <img src="images/icon/personal.svg" class="w-full">
+                                    </a>
+                                </li>
+                            </ul>
+                            <!-- pc btn wallet -->
+                            <div class="relative">
+                                <a href="##" id="btn-change"
+                                    class="hidden text-sm rounded-full py-3 px-6 text-white font-bold whitespace-nowrap bg-from-e63eb6-to-749ff5 btn-wallet sm:block lg:text-xs">連接錢包</a>
+                                <ul
+                                    class="hidden w-40 py-6 text-center mt-3 border border-solid absolute top-11 left-1/2 transform -translate-x-1/2 rounded-xl text-sm font-bold color-898989 hover:color-white bg-1f1f1f border-color-353535 panel-wallet">
+                                    <li class="">
+                                        <a href="personal.html" onclick="textChange1()"
+                                            class="block p-2 text-white whitespace-nowrap">個人資產</a>
+                                    </li>
+                                    <li class="">
+                                        <a href="record.html" class="block p-2 text-white whitespace-nowrap">歷史紀錄</a>
+                                    </li>
+                                    <li class="">
+                                        <a href="##" onclick="textChange2()"
+                                            class="block p-2 hover:text-white whitespace-nowrap">登出</a>
+                                    </li>
+                                </ul>
+                            </div>
+                            <!-- mobile btn wallet -->
+                            <div>
+                                <a href="javascript:void(0)"
+                                    class="mr-0 text-sm font-bold rounded-full py-3 px-5 mx-1 text-white whitespace-nowrap bg-from-e63eb6-to-749ff5 btn-m-wallet sm:hidden">連接錢包</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </nav>
+
+        <!-- mobile menu -->
+        <div class="hidden w-full h-full text-lg fixed top-0 left-0 z-30 bg-121212 m-menu lg:hidden">
+            <ul class="text-center relative font-bold top-24 color-efefef">
+                <li class="py-4">
+                    <a href="shop.html" class="block">商城</a>
+                </li>
+                <li class="py-4">
+                    <a href="##" class="block">白皮書</a>
+                </li>
+                <li class="py-4">
+                    <a href="pledge.html" class="block">質押</a>
+                </li>
+                <li class="py-4">
+                    <a href="##" class="block">DEX</a>
+                </li>
+                <li class="py-4 relative top-60">
+                    <a href="##" class="block space-x-1  btn-m-language">
+                        <img src="images/icon/icon-language.svg" class="inline-block align-middle">
+                        <span class="inline-block align-middle text-sm">繁體中文</span>
+                        <img src="images/icon/icon-arrow-top.svg" class="inline-block align-middle">
+                    </a>
+                    <ul
+                        class="hidden w-40 py-6 text-sm font-bold text-center border border-solid absolute -top-48 left-1/2 transform -translate-x-1/2 rounded-xl bg-1f1f1f border-color-353535 m-language-menu">
+                        <li class="">
+                            <a href="##" class="block p-2 color-898989 focus:text-white">繁體中文</a>
+                        </li>
+                        <li class="">
+                            <a href="##" class="block p-2 color-898989 focus:text-white">简体中文</a>
+                        </li>
+                        <li class="">
+                            <a href="##" class="block p-2 color-898989 focus:text-white">English</a>
+                        </li>
+                        <li class="">
+                            <a href="##" class="block p-2 color-898989 focus:text-white">한국어</a>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+            <button class="absolute top-4 right-4 btn-close">
+                <img src="images/icon/icon-close.svg">
+            </button>
+        </div>
+
+        <!-- mobile wallet -->
+        <div class="hidden w-full h-full fixed top-0 left-0 z-30 bg-353535 bg-353535-80 m-bg-wallet lg:hidden">
+            <div class="w-full p-6 absolute bottom-0 z-20 rounded-t-2xl bg-1f1f1f m-panel-wallet">
+                <div
+                    class="flex flex-col items-center justify-between px-5 py-4 mt-11 mb-7 border border-solid rounded-3xl bg-5e5e5e-30 color-efefef border-color-353535">
+                    <div class="w-full flex items-center space-x-3 mb-2">
+                        <div><img src="images/icon/icon-account.svg"></div>
+                        <div class="text-base font-bold">0x130...123D</div>
+                    </div>
+                    <div class="w-full flex flex-row-reverse space-x-2">
+                        <div class="flex">
+                            <div class="mr-2"><img src="images/icon/icon-coin.svg"></div>
+                            <div class="text-base font-bold">300,000</div>
+                        </div>
+                    </div>
+                </div>
+                <div
+                    class="mb-3 rounded-full border border-solid border-transparent text-sm text-center border-linear-gradient-1f1f1f-e63eb6-749ff5">
+                    <a href="personal.html"
+                        class="w-full flex items-center justify-center py-3 px-6 border-transparent font-bold color-efefef">個人資產</a>
+                </div>
+                <div
+                    class="mb-3 rounded-full border border-solid border-transparent text-sm text-center border-linear-gradient-1f1f1f-e63eb6-749ff5">
+                    <a href="record.html"
+                        class="w-full flex items-center justify-center py-3 px-6 border-transparent font-bold color-efefef">歷史紀錄</a>
+                </div>
+                <div
+                    class="text-center border border-solid rounded-full text-sm font-bold color-efefef border-color-353535">
+                    <a href="##" class="w-full flex items-center justify-center py-3 px-6">登出</a>
+                </div>
+                <button class="absolute top-4 right-4 btn-wallet-close">
+                    <img src="images/icon/icon-close.svg">
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- 背景漸層色 -->
+    <div class="w-full absolute top-0 left-0 -z-1">
+        <img src="images/product/bg-gradient.svg" class="w-full">
+    </div>
+
+    <div class="max-w-6xl mx-auto px-5 sm:px-6 lg:px-8">
+        <!-- 麵包屑 -->
+        <div class="flex items-center space-x-1 pt-24 mb-5 sm:mb-11">
+            <a href="index.html" class="text-sm font-normal sm:text-xs color-898989">首頁</a>
+            <span><img src="images/icon/icon-arrow-right.svg"></span>
+            <a href="personal.html" class="text-sm font-bold sm:text-xs color-898989">個人資產</a>
+            <span><img src="images/icon/icon-arrow-right.svg"></span>
+            <a href="##" class="text-sm font-bold sm:text-xs color-898989">質押</a>
+        </div>
+
+        <div class="dashboard">
+            <p class="mainTitle">只需質押NFT，即可開始賺取利潤。</p>
+            <ul>
+                <li>
+                    <p>質押總數量</p>
+                    <p class="title bold">3,686</p>
+                </li>
+
+                <li>
+                    <p>總發出代幣</p>
+                    <p class="title bold">≈ 849.94 BUG</p>
+                </li>
+
+                <li>
+                    <p>質押池APR <a id="apr--open" href="javascript:void(0)"><img src="images/icon/icon-info.svg"></a></p>
+                    <p class="title bold">1,924.00 %</p>
+                </li>
+
+                <li>
+                    <p>日發出量 <a id="daily--open" href="javascript:void(0)"><img src="images/icon/icon-info.svg"></a></p>
+                    <p class="title bold">66</p>
+                </li>
+            </ul>
+        </div>
+
+        <div class="project">
+            <!-- 質押啟用 前 & 後 顯示區塊不同，詳見註記 -->
+            <p class="mainTitle">質押專案</p>
+            <div class="borderCard">
+                <div class="project__info">
+                    <ul class="project__info__item title">
+                        <li>
+                            <img src="images/icon/icon-bug_nft.svg">
+                            <span>質押賺蟲蟲幣</span>
+                        </li>
+                    </ul>
+                    <ul class="project__info__item">
+                        <li>
+                            <p class="note">
+                                質押項目</p>
+                            <div>
+                                <img src="images/icon/icon-nft.svg">
+                                <span class="bold">NFT角色卡</span>
+                            </div>
+                        </li>
+                        <li>
+                            <p class="note">獎勵代幣</p>
+                            <div>
+                                <img src="images/icon/icon-bug.svg">
+                                <span class="bold">蟲蟲幣</span>
+                            </div>
+                        </li>
+                        <li>
+                            <p class="note">已賺取</p>
+                            <p class="bold bug">
+                                0.99 BUG
+                                <span>≈ 100.82 USDT</span> <!-- 質押啟用後才顯示此行資訊 -->
+                            </p>
+                        </li>
+                        <li class="roi">
+                            <p class="note roi">BUG幣獎勵
+                                <a id="roi--open" href="javascript:void(0)"><img src="images/icon/icon-info.svg"></a>
+                            </p>
+                            <p class="bold">120%</p>
+                        </li>
+                    </ul>
+                    <a href="javascript:void(0)" id="notice--open" class="notice"><img
+                            src="images/icon/icon-bell_light.svg"></a>
+                </div>
+                <p class="dDate">專案結束時間：2022/3/11 23:59 (UTC+8)</p>
+                <div class="flex">
+                    <ul class="linkOut">
+                        <li><a href="#">取得 NFT <img src="images/icon/icon-open.svg"></a></li>
+                        <li><a href="#">檢視教學 <img src="images/icon/icon-open.svg"></a></li>
+                        <li><a href="#">檢查合約 <img src="images/icon/icon-open.svg"></a></li>
+                        <li><a href="#">新增BUG到錢包 <img src="images/icon/icon-open.svg"></a></li>
+                    </ul>
+
+                    <!-- ↓↓↓質押開始前顯示此區塊按鈕↓↓↓ -->
+                    <button id="submit" class="btn-gradient">啟用</button>
+                    <!-- 啟用完MetaMask的核准後，按鈕從「啟用」變成「開始質押」 -->
+
+                    <!-- ↓↓↓質押開始後顯示此區塊按鈕↓↓↓ -->
+                    <button id="relieve" class="btn-outline">解除質押</button>
+                    <button id="recieve" class="btn-gradient">領取收益</button>
+                    <!-- ↑↑↑質押開始後顯示此區塊按鈕↑↑↑ -->
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- footer -->
+    <footer>
+        <div class="copyright">
+            <dl>
+                <dt><img src="images/product/Logo_GASH.png"></dt>
+                <dt><img src="images/product/Logo_Naddic.png"></dt>
+                <dd>© 2022 GASH POINT Co., Ltd. All right reserved</dd>
+            </dl>
+            <div><img src="images/icon/icon-pg-12.svg"></div>
+        </div>
+    </footer>
+
+    <!-- social link -->
+    <div class="hidden fixed right-16 bottom-11 sm:hidden lg:block">
+        <a href="##" class="block" target="_blank">
+            <img src="images/icon/icon-dioscord-pc.svg">
+        </a>
+    </div>
+
+
+
+    <!-- pop up 質押池APR -->
+    <div id="apr--popUp" class="popUp popUp__button">
+        <div class="popUp--container">
+            <button id="apr--close" class="popUp--close"><img src="images/icon/icon-minus.svg"></button>
+            <h2>質押池APR</h2>
+            <div class="popUp--content">
+                <p>質押池APR相關說明質押池APR相關說明質押池APR相關說明質押池APR相關說明。</p>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Excepturi perspiciatis nostrum quibusdam
+                    adipisci aspernatur rem fuga omnis earum consequuntur numquam suscipit, enim, doloribus impedit
+                    nesciunt officiis nihil tempore blanditiis ducimus? ipsum dolor sit amet consectetur, adipisicing
+                    elit. Inventore porro omnis rerum ipsum quasi. Dolores hic fugit quos officia iusto sunt tempora
+                    quibusdam cum officiis qui, minus recusandae nobis nisi. ipsum dolor sit amet consectetur
+                    adipisicing elit. Maxime dignissimos quisquam dolor tenetur ipsum voluptatem culpa eum! Cupiditate,
+                    unde. Culpa, dolorem eligendi. Inventore harum fuga aliquam sapiente, hic odio iste.</p>
+                <p class="warning">一些關比較重要的說明可以是紅色。</p>
+            </div>
+            <button id="apr--submit" class="popUp--submit">確認</button>
+        </div>
+    </div>
+
+    <!-- pop up 日發出量 -->
+    <div id="daily--popUp" class="popUp popUp__button">
+        <div class="popUp--container">
+            <button id="daily--close" class="popUp--close"><img src="images/icon/icon-minus.svg"></button>
+            <h2>日發出量</h2>
+            <div class="popUp--content">
+                <p>日發出量相關說明日發出量相關說明日發出量相關說明日發出量相關說明。</p>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Excepturi perspiciatis nostrum quibusdam
+                    adipisci aspernatur rem fuga omnis earum consequuntur numquam suscipit, enim, doloribus impedit
+                    nesciunt officiis nihil tempore blanditiis ducimus? ipsum dolor sit amet consectetur, adipisicing
+                    elit. Inventore porro omnis rerum ipsum quasi. Dolores hic fugit quos officia iusto sunt tempora
+                    quibusdam cum officiis qui, minus recusandae nobis nisi. ipsum dolor sit amet consectetur
+                    adipisicing elit. Maxime dignissimos quisquam dolor tenetur ipsum voluptatem culpa eum! Cupiditate,
+                    unde. Culpa, dolorem eligendi. Inventore harum fuga aliquam sapiente, hic odio iste.</p>
+                <p class="warning">一些關比較重要的說明可以是紅色。</p>
+            </div>
+            <button id="daily--submit" class="popUp--submit">確認</button>
+        </div>
+    </div>
+
+    <!-- pop up 重要提醒小鈴鐺 -->
+    <div id="notice--popUp" class="popUp popUp__button">
+        <div class="popUp--container">
+            <button id="notice--close" class="popUp--close"><img src="images/icon/icon-minus.svg"></button>
+            <h2>重要提醒</h2>
+            <div class="popUp--content">
+                <p>投資一定有風險，有賺有賠，質押前請詳細理解。</p>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Excepturi perspiciatis nostrum quibusdam
+                    adipisci aspernatur rem fuga omnis earum consequuntur numquam suscipit, enim, doloribus impedit
+                    nesciunt officiis nihil tempore blanditiis ducimus? ipsum dolor sit amet consectetur, adipisicing
+                    elit. Inventore porro omnis rerum ipsum quasi. Dolores hic fugit quos officia iusto sunt tempora
+                    quibusdam cum officiis qui, minus recusandae nobis nisi. ipsum dolor sit amet consectetur
+                    adipisicing elit. Maxime dignissimos quisquam dolor tenetur ipsum voluptatem culpa eum! Cupiditate,
+                    unde. Culpa, dolorem eligendi. Inventore harum fuga aliquam sapiente, hic odio iste.</p>
+                <p class="warning">一些關於停止打工要扣很多手續費的說明可以是紅色。</p>
+            </div>
+            <button id="notice--submit" class="popUp--submit">確認</button>
+        </div>
+    </div>
+
+    <!-- pop up 年化報酬率 -->
+    <div id="roi--popUp" class="popUp popUp__button">
+        <div class="popUp--container">
+            <button id="roi--close" class="popUp--close"><img src="images/icon/icon-minus.svg"></button>
+            <h2>年化報酬率</h2>
+            <div class="popUp--content">
+                <p>年化報酬率相關說明年化報酬率相關說明年化報酬率相關說明年化報酬率相關說明。</p>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Excepturi perspiciatis nostrum quibusdam
+                    adipisci aspernatur rem fuga omnis earum consequuntur numquam suscipit, enim, doloribus impedit
+                    nesciunt officiis nihil tempore blanditiis ducimus? ipsum dolor sit amet consectetur, adipisicing
+                    elit. Inventore porro omnis rerum ipsum quasi. Dolores hic fugit quos officia iusto sunt tempora
+                    quibusdam cum officiis qui, minus recusandae nobis nisi. ipsum dolor sit amet consectetur
+                    adipisicing elit. Maxime dignissimos quisquam dolor tenetur ipsum voluptatem culpa eum! Cupiditate,
+                    unde. Culpa, dolorem eligendi. Inventore harum fuga aliquam sapiente, hic odio iste.</p>
+                <p class="warning">一些關比較重要的說明可以是紅色。</p>
+            </div>
+            <button id="roi--submit" class="popUp--submit">確認</button>
+        </div>
+    </div>
+
+    <!-- pop up 開始質押 -->
+    <div id="start--popUp" class="popUp popUp__check">
+        <div class="popUp--container">
+            <button id="start--close" class="popUp--close"><img src="images/icon/icon-minus.svg"></button>
+            <h2>重要提醒</h2>
+            <div class="popUp--content">
+                <p>投資一定有風險，有賺有賠，質押前請詳細理解。</p>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Excepturi perspiciatis nostrum quibusdam
+                    adipisci aspernatur rem fuga omnis earum consequuntur numquam suscipit, enim, doloribus impedit
+                    nesciunt officiis nihil tempore blanditiis ducimus? ipsum dolor sit amet consectetur, adipisicing
+                    elit. Inventore porro omnis rerum ipsum quasi. Dolores hic fugit quos officia iusto sunt tempora
+                    quibusdam cum officiis qui, minus recusandae nobis nisi. ipsum dolor sit amet consectetur
+                    adipisicing elit. Maxime dignissimos quisquam dolor tenetur ipsum voluptatem culpa eum! Cupiditate,
+                    unde. Culpa, dolorem eligendi. Inventore harum fuga aliquam sapiente, hic odio iste.</p>
+                <p class="warning">一些關於停止打工要扣很多手續費的說明可以是紅色。</p>
+            </div>
+            <label>
+                <input type="checkbox">
+                <span>我同意並理解質押風險</span>
+            </label>
+            <a id="start--submit" href="pledge-choose.html" class="button popUp--submit" disabled>
+                確認開始質押
+                <span class="count">3s</span>
+            </a>
+            <!-- 倒數完3秒，且已勾選同意，才可點選確認(關閉disabled) -->
+        </div>
+    </div>
+
+    <!-- pop up 解除質押 -->
+    <div id="relieve--popUp" class="popUp popUp__check">
+        <div class="popUp--container">
+            <button id="relieve--close" class="popUp--close"><img src="images/icon/icon-minus.svg"></button>
+            <h2>解除質押</h2>
+            <div class="popUp--content">
+                <p>約可獲取的 BUG： <span class="warning">0.99</span> (≈ USDT 100.82)</p>
+                <p>倘若您質押期間未滿30天，將扣除<span class="warning">必要的蟲蟲幣手續費</span>。<a id="collapse-1" class="collapse"
+                        href="javascript:void(0)">手續費規則</a></p>
+                <p id="collapse-content-1" class="collapse-content">
+                    手續費規則詳細說明可放在這裡手續費規則詳細說明可放在這裡手續費規則詳細說明可放在這裡手續費規則詳細說明可放在這裡手續費規則詳細說明可放在這裡手續費規則詳細說明可放在這裡手續費規則詳細說明可放在這裡手續費規則詳細說明可放在這裡手續費規則詳細說明可放在這裡手續費規則詳細說明可放在這裡手續費規則詳細說明可放在這裡手續費規則詳細說明可放在這裡手續費規則詳細說明可放在這裡手續費規則詳細說明可放在這裡手續費規則詳細說明可放在這裡手續費規則詳細說明可放在這裡。
+                </p>
+                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Non officia, dolor natus expedita ipsam
+                    dignissimos aperiam reprehenderit cumque quisquam magni! Iste quos unde eaque omnis illo, cupiditate
+                    error quam iure! ipsum dolor sit amet consectetur adipisicing elit. Mollitia accusantium voluptatum
+                    doloremque nemo facere quaerat delectus quidem veritatis rem similique? Facilis quod rem magni
+                    tempora, deserunt ratione repudiandae cumque ut.</p>
+            </div>
+            <label>
+                <input type="checkbox">
+                <span>我同意並理解未滿30天需支付手續費</span>
+            </label>
+            <a href="relieve-success.html" class="button popUp--submit">確認</a>
+            <!-- 預設為disabled，勾選同意後才可點選確認(關閉disabled) -->
+        </div>
+    </div>
+
+    <!-- pop up 領取收益 -->
+    <div id="recieve--popUp" class="popUp popUp__check">
+        <div class="popUp--container">
+            <button id="recieve--close" class="popUp--close"><img src="images/icon/icon-minus.svg"></button>
+            <h2>領取收益</h2>
+            <div class="popUp--content">
+                <p>約可獲取的 BUG： <span class="warning">0.99</span> (≈ USDT 100.82)</p>
+                <p>倘若您質押期間未滿30天，將扣除<span class="warning">必要的蟲蟲幣手續費</span>。<a id="collapse-2" class="collapse"
+                        href="javascript:void(0)">手續費規則</a></p>
+                <p id="collapse-content-2" class="collapse-content">
+                    手續費規則詳細說明可放在這裡手續費規則詳細說明可放在這裡手續費規則詳細說明可放在這裡手續費規則詳細說明可放在這裡手續費規則詳細說明可放在這裡手續費規則詳細說明可放在這裡手續費規則詳細說明可放在這裡手續費規則詳細說明可放在這裡手續費規則詳細說明可放在這裡手續費規則詳細說明可放在這裡手續費規則詳細說明可放在這裡手續費規則詳細說明可放在這裡手續費規則詳細說明可放在這裡手續費規則詳細說明可放在這裡手續費規則詳細說明可放在這裡手續費規則詳細說明可放在這裡。
+                </p>
+                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Non officia, dolor natus expedita ipsam
+                    dignissimos aperiam reprehenderit cumque quisquam magni! Iste quos unde eaque omnis illo, cupiditate
+                    error quam iure! ipsum dolor sit amet consectetur adipisicing elit. Mollitia accusantium voluptatum
+                    doloremque nemo facere quaerat delectus quidem veritatis rem similique? Facilis quod rem magni
+                    tempora, deserunt ratione repudiandae cumque ut.</p>
+            </div>
+            <label>
+                <input type="checkbox">
+                <span>我同意並理解未滿30天需支付手續費</span>
+            </label>
+            <a href="recieve-success.html" class="button popUp--submit">確認</a>
+            <!-- 預設為disabled，勾選同意後才可點選確認(關閉disabled) -->
+        </div>
+    </div>
+</body>
+
+
+<!-- popup bg-->
+<!-- 20220704 -->
+<div class="hidden w-full h-full fixed top-0 left-0 z-40 opacity-88 bg-121212 popup-bg"></div>
+
+<!-- 連接錢包 8-1 -->
+<div
+    class="hidden w-11/12 p-10 mx-auto fixed top-1/4 left-1/2 z-40 transform -translate-x-1/2 rounded-3xl text-center text-xs tracking-wider z-20 border border-solid bg-1f1f1f color-efefef border-color-353535 popup-wrap w-469px">
+    <div>
+        <div class="mb-7 text-lg font-bold">連接錢包</div>
+        <div class="mb-7 text-sm font-noraml text-left color-efefef max-h-64 overflow-y-auto scroll-style">
+            請先連結MetaMask錢包。</div>
+        <a href="##"
+            class="block w-full py-3 px-6 border-transparent rounded-full text-sm font-bold color-efefef bg-from-e63eb6-to-749ff5">連接錢包</a>
+    </div>
+    <button class="absolute top-5 right-5 btn-close">
+        <img src="images/icon/icon-close.svg">
+    </button>
+</div>
+
+<!-- 功能維護中 8-2-11 -->
+<div
+    class="hidden w-11/12 p-10 mx-auto fixed top-1/4 left-1/2 z-40 transform -translate-x-1/2 rounded-3xl text-center text-xs tracking-wider z-20 border border-solid bg-1f1f1f color-efefef border-color-353535 popup-wrap w-469px">
+    <div>
+        <div class="mb-7 text-lg font-bold">功能維護中</div>
+        <div class="mb-7 text-sm font-noraml text-left color-efefef">功能維護中，暫時關閉。</div>
+        <a href="##"
+            class="block w-full py-3 px-6 border-transparent rounded-full text-sm font-bold color-efefef bg-from-e63eb6-to-749ff5">確認</a>
+    </div>
+</div>
+
+<!-- 系統發生問題 8-2-13 -->
+<div
+    class="hidden w-11/12 p-10 mx-auto fixed top-1/4 left-1/2 z-40 transform -translate-x-1/2 rounded-3xl text-center text-xs tracking-wider z-20 border border-solid bg-1f1f1f color-efefef border-color-353535 popup-wrap w-469px">
+    <div>
+        <div class="mb-7 text-lg font-bold">系統發生問題</div>
+        <div class="mb-7 text-sm font-noraml text-left color-efefef">錯誤代碼(ERRXXXXXXX)，請重新嘗試或 <a href="##"
+                target="_blank" class="font-bold color-7e97f0">洽客服</a></div>
+        <a href="##"
+            class="block w-full py-3 px-6 border-transparent rounded-full text-sm font-bold color-efefef bg-from-e63eb6-to-749ff5">確認</a>
+    </div>
+</div>
+
+<!-- 功能建置中 8-2-16 -->
+<div
+    class="hidden w-11/12 p-10 mx-auto fixed top-1/4 left-1/2 z-40 transform -translate-x-1/2 rounded-3xl text-center text-xs tracking-wider z-20 border border-solid bg-1f1f1f color-efefef border-color-353535 popup-wrap coming-soon-wrap w-469px">
+    <div>
+        <div class="mb-7 text-lg font-bold">功能建置中</div>
+        <div class="mb-7 text-sm font-noraml text-left color-efefef">功能建置中，敬請期待！</div>
+        <a href="##"
+            class="block w-full py-3 px-6 border-transparent rounded-full text-sm font-bold color-efefef bg-from-e63eb6-to-749ff5 btn-confirm">確認</a>
+    </div>
+</div>
+
+<!-- 等待確認中 8-3-1 -->
+<div
+    class="hidden w-11/12 p-10 mx-auto fixed top-1/4 left-1/2 z-40 transform -translate-x-1/2 rounded-3xl text-center text-xs tracking-wider z-20 border border-solid bg-1f1f1f color-efefef border-color-353535 popup-wrap w-469px">
+    <div>
+        <div class="mb-7 text-lg font-bold">等待確認中</div>
+        <div class="mb-7 text-sm font-noraml text-center color-efefef">等待MetaMask錢包確認中，請稍候。</div>
+        <div class="text-sm font-noraml text-center color-efefef">還沒下載MetaMask錢包? <a href="##" target="_blank"
+                class="font-bold color-7e97f0">前往下載</a></div>
+    </div>
+</div>
+
+<!-- 個人資產的table 3-1-2-->
+<div
+    class="hidden w-11/12 p-10 mx-auto fixed top-1/4 left-1/2 z-40 transform -translate-x-1/2 rounded-3xl text-center text-xs tracking-wider z-20 border border-solid bg-1f1f1f color-efefef border-color-353535 popup-wrap w-469px">
+    <div>
+        <div class="mb-7 text-lg font-bold">狀態說明</div>
+        <div class="mb-7 text-sm font-noraml text-left color-efefef max-h-64 overflow-y-auto scroll-style"><span
+                class="inline-block w-1 h-1 mx-1 align-middle rounded-full bg-7ef09e"></span>成功 - Are you sure you want
+            to deactivate your account</div>
+        <div class="mb-7 text-sm font-noraml text-left color-efefef max-h-64 overflow-y-auto scroll-style"><span
+                class="inline-block w-1 h-1 mx-1 align-middle rounded-full bg-cc47a6"></span>失敗 - Are you sure you want
+            to deactivate your account</div>
+        <div class="mb-7 text-sm font-noraml text-left color-efefef max-h-64 overflow-y-auto scroll-style"><span
+                class="inline-block w-1 h-1 mx-1 align-middle rounded-full bg-d8b42c"></span>提領中 - Are you sure you want
+            to deactivate your account</div>
+        <div class="mb-7 text-sm font-noraml text-left color-efefef max-h-64 overflow-y-auto scroll-style"><span
+                class="inline-block w-1 h-1 mx-1 align-middle rounded-full bg-d8b42c"></span>存入中 - Are you sure you want
+            to deactivate your account</div>
+    </div>
+    <button class="absolute top-5 right-5 btn-close">
+        <img src="images/icon/icon-close.svg">
+    </button>
+</div>
+
+<!-- 右邊蟲蟲幣的提領按鈕 8-2-15 -->
+<div
+    class="hidden w-11/12 p-10 mx-auto fixed top-1/4 left-1/2 z-40 transform -translate-x-1/2 rounded-3xl text-center text-xs tracking-wider z-20 border border-solid bg-1f1f1f color-efefef border-color-353535 popup-wrap w-469px">
+    <div>
+        <div class="mb-7 text-lg font-bold">提醒</div>
+        <div class="mb-7 text-sm font-noraml text-left color-efefef max-h-64 overflow-y-auto scroll-style">
+            免費試玩等級不開放提領功能。<a href="##" target="_blank" class="font-bold color-7e97f0">購買入場券</a></div>
+        <a href="##"
+            class="block w-full py-3 px-6 border-transparent rounded-full text-sm font-bold color-efefef bg-from-e63eb6-to-749ff5">確認</a>
+    </div>
+</div>
+
+<!-- 入場券等級 8-2-12 -->
+<div
+    class="hidden w-11/12 p-10 mx-auto fixed top-1/4 left-1/2 z-40 transform -translate-x-1/2 rounded-3xl text-center text-xs tracking-wider z-20 border border-solid bg-1f1f1f color-efefef border-color-353535 popup-wrap w-469px">
+    <div>
+        <div class="mb-7 text-lg font-bold">入場券等級</div>
+        <div class="text-sm font-noraml text-left color-efefef max-h-64 overflow-y-auto scroll-style">待營運確認中</div>
+    </div>
+    <button class="absolute top-5 right-5 btn-close">
+        <img src="images/icon/icon-close.svg">
+    </button>
+</div>
+
+
+<script>
+    // pop up 質押池APR
+    $('#apr--open').click(function () {
+        $('#apr--popUp').addClass('active')
+    })
+    $('#apr--close').click(function () {
+        $('#apr--popUp').removeClass('active')
+    })
+    $('#apr--submit').click(function () {
+        $('#apr--popUp').removeClass('active')
+    })
+
+    // pop up 日發出量
+    $('#daily--open').click(function () {
+        $('#daily--popUp').addClass('active')
+    })
+    $('#daily--close').click(function () {
+        $('#daily--popUp').removeClass('active')
+    })
+    $('#daily--submit').click(function () {
+        $('#daily--popUp').removeClass('active')
+    })
+
+    // pop up 重要提醒小鈴鐺
+    $('#notice--open').click(function () {
+        $('#notice--popUp').addClass('active')
+    })
+    $('#notice--close').click(function () {
+        $('#notice--popUp').removeClass('active')
+    })
+    $('#notice--submit').click(function () {
+        $('#notice--popUp').removeClass('active')
+    })
+
+    // pop up 年化報酬率
+    $('#roi--open').click(function () {
+        $('#roi--popUp').addClass('active')
+    })
+    $('#roi--close').click(function () {
+        $('#roi--popUp').removeClass('active')
+    })
+    $('#roi--submit').click(function () {
+        $('#roi--popUp').removeClass('active')
+    })
+
+    // 啟用按鈕 & pop up 開始質押
+    $('#submit').click(function () {
+        if ($(this).html() === '啟用') {
+            $(this).html('開始質押')
+        } else {
+            $('#start--popUp').addClass('active')
+            setTimeout(function () {
+                $("#start--submit > span").html('2s');
+            }, 1000);
+
+            setTimeout(function () {
+                $("#start--submit > span").html('1s');
+            }, 2000);
+
+            setTimeout(function () {
+                $("#start--submit > span").html('');
+                $("#start--submit").removeAttr('disabled');
+            }, 3000);
+        }
+    })
+    $('#start--close').click(function () {
+        $('#start--popUp').removeClass('active')
+    })
+
+    // pop up 解除質押
+    $('#relieve').click(function () {
+        $('#relieve--popUp').addClass('active')
+    })
+    $('#relieve--close').click(function () {
+        $('#relieve--popUp').removeClass('active')
+    })
+    // 解除質押開合選單
+    $('#collapse-1').click(function () {
+        $('#collapse-content-1').toggleClass('open')
+    })
+
+    // pop up 領取收益
+    $('#recieve').click(function () {
+        $('#recieve--popUp').addClass('active')
+    })
+    $('#recieve--close').click(function () {
+        $('#recieve--popUp').removeClass('active')
+    })
+    // 領取收益開合選單
+    $('#collapse-2').click(function () {
+        $('#collapse-content-2').toggleClass('open')
+    })
+</script>
+
+
+</html>

@@ -1,0 +1,561 @@
+.mainTitle {
+  margin-bottom: 16px;
+  font-size: 16px;
+}
+
+.dashboard {
+  margin-bottom: 32px;
+}
+.dashboard ul {
+  display: flex;
+  text-align: center;
+  justify-content: space-between;
+  align-items: stretch;
+  list-style-type: none;
+  gap: 12px;
+}
+.dashboard ul li {
+  padding: 20px;
+  flex: 1;
+  border-radius: 24px;
+  border: 1px solid #353535;
+}
+.dashboard ul li p {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 14px;
+  color: #BDBDBD;
+}
+.dashboard ul li p.title {
+  font-size: 18px;
+  color: #EFEFEF;
+}
+.dashboard ul li p a {
+  transition: all 0.15s ease;
+}
+.dashboard ul li p a img {
+  display: inline-block;
+}
+.dashboard ul li p a:hover {
+  filter: brightness(120%);
+}
+.dashboard ul li p a#apr--open, .dashboard ul li p a#daily--open {
+  margin-left: 4px;
+  transform: translateY(-6%);
+}
+
+.project .mainTitle {
+  font-weight: 700;
+}
+.project .borderCard {
+  border-radius: 24px;
+  border: 1px solid #353535;
+  padding: 36px;
+  margin-bottom: 32px;
+}
+.project .borderCard .project__info {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
+  gap: 20px;
+}
+.project .borderCard .project__info__item {
+  list-style-type: none;
+  text-align: left;
+  align-items: flex-start;
+}
+.project .borderCard .project__info__item li {
+  display: inline-flex;
+  align-items: center;
+  flex-wrap: wrap;
+  min-width: -moz-max-content;
+  min-width: max-content;
+  flex: 1;
+}
+.project .borderCard .project__info__item li:last-child {
+  margin-right: 0;
+}
+.project .borderCard .project__info__item li img {
+  display: inline;
+  margin-right: 8px;
+}
+.project .borderCard .project__info__item li p {
+  flex: 100%;
+  margin-bottom: 4px;
+  line-height: 24px;
+  color: #BDBDBD;
+}
+.project .borderCard .project__info__item li p.note {
+  font-size: 14px;
+}
+.project .borderCard .project__info__item li p.bug {
+  color: #EFEFEF;
+}
+.project .borderCard .project__info__item li p span {
+  display: block;
+  color: #BDBDBD;
+  font-size: 14px;
+}
+.project .borderCard .project__info__item li p.roi {
+  position: relative;
+}
+.project .borderCard .project__info__item li p.roi a {
+  transition: all 0.15s ease;
+}
+.project .borderCard .project__info__item li p.roi a:hover {
+  filter: brightness(120%);
+}
+.project .borderCard .project__info__item li p.roi a#roi--open {
+  position: absolute;
+  transform: translateY(-6%) translateX(4px);
+}
+.project .borderCard .project__info__item li p.roi + p {
+  color: #EFEFEF;
+}
+.project .borderCard .project__info__item div span {
+  font-size: 16px;
+}
+.project .borderCard .project__info__item.title {
+  flex: 300px;
+  max-width: 300px;
+}
+.project .borderCard .project__info__item.title img {
+  max-width: 41px;
+}
+.project .borderCard .project__info__item.title span {
+  font-size: 16px;
+  font-weight: 700;
+}
+.project .borderCard .project__info__item:nth-child(2) {
+  flex: calc(100% - 320px);
+  padding-right: 24px;
+  display: flex;
+  gap: 16px 12px;
+  flex-wrap: wrap;
+}
+.project .borderCard .project__info .notice {
+  position: absolute;
+  top: 0;
+  right: 0;
+  transition: all 0.15s ease;
+}
+.project .borderCard .project__info .notice:hover {
+  filter: brightness(130%);
+}
+.project .borderCard .dDate {
+  font-size: 14px;
+  color: #BDBDBD;
+  margin-bottom: 20px;
+}
+.project .borderCard .flex {
+  justify-content: space-between;
+  align-items: flex-end;
+}
+.project .borderCard .flex .linkOut {
+  list-style-type: none;
+  font-size: 14px;
+  text-align: left;
+}
+.project .borderCard .flex .linkOut li {
+  display: inline-block;
+  margin-right: 24px;
+}
+.project .borderCard .flex .linkOut li a {
+  color: #898989;
+  transition: all 0.15s ease;
+}
+.project .borderCard .flex .linkOut li a:hover {
+  filter: brightness(130%);
+}
+.project .borderCard .flex .linkOut li a * {
+  display: inline;
+}
+.project .borderCard .flex #submit {
+  height: 44px;
+  width: 295px;
+}
+.project .borderCard .flex #relieve,
+.project .borderCard .flex #recieve {
+  flex: 1;
+  margin-left: 16px;
+  height: 44px;
+}
+
+.choose .mainTitle {
+  margin-bottom: 44px;
+  font-size: 18px;
+}
+.choose ul {
+  list-style-type: none;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 24px 16px;
+  margin-bottom: 64px;
+  cursor: pointer;
+}
+.choose ul li {
+  flex: calc(25% - 12px);
+  max-width: calc(25% - 12px);
+  padding: 16px;
+  border: 1px solid #353535;
+  border-radius: 20px;
+  position: relative;
+}
+.choose ul li .img {
+  background-color: #353535;
+  border-radius: 8px;
+  margin-bottom: 16px;
+  width: 100%;
+}
+.choose ul li .desc {
+  font-size: 14px;
+  overflow: hidden;
+}
+.choose ul li .desc .nft--name {
+  font-weight: 700;
+  color: #ffffff;
+  font-size: 16px;
+}
+.choose ul li .desc .nft--id {
+  font-weight: 400;
+  color: #898989;
+  font-size: 14px;
+}
+.choose ul li.checked {
+  border-color: #8AA3FF;
+}
+.choose ul li.checked:after {
+  content: url(../images//icon/icon-check.svg);
+  position: absolute;
+  right: 16px;
+  bottom: 12px;
+}
+.choose--done {
+  width: 100%;
+  text-align: right;
+}
+.choose--done p {
+  font-size: 16px;
+  font-weight: 400;
+  color: #BDBDBD;
+  margin-bottom: 8px;
+}
+.choose--done p span {
+  font-size: 18px;
+  font-weight: 700;
+  color: #8AA3FF;
+}
+.choose--done .button {
+  display: inline-block;
+  height: 44px;
+  width: 335px;
+  text-align: center;
+  line-height: 44px;
+  font-weight: 700;
+  background: linear-gradient(to right, #E63EB6, #749FF5);
+  text-shadow: 0 0 12px rgba(0, 0, 0, 0.4);
+  border-radius: 24px;
+}
+.choose--done .button:hover {
+  background: linear-gradient(to right, #cf36a3, #658ad6);
+}
+
+.pledge-success {
+  width: 500px;
+  margin: 48px auto 0 auto;
+}
+.pledge-success .message {
+  text-align: center;
+  margin-bottom: 28px;
+}
+.pledge-success .message img {
+  margin: 0 auto 16px auto;
+}
+.pledge-success .message p {
+  font-size: 16px;
+  font-weight: 700;
+}
+.pledge-success .info {
+  font-size: 14px;
+  color: #BDBDBD;
+  margin-bottom: 20px;
+}
+.pledge-success .info p {
+  padding-left: 5em;
+  text-indent: -5em;
+}
+.pledge-success .nft--list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px 15px;
+}
+.pledge-success .nft--list li {
+  flex: calc((100% - 30px) / 3);
+  max-width: calc((100% - 30px) / 3);
+  border: 1px solid #353535;
+  border-radius: 20px;
+  padding: 16px;
+}
+.pledge-success .nft--list li .img {
+  background-color: #353535;
+  border-radius: 8px;
+  margin-bottom: 16px;
+  position: relative;
+}
+.pledge-success .nft--list li .desc .nft--name {
+  font-weight: 700;
+}
+.pledge-success .nft--list li .desc .nft--id {
+  color: #898989;
+}
+.pledge-success .nft--list li.pledging .img span {
+  position: absolute;
+  width: -moz-max-content;
+  width: max-content;
+  min-width: -moz-max-content;
+  min-width: max-content;
+  bottom: 8px;
+  left: 50%;
+  transform: translateX(-50%);
+  padding: 4px 12px;
+  border-radius: 8px;
+  background-color: rgba(126, 151, 240, 0.85);
+  color: #EFEFEF;
+  font-weight: 700;
+}
+.pledge-success .nft--list li.relieve .img span {
+  position: absolute;
+  padding: 4px 8px;
+  border-radius: 8px;
+  background-color: rgba(224, 128, 131, 0.85);
+  color: #EFEFEF;
+  font-size: 12px;
+  font-weight: 700;
+  bottom: 8px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+.pledge-success .btns {
+  margin-top: 66px;
+  display: flex;
+  gap: 16px;
+  font-size: 12px;
+  font-weight: 700;
+}
+.pledge-success .btns a {
+  flex: 1;
+  display: inline-block;
+  text-align: center;
+  line-height: 44px;
+  height: 44px;
+}
+
+.popUp p {
+  line-height: 1.8;
+  color: #BDBDBD;
+}
+.popUp p a {
+  color: #8AA3FF;
+  transition: color 0.5s;
+  font-weight: 700;
+  text-decoration: none;
+}
+.popUp p a:hover {
+  color: #718fff;
+}
+.popUp p .collapse {
+  display: inline-block;
+}
+.popUp p.collapse-content {
+  border-radius: 8px;
+  border: 1px solid transparent;
+  background-color: transparent;
+  padding: 0 12px;
+  overflow: hidden;
+  max-height: 0;
+  transition: all 0.3s ease;
+  margin: 0 !important;
+}
+.popUp p.collapse-content.open {
+  padding: 12px;
+  border-color: #898989;
+  background-color: #353535;
+  height: auto;
+  max-height: 100px;
+  margin-top: 8px !important;
+  margin-bottom: 28px !important;
+  overflow-y: scroll;
+}
+.popUp p.collapse-content.open::-webkit-scrollbar {
+  background-color: transparent;
+  width: 5px;
+}
+.popUp p.collapse-content.open::-webkit-scrollbar-thumb {
+  background-color: #898989;
+  border-radius: 5px;
+}
+.popUp label {
+  margin-top: 28px;
+  display: block;
+  text-align: left;
+}
+.popUp label span {
+  font-size: 14px;
+  color: #BDBDBD;
+}
+.popUp label + a.button {
+  margin-top: 12px !important;
+}
+
+@media screen and (max-width: 991px) {
+  .project .borderCard .project__info {
+    flex-wrap: wrap;
+  }
+  .project .borderCard .project__info__item {
+    flex: 50%;
+    display: flex;
+    gap: 12px;
+  }
+  .project .borderCard .project__info__item.title {
+    flex: 100%;
+    max-width: 100%;
+  }
+  .project .borderCard .project__info__item li {
+    flex: calc(50% - 6px);
+    min-width: calc(50% - 6px);
+  }
+  .project .borderCard .project__info__item:nth-child(3) {
+    padding-right: 0;
+  }
+  .project .borderCard .dDate {
+    margin-bottom: 0;
+  }
+  .project .borderCard .flex {
+    flex-wrap: wrap;
+    flex-direction: column-reverse;
+  }
+  .project .borderCard .flex .linkOut {
+    margin: 0;
+    width: 100%;
+  }
+  .project .borderCard .flex .enable {
+    top: 0;
+    right: 0;
+    width: 100%;
+    margin: 24px auto;
+  }
+  .project .borderCard .flex #submit,
+  .project .borderCard .flex #relieve,
+  .project .borderCard .flex #recieve {
+    width: 100%;
+    margin: 16px auto;
+    line-height: 44px;
+  }
+  .project .borderCard .flex #relieve {
+    margin-top: 0px;
+    margin-bottom: 20px;
+  }
+  .project .borderCard .flex #recieve {
+    margin-top: 20px;
+    margin-bottom: 12px;
+  }
+}
+@media screen and (max-width: 767px) {
+  .dashboard ul {
+    flex-wrap: wrap;
+  }
+  .dashboard ul li {
+    flex: calc(50% - 12px);
+  }
+  .project .borderCard {
+    padding: 20px;
+  }
+  .project .borderCard .project__info {
+    flex-wrap: wrap;
+  }
+  .project .borderCard .project__info__item {
+    flex: 100%;
+  }
+  .project .borderCard .project__info__item li {
+    margin-bottom: 12px;
+  }
+  .project .borderCard .flex .linkOut {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  .project .borderCard .flex .linkOut li {
+    flex: calc(50% - 6px);
+    margin-right: 0;
+    margin-bottom: 6px;
+  }
+}
+@media screen and (max-width: 515px) {
+  .project .borderCard .project__info {
+    margin-bottom: 0;
+  }
+  .project .borderCard .dDate {
+    margin: 4px 0;
+  }
+  .choose ul {
+    -webkit-tap-highlight-color: transparent;
+  }
+  .choose ul li {
+    flex: calc(50% - 8px);
+    max-width: calc(50% - 8px);
+  }
+  .choose ul li .desc .nft--name {
+    font-size: 14px;
+  }
+  .choose ul:focus {
+    outline: none;
+  }
+  .choose--done {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    background-color: #1F1F1F;
+    border-top: 1px solid #353535;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+    border-bottom: none;
+    text-align: center;
+    padding: 16px 20px;
+    z-index: 50;
+  }
+  .choose--done .button {
+    max-width: calc(100vw - 60px);
+  }
+  .pledge-success {
+    width: 90vw;
+  }
+  .pledge-success .nft--list {
+    width: 100%;
+  }
+  .pledge-success .nft--list li {
+    overflow: hidden;
+    flex: calc((100% - 15px) / 2);
+    max-width: calc((100% - 15px) / 2);
+  }
+  .pledge-success .btns {
+    flex-direction: column-reverse;
+    font-size: 14px;
+  }
+  .pledge-success .btns a {
+    flex: 100%;
+  }
+}
+@media screen and (max-width: 340px) {
+  .project .borderCard .project__info__item {
+    flex-wrap: wrap;
+  }
+  .project .borderCard .project__info__item li {
+    flex: 100%;
+    margin-bottom: 12px;
+  }
+  .project .borderCard .flex .linkOut li {
+    flex: 100%;
+  }
+}

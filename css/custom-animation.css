@@ -1,0 +1,60 @@
+.-ty-3:hover {
+  transform: translateY(-3px);
+  transition: all 0.3s;
+}
+
+.-ty-8:hover {
+  transform: translateY(-8px) !important;
+  transition: all 0.3s;
+}
+
+.bg-from-e63eb6-to-749ff5:hover {
+  background-image: linear-gradient(90deg, rgb(207, 54, 163), rgb(101, 138, 214));
+  transition: all 0.3s;
+}
+
+.border-linear-gradient-121212-e63eb6-749ff5:hover {
+  content: "";
+  display: block;
+  border-radius: 9999px;
+  background-image: linear-gradient(to right, #e63eB6, #749ff5);
+  background-color: #1F1F1F;
+}
+
+.bg-7e97f0:hover {
+  background-color: #7087D8;
+}
+
+.border-color-7e97f0 {
+  background-color: #1F1F1F;
+}
+
+.language-menu li:hover {
+  margin: 0 10px;
+}
+
+.language-menu li:hover a {
+  background-color: #353535;
+  border-radius: 4px;
+}
+
+.scroll-style button:hover {
+  background-color: #353535;
+  border-radius: 4px;
+}
+
+.filter-menu button:hover {
+  background-color: #353535;
+  border-radius: 4px;
+}
+
+.invoice-sub-select li:hover,
+.invoice-sub-select2 li:hover {
+  background-color: #353535;
+}
+
+.footer-small:hover {
+  color: #7e97f0;
+}
+
+/*  */

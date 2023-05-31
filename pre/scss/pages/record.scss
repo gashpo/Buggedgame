@@ -1,0 +1,698 @@
+@import "../variable";
+@import "../mixin";
+
+.record {
+    margin-bottom: 64px;
+
+    h2 {
+        margin-bottom: 32px;
+    }
+
+    .record-tab {
+        display: flex;
+        gap: 24px;
+        border-bottom: 1px solid $dark;
+
+        li {
+            border-bottom: 3px solid transparent;
+            font-size: calc($fontSize * 1.2);
+            font-weight: $UltraBold;
+
+            a {
+                display: inline-block;
+                padding: 12px 16px;
+                @include a-color($grey);
+                transition: all .5s;
+            }
+
+            &.active {
+                border-color: $primaryC;
+            }
+
+            &.active,
+            &:hover {
+                a {
+                    color: $lightGrey;
+                }
+            }
+        }
+    }
+
+    .no-record {
+        width: 190px;
+        margin: 100px auto 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+
+        .title {
+            font-weight: $UltraBold;
+            margin-bottom: 4px;
+        }
+
+        .desc {
+            font-size: calc($fontSize * 1.2);
+            color: $grey;
+        }
+
+        button {
+            width: 135px;
+            padding: 12px;
+            color: $lightGrey;
+            font-size: calc($fontSize * 1.2);
+            font-weight: $UltraBold;
+            margin-top: 28px;
+        }
+    }
+
+    .record-content {
+        .filter {
+            display: flex;
+            justify-content: flex-end;
+            align-items: center;
+            gap: 28px;
+            color: $lighter;
+            font-size: calc($fontSize * 1.2);
+            margin: 16px 0;
+
+            .days,
+            .pages {
+                position: relative;
+
+                button {
+                    font-size: calc($fontSize * 1.4);
+                    font-weight: $UltraBold;
+                    color: $primaryC;
+                    padding: 8px;
+                    margin-left: 12px;
+                    cursor: pointer;
+                    transition: all .5s;
+
+                    img {
+                        display: inline-block;
+                        margin-left: 12px;
+                        transition: all .5s;
+                    }
+
+                    &:hover {
+                        filter: brightness(80%);
+                    }
+                }
+
+                .items {
+                    position: absolute;
+                    border: 1px solid transparent;
+                    border-radius: 12px;
+                    padding: 0 8px;
+                    width: 144px;
+                    right: 0;
+                    transition: all .5s;
+
+                    ul {
+                        overflow: hidden;
+                        max-height: 0;
+                        text-align: center;
+                        font-size: calc($fontSize * 1.4);
+                        font-weight: $UltraBold;
+                        color: $lightGrey;
+                        transition: all .3s;
+
+                        li {
+                            cursor: pointer;
+                            padding: 8px;
+                            border-radius: 4px;
+
+                            &:hover {
+                                background-color: $dark;
+                            }
+                        }
+                    }
+                }
+
+                &.active {
+                    button {
+                        img {
+                            transform: rotate(180deg);
+                        }
+                    }
+
+                    .items {
+                        border: 1px solid $dark;
+                        background-color: $frameBg;
+                        padding: 8px;
+                        z-index: 100;
+
+                        ul {
+                            max-height: 13em;
+
+                            &::-webkit-scrollbar {
+                                width: 2px;
+                                border-radius: 2px;
+                            }
+
+                            &::-webkit-scrollbar-track {
+                                background-color: $dark;
+                                border-radius: 2px;
+                            }
+
+                            &::-webkit-scrollbar-thumb {
+                                background-color: $lighter;
+                                border-radius: 2px;
+                            }
+                        }
+                    }
+                }
+            }
+
+            .pages {
+                &.active {
+                    .items {
+                        ul {
+                            overflow-y: auto;
+                        }
+                    }
+                }
+            }
+
+            .status {
+                display: none;
+
+                img {
+                    display: inline-block;
+                    margin-left: 4px;
+                    transition: all .5s;
+                    transform: translateY(-1px);
+
+                    &:hover {
+                        filter: brightness(130%);
+                    }
+                }
+            }
+        }
+
+        table {
+            width: 100%;
+            display: none;
+
+            &.active {
+                display: table;
+            }
+
+            thead {
+                margin-bottom: 16px;
+
+                tr {
+                    th {
+                        text-align: left;
+                        padding: 8px;
+                        background-color: $frameBg;
+                        color: $lighter;
+                        font-size: calc($fontSize * 1.4);
+                        font-weight: $Regular;
+
+                        &:first-child {
+                            border-top-left-radius: 12px;
+                            border-bottom-left-radius: 12px;
+                            padding-left: 24px;
+                        }
+
+                        &:last-child {
+                            border-top-right-radius: 12px;
+                            border-bottom-right-radius: 12px;
+                        }
+
+                        img {
+                            display: inline-block;
+                            margin-left: 4px;
+                            transform: translateY(-1px);
+                            transition: all .5s;
+
+                            &:hover {
+                                filter: brightness(120%);
+                            }
+                        }
+                    }
+                }
+            }
+
+            tbody {
+                tr {
+                    &.win {
+                        td {
+
+                            &.title-name,
+                            &.title-price,
+                            &.title-total {
+                                color: $gamefiPass;
+                            }
+                        }
+                    }
+
+                    td {
+                        height: 52px;
+                        color: $lightGrey;
+                        font-size: calc($fontSize * 1.4);
+                        font-weight: $Regular;
+                        padding: 16px 8px;
+
+                        img {
+                            display: inline-block;
+                            width: 20px;
+                            margin-right: 6px;
+                            transform: translateY(-2px);
+                        }
+
+                        a {
+                            color: $lighter;
+                            text-decoration: underline;
+
+                            &:hover {
+                                color: $grey;
+                            }
+                        }
+
+                        .currency {
+                            display: inline-block;
+                            font-size: calc($fontSize * 1.4);
+                        }
+
+                        &.title- {
+
+                            &price,
+                            &price-plus,
+                            &fee,
+                            &total,
+                            &benefit {
+                                min-width: 120px;
+                                word-break: break-all;
+                            }
+
+                            &time {
+                                min-width: 120px;
+                                max-width: 172px;
+                            }
+
+                            &trackno {
+                                width: 216px;
+                                min-width: 216px;
+                                word-break: break-all;
+
+                                a {
+                                    text-decoration: none;
+                                    @include a-color($grey);
+                                    transition: color .3s ease;
+
+                                    img {
+                                        width: 16px;
+                                    }
+                                }
+                            }
+
+                            &name {
+                                width: 100%;
+                                min-width: 136px;
+                            }
+
+                            &number {
+                                width: 48px;
+                                min-width: 48px;
+                            }
+
+                            &fee {
+                                width: 86px;
+                                min-width: 86px;
+                            }
+
+                            &status {
+                                width: 98px;
+                                min-width: 98px;
+
+                                span {
+                                    display: flex;
+                                    gap: 0 8px;
+                                }
+
+                                a {
+                                    word-break: keep-all;
+                                    padding-left: 12px;
+                                }
+                            }
+                        }
+
+                        &:first-child {
+                            padding-left: 24px;
+                        }
+                    }
+
+                    &:first-child {
+                        td {
+                            padding-top: 32px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+#win--popUp,
+#fail--popUp {
+    .popUp--content {
+        img {
+            border-radius: 8px;
+            width: 320px;
+            max-width: 100%;
+            margin: 0 auto;
+        }
+    }
+
+    .button {
+        display: block;
+        width: 100%;
+        height: 44px;
+        line-height: 44px;
+        margin-top: 28px;
+    }
+}
+
+.win_ribbon {
+    canvas {
+        height: 100vh;
+        pointer-events: none;
+        position: fixed;
+        width: 100%;
+        z-index: 2;
+    }
+
+    .btn-win {
+        display: none;
+    }
+}
+
+.fail_ribbon {
+    position: relative;
+    min-height: 100vh;
+    max-width: 500px;
+    margin: auto;
+    transform: translateX(-8%);
+
+    [class|="confetti"] {
+        position: absolute;
+    }
+
+    $colors: (
+        $dark,
+        $grey,
+        $lighter
+    );
+
+@for $i from 0 through 100 {
+    $w: random(8);
+    $l: random(100);
+
+    .confetti-#{$i} {
+        width: #{$w}px;
+        height: #{$w*0.4}px;
+        background-color: nth($colors, random(3));
+        top: -10%;
+        left: unquote($l+"%");
+        opacity: random() + 0.5;
+        transform: rotate(#{random()*360}deg);
+        animation: drop-#{$i} unquote(4+random()+"s") unquote(random()+"s");
+    }
+
+    @keyframes drop-#{$i} {
+        100% {
+            top: 110%;
+            left: unquote($l+random(15)+"%");
+            opacity: 0;
+        }
+    }
+}
+}
+
+
+@media screen and (max-width: 959px) {
+    .record {
+        .record-content {
+            table {
+                tbody {
+                    tr {
+                        td {
+                            &.title- {
+                                &trackno {
+                                    min-width: 84px;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+//max-width: 959px
+
+
+@media screen and (max-width: 767px) {
+    .record {
+        .record-content {
+            .filter {
+                .status {
+                    display: inline;
+                }
+            }
+
+            table {
+                thead {
+                    display: none;
+                }
+
+                tbody {
+                    tr {
+                        background-color: $frameBg;
+                        margin: 0 -20px 12px;
+                        padding: 12px 18px;
+                        display: flex;
+                        flex-wrap: wrap;
+                        gap: 0;
+
+                        &.win {
+                            td {
+
+                                &.title-name,
+                                &.title-price,
+                                &.title-total {
+                                    &:before {
+                                        color: $lighter;
+                                    }
+                                }
+                            }
+                        }
+
+                        td {
+                            align-items: center;
+                            height: auto;
+                            padding: 4px 0;
+
+                            .currency {
+                                font-weight: $UltraBold;
+                            }
+
+                            &.title- {
+
+                                &time,
+                                &trackno {
+                                    flex: calc(50% - 28px);
+                                    border-bottom: 1px solid $dark;
+                                    padding-bottom: 4px;
+                                    color: $grey;
+                                    padding-top: 0 !important;
+                                }
+
+                                &trackno {
+                                    text-align: right;
+                                    width: max-content;
+                                    min-width: auto;
+                                    word-break: keep-all;
+                                }
+
+                                &name {
+                                    flex: 6;
+                                    flex-shrink: 1;
+                                    min-width: 30%;
+                                    font-size: calc($fontSize * 1.6);
+                                    font-weight: $UltraBold;
+                                    margin: 12px 0;
+                                }
+
+                                &price,
+                                &price-plus,
+                                &number,
+                                &fee,
+                                &total,
+                                &benefit {
+                                    order: 2;
+                                    flex: 100%;
+                                    padding: 4px 12px 4px 4em;
+                                    text-align: right;
+                                    color: $lighter;
+                                    position: relative;
+                                    font-weight: $UltraBold;
+                                    margin: 2px 0;
+
+                                    &:before {
+                                        position: absolute;
+                                        left: 12px;
+                                        font-weight: $Regular;
+                                    }
+                                }
+
+                                &price-plus {
+                                    padding: 4px 12px 4px 6.5em;
+                                }
+
+                                &price,
+                                &price-plus,
+                                &total {
+                                    background-color: $dark;
+                                    border-radius: 8px;
+                                }
+
+                                &price {
+                                    &:before {
+                                        content: '單價';
+                                    }
+                                }
+
+                                &price-plus {
+                                    &:before {
+                                        content: '單價 (加乘)';
+                                    }
+                                }
+
+                                &number {
+                                    &:before {
+                                        content: '數量';
+                                    }
+                                }
+
+                                &fee {
+                                    &:before {
+                                        content: '手續費';
+                                    }
+                                }
+
+                                &total {
+                                    &:before {
+                                        content: '總價';
+                                    }
+                                }
+
+                                &status {
+                                    flex: 1;
+                                    flex-shrink: 0;
+                                    width: max-content;
+                                    min-width: auto;
+                                    text-align: right;
+                                    margin: 12px 0;
+                                    padding-left: 20px;
+                                    align-self: flex-start;
+
+                                    span {
+                                        word-break: keep-all;
+                                        justify-content: flex-end;
+                                    }
+
+                                    a {
+                                        padding-left: 0;
+                                    }
+                                }
+                            }
+
+                            &:first-child {
+                                padding-left: 0;
+                            }
+                        }
+
+                        &:first-child {
+                            td {
+                                padding-top: 4px;
+                            }
+                        }
+                    }
+                }
+
+                &#content-table-3 {
+                    tbody {
+                        tr {
+                            td {
+                                &.title- {
+                                    &fee {
+                                        background-color: $dark;
+                                        border-radius: 8px;
+                                    }
+
+                                    &benefit {
+                                        &:before {
+                                            content: '收益';
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+// max-width: 767px
+
+@media screen and (max-width: 515px) {
+    .record {
+        h2 {
+            padding-top: 12px;
+            margin-bottom: 20px;
+        }
+
+        .record-tab {
+            gap: 12px;
+
+            li {
+                font-size: calc($fontSize * 1.4);
+            }
+        }
+
+        .record-content {
+            .filter {
+                justify-content: flex-start;
+                font-size: calc($fontSize * 1.4);
+
+                .days,
+                .pages {
+                    button {
+                        margin-left: 8px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+// mobile
+
+@media screen and (max-width: 400px) {
+    .record {
+        .record-content {
+            .filter {
+                gap: 12px;
+            }
+        }
+    }
+}
+
+// mini mobile

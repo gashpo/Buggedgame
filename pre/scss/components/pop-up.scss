@@ -1,0 +1,738 @@
+@import "../variable";
+@import "../mixin";
+
+.popUp {
+    display: none;
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-color: rgba($darkBg, .88);
+    z-index: 100;
+
+    .popUp--container {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translateX(-50%) translateY(-50%);
+        background-color: $frameBg;
+        color: $lighter;
+        border-radius: 24px;
+        border: 1px solid $dark;
+        padding: 40px;
+        width: 510px;
+        max-height: calc(80vh);
+
+        .popUp--close {
+            position: absolute;
+            top: 40px;
+            right: 40px;
+            background-color: rgba($grey, .3);
+            height: 36px;
+            width: 36px;
+            border-radius: 20px;
+            text-align: center;
+            transition: all .15s ease;
+
+            img {
+                width: 100%;
+            }
+
+            &:hover {
+                background-color: rgba($grey, .4);
+            }
+        }
+
+        h2 {
+            color: $lightGrey;
+            margin-bottom: 28px;
+            padding: 0 40px;
+            text-align: center;
+        }
+
+        .popUp--content {
+            overflow-y: auto;
+            margin-right: -24px;
+            padding-right: 24px;
+            max-height: calc(80vh - 144px);
+            min-height: max-content;
+
+            p {
+                margin-bottom: 16px;
+            }
+
+            ul {
+                font-size: calc($fontSize * 1.4);
+                color: $lighter;
+                margin-bottom: 8px;
+
+                li {
+                    margin-bottom: 8px;
+                }
+
+                a {
+                    font-weight: $UltraBold;
+                    color: $primaryC;
+                }
+            }
+
+            &::-webkit-scrollbar {
+                border-radius: 2px;
+                background-color: $grey;
+                width: 2px;
+            }
+
+            &::-webkit-scrollbar-thumb {
+                border-radius: 2px;
+                background-color: $lighter;
+                border-radius: 2px;
+            }
+        }
+
+        .popUp--submit {
+            position: relative;
+            display: inline-block;
+            height: 44px;
+            width: 100%;
+            margin-top: 28px;
+            border-radius: 22px;
+            text-shadow: 0 0 12px rgba(black, .4);
+            font-weight: $UltraBold;
+            line-height: 44px;
+            background: $gradient;
+            color: $lightGrey;
+
+            .count {
+                position: absolute;
+                right: 20px;
+                top: 50%;
+                transform: translateY(-50%);
+                color: $white;
+                line-height: 1em;
+            }
+
+            &[disabled] {
+                .count {
+                    color: $primaryC;
+                }
+            }
+
+            &:hover {
+                background: $gradient-hover;
+            }
+        }
+    }
+
+    &.active {
+        display: block;
+    }
+
+    &__button {
+        .popUp--container {
+            .popUp--content {
+                max-height: calc(80vh - 216px);
+            }
+        }
+    }
+
+    &__check {
+        .popUp--container {
+            .popUp--content {
+                max-height: calc(80vh - 252px);
+            }
+        }
+    }
+}
+
+#download--popUp {
+    .popUp--container {
+        max-height: 90vh;
+
+        .mobile {
+            display: none;
+        }
+
+        .desc {
+            text-align: center;
+
+            p {
+                font-size: calc($fontSize * 1.4);
+            }
+
+            img {
+                margin: 16px auto 0;
+                border-radius: 8px;
+                width: 320px;
+                max-width: 100%;
+            }
+        }
+
+        .download-show {
+            display: none;
+            gap: 36px;
+            margin-top: 20px;
+
+            .qrc {
+                flex: 120px;
+                max-width: 120px;
+                align-self: center;
+                border-radius: 8px;
+                overflow: hidden;
+            }
+
+            .btns {
+                flex: 1;
+                display: flex;
+                flex-wrap: wrap;
+                align-items: center;
+                justify-content: center;
+                gap: 12px;
+
+                button {
+                    flex: 100%;
+                    height: 44px;
+                    background-color: $primaryC;
+                    transition: all .5s;
+                    font-size: calc($fontSize * 1.4);
+                    font-weight: $UltraBold;
+                    color: $lightGrey;
+
+                    &:hover {
+                        background-color: #7087D8;
+                    }
+                }
+            }
+        }
+    }
+}
+
+#passlevel--popUp {
+    .popUp--container {
+        line-height: 1.6;
+
+        .popUp--content {
+            p {
+                margin-bottom: 8px;
+            }
+
+            img {
+                margin: 20px 0 12px;
+                max-height: 32px;
+            }
+        }
+    }
+
+    ul {
+        list-style: disc;
+        padding-left: 1.5em;
+
+        li {
+            text-align: left;
+        }
+    }
+}
+
+#gamepass--popUp {
+    .content {
+        color: $lighter;
+
+        >* {
+            margin-bottom: 28px;
+        }
+    }
+
+    p {
+        text-align: left;
+    }
+
+    ul {
+        list-style-type: disc;
+        padding-left: 2em;
+        font-size: calc($fontSize * 1.6);
+        line-height: 1.6em;
+
+        li {
+            text-align: left;
+        }
+    }
+
+    .mission {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 14px 20px 28px 20px;
+        flex-wrap: wrap;
+        font-size: calc($fontSize * 1.2);
+
+        p {
+            display: inline-block;
+            text-align: left;
+            flex: 5em;
+            max-width: 5em;
+        }
+
+        .bar {
+            flex: calc(100% - 6em);
+            height: 8px;
+            border-radius: 4px;
+            background-color: $dark;
+            position: relative;
+
+            .progress {
+                position: absolute;
+                left: 0;
+                height: 8px;
+
+                &:before {
+                    position: absolute;
+                    top: -24px;
+                    right: 0;
+                    transform: translateX(50%);
+                }
+
+                &:after {
+                    content: '';
+                    position: absolute;
+                    top: -2px;
+                    right: -2px;
+                    width: 12px;
+                    height: 12px;
+                    border-radius: 6px;
+                }
+
+                &-100 {
+                    width: 100%;
+                    background-color: $success;
+
+                    &:before {
+                        content: '100';
+                        color: $success;
+                        transform: translateX(30%);
+                    }
+
+                    &:after {
+                        background-color: $success;
+                    }
+                }
+
+                &-51 {
+                    width: 75%;
+                    background-color: $neutral;
+
+                    &:before {
+                        content: '51';
+                        color: $neutral;
+                    }
+
+                    &:after {
+                        background-color: $neutral;
+                    }
+                }
+
+                &-11 {
+                    width: 25%;
+                    background-color: $error;
+
+                    &:before {
+                        content: '11';
+                        color: $error;
+                    }
+
+                    &:after {
+                        background-color: $error;
+                    }
+                }
+
+                &-0 {
+                    width: 0;
+
+                    &:before {
+                        content: '0';
+                        color: $grey;
+                    }
+
+                    &:after {
+                        background-color: $dark;
+                    }
+                }
+            }
+
+            &.longterm {
+                .progress {
+                    &:before {
+                        content: '';
+                    }
+                }
+            }
+        }
+
+        .earn {
+            flex: calc(100% - 5em);
+            margin-left: 5em;
+            position: relative;
+
+            &-100,
+            &-51,
+            &-11 {
+                font-size: calc($fontSize * 1.2);
+                position: absolute;
+                transform: translateX(-50%);
+            }
+
+            &-100 {
+                color: $success;
+                left: 87%;
+            }
+
+            &-51 {
+                color: $neutral;
+                left: 50%;
+            }
+
+            &-11 {
+                color: $error;
+                left: 16%;
+            }
+
+            &.longterm {
+                .earn-100 {
+                    left: 55%;
+                }
+
+                .earn-11 {
+                    color: $success;
+                    left: 6%;
+                }
+            }
+        }
+
+        &:last-child {
+            padding-top: 0;
+        }
+    }
+}
+
+#repair--popUp {
+    .popUp--container {
+        max-height: max-content;
+    }
+
+    .repair {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: space-between;
+        margin-bottom: 28px;
+
+        #level {
+            flex: 50%;
+            text-align: left;
+            font-size: calc($fontSize * 1.4);
+            color: $lighter;
+
+            span {
+                font-weight: $UltraBold;
+                font-size: calc($fontSize * 1.4);
+            }
+        }
+
+        #reset {
+            flex: 50%;
+            display: flex;
+            justify-content: flex-end;
+            align-items: center;
+            gap: 4px;
+            color: $lighter;
+            transition: all .15s ease;
+
+            &:hover {
+                filter: brightness(110%);
+            }
+        }
+
+        .bar {
+            flex: 100%;
+            width: 100%;
+            height: 10px;
+            border-radius: 10px;
+            background-color: $dark;
+            margin: 6px 0;
+            position: relative;
+
+            #bar--new,
+            #bar--origin {
+                position: absolute;
+                top: 0;
+                left: 0;
+                height: 10px;
+                border-radius: 10px;
+            }
+
+            #bar--new {
+                background-color: $success;
+                max-width: 100%;
+                transition: all .1s ease;
+            }
+
+            #bar--origin {
+                background-color: $neutral;
+            }
+        }
+
+        .btns {
+            flex: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 16px;
+            text-align: center;
+            margin-top: 8px;
+
+            button {
+                flex: 1;
+                height: 38px;
+                border-radius: 20px;
+                border: 1px solid $lightGrey;
+                font-weight: $UltraBold;
+                color: $lightGrey;
+                font-size: calc($fontSize * 1.4);
+                transition: all .15s ease;
+
+                &:hover {
+                    background-color: $lightGrey;
+                    color: $dark;
+                }
+            }
+        }
+    }
+
+    .desc {
+        background-color: $dark;
+        border-radius: 16px;
+        padding: 16px 20px;
+        color: $lightGrey;
+        font-size: calc($fontSize * 1.4);
+        text-align: left;
+        margin-bottom: 8px;
+
+        .color {
+            font-weight: $UltraBold;
+            font-size: calc($fontSize * 1.4);
+
+            #cost-bug {
+                font-weight: $UltraBold;
+                font-size: calc($fontSize * 1.4);
+            }
+        }
+    }
+
+    #warning {
+        display: none;
+        text-align: left;
+        width: 100%;
+        color: $warning;
+        font-size: calc($fontSize * 1.4);
+        margin-bottom: 8px;
+    }
+
+    #repair--submit {
+        display: inline-block;
+        margin: 8px 0;
+        width: 100%;
+        height: 44px;
+        line-height: 44px;
+        font-size: calc($fontSize * 1.4);
+        font-weight: $UltraBold;
+    }
+}
+
+#deposit--popUp {
+    .popUp--container {
+        p {
+            color: $lighter;
+            margin-bottom: 12px;
+        }
+
+        .input-group {
+            position: relative;
+
+            &:after {
+                content: 'BUG';
+                position: absolute;
+                top: 10px;
+                right: 24px;
+                color: $white;
+                font-weight: $UltraBold;
+            }
+
+            input {
+                width: 100%;
+                font-size: calc($fontSize * 1.6);
+                margin-bottom: 4px;
+                background-color: transparent;
+            }
+        }
+    }
+}
+
+#nftinfo--popUp {
+    .popUp--container {
+        .desc {
+            text-align: center;
+            margin-bottom: 28px;
+
+            img {
+                display: inline;
+                max-height: 400px;
+            }
+        }
+
+        ul {
+            list-style: disc;
+            padding-left: 1.5em;
+            line-height: auto;
+            position: relative;
+
+            li {
+                text-align: left;
+
+                a {
+                    display: inline-flex;
+                    align-items: center;
+                    gap: 4px;
+                    color: $lighter;
+                }
+            }
+
+            // 配合Iven把複製工能區塊拉出<li>外
+            // li {
+            //     text-align: left;
+
+            //     &:nth-child(2) {
+            //         display: inline-block;
+            //         margin-top: -21px;
+
+            //         &:before {
+            //             content: '';
+            //             display: list-item;
+            //             transform: translateY(21px);
+            //         }
+            //     }
+            // }
+
+            // a {
+            //     display: inline-flex;
+            //     align-items: center;
+            //     gap: 4px;
+            //     color: $lighter;
+            // }
+        }
+    }
+}
+
+#nftdetail--popUp {
+    .popUp--container {
+        .desc {
+            img {
+                margin: 0 auto;
+                border-radius: 8px;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 515px) {
+    .popUp {
+        .popUp--container {
+            width: calc(100vw - 40px);
+            padding: 28px;
+
+            .popUp--close {
+                top: 20px;
+                right: 20px;
+            }
+
+            .popUp--content {
+                margin-right: -16px;
+                padding-right: 16px;
+                max-height: calc(80vh - 110px);
+            }
+        }
+
+        &__button {
+            .popUp--container {
+                .popUp--content {
+                    max-height: calc(80vh - 184px);
+                }
+            }
+        }
+
+        &__check {
+            .popUp--container {
+                .popUp--content {
+                    max-height: calc(80vh - 216px);
+                }
+            }
+        }
+    }
+
+    #download--popUp {
+        .popUp--container {
+            min-width: auto;
+
+            .web {
+                display: none;
+            }
+
+            .mobile {
+                display: inline;
+            }
+        }
+    }
+
+    #gamepass--popUp {
+        .mission {
+            padding: 0;
+            margin-bottom: 56px;
+
+            .bar {
+                flex: 100%;
+                margin: 32px 20px 4px 20px;
+
+                &.longterm {
+                    margin-top: 16px;
+                }
+            }
+
+            .earn {
+                flex: 100%;
+                margin-left: 0;
+
+                &-100 {
+                    left: 82%;
+                }
+            }
+        }
+    }
+
+    #repair--popUp {
+        .popUp--container {
+            min-width: auto;
+        }
+
+        .repair {
+            #reset {
+                font-size: calc($fontSize * 1.4);
+            }
+        }
+
+        .desc {
+            #own-bug {
+                font-size: calc($fontSize * 1.4);
+            }
+        }
+    }
+}
+
+// mobile

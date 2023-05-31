@@ -1,0 +1,1183 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="format-detection" content="telephone=no">
+    <title>遊戲完蛋了</title>
+    <link rel="shortcut icon" href="images/icon/favicon.ico" type="images/icon/favicon.ico" />
+
+    <!-- share info -->
+    <meta property="og:url" content="https://buggedgame.io/" />
+    <meta property="og:locale" content="zh-Hant" />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="遊戲完蛋了! The Game is Bugged!" />
+    <meta property="og:description" content="樂玩享賺！ Play for Fun & Earn!" />
+    <meta property="og:image" content="https://g-jiuyang.github.io/buggedgame/images/og-img.png" />
+    <meta property="og:image:type" content="image/png" />
+    <meta property="og:image:width" content="1400" />
+    <meta property="og:image:height" content="770" />
+
+    <!-- tailwind css -->
+    <link rel="stylesheet" href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css">
+
+    <!-- Custom styles -->
+    <link rel="stylesheet" href="css/custom-style.css">
+    <link rel="stylesheet" href="css/custom-animation.css">
+    <link rel="stylesheet" href="css/global.css">
+    <link rel="stylesheet" href="css/record.css">
+    <link rel="stylesheet" href="css/toast.css">
+    <link rel="stylesheet" href="css/pop-up.css">
+
+    <!-- jQuery -->
+    <script src="js/jquery-3.4.1.min.js"></script>
+
+    <!-- tailwind js -->
+    <!-- <script src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.3.5/dist/alpine.min.js" defer></script> -->
+
+    <!-- <script src="js/lottery.js"></script> -->
+    <script src="js/cookie.js"></script>
+    <script src="js/step.js"></script>
+    <script src="js/tabs.js"></script>
+    <script src="js/switch.js"></script>
+    <script src="js/dropdown.js"></script>
+    <script src="js/mobile-menu.js"></script>
+    <script src="js/mobile-wallet.js"></script>
+    <script src="js/wallet-text-change.js"></script>
+    <script src="js/faq.js"></script>
+    <script src="js/table-show.js"></script>
+    <script src="js/nav-blur.js"></script>
+    <script src="js/popup.js"></script>
+</head>
+
+<body class="font-sans overflow-x-hidden bg-121212" onload="winRibbon();">
+    <!-- 麻煩Ken大大 中獎的時候幫我 onload="winRibbon();" -->
+
+    <!-- header -->
+    <div class="min-h-full">
+        <!-- 20220620 -->
+        <nav id="navH" class="bg-opacity-0 w-full fixed top-0 z-10">
+            <div class="max-w-7xl mx-auto px-5 sm:px-6 lg:px-8">
+                <div class="flex items-center h-20">
+                    <div class="flex items-center justify-between w-full">
+                        <!-- 20220628 20220629-->
+                        <div class="w-24 lg:w-32 flex-shrink-0 lg:w-auto">
+                            <a href="index.html">
+                                <img src="images/product/logo.png">
+                            </a>
+                        </div>
+                        <!-- pc and mobile menu -->
+                        <div class="flex items-center">
+                            <ul class="items-center text-base text-white font-bold hidden lg:flex">
+                                <!-- pc -->
+                                <li class="-ty-3">
+                                    <a href="shop.html" class="block px-5">商城</a>
+                                </li>
+                                <li class="-ty-3">
+                                    <a href="##" class="block px-5">白皮書</a>
+                                </li>
+                                <li class="-ty-3">
+                                    <a href="pledge.html" class="block px-5">質押</a>
+                                </li>
+                                <li class="-ty-3">
+                                    <a href="##" class="block px-5">DEX</a>
+                                </li>
+                                <li class="relative font-bold">
+                                    <a href="##" class="px-5 flex items-center space-x-1 btn-language">
+                                        <img src="images/icon/icon-language.svg">
+                                        <span class="text-sm">繁體中文</span>
+                                        <img src="images/icon/icon-arrow-bottom.svg" class="icon-arrow-bottom">
+                                    </a>
+                                    <ul
+                                        class="hidden w-40 py-6 text-center font-bold mt-3 border border-solid text-sm absolute top-9 left-1/2 transform -translate-x-1/2 rounded-xl bg-1f1f1f border-color-353535 color-898989 language-menu">
+                                        <li>
+                                            <a href="##" class="block p-2 text-white">繁體中文</a>
+                                        </li>
+                                        <li>
+                                            <a href="##" class="block p-2 text-white">简体中文</a>
+                                        </li>
+                                        <li>
+                                            <a href="##" class="block p-2 text-white">English</a>
+                                        </li>
+                                        <li>
+                                            <a href="##" class="block p-2 text-white">한국어</a>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li class="hidden mr-10 relative font-normal coin-box">
+                                    <span class="flex space-x-2">
+                                        <span><img src="images/icon/icon-coin.svg"></span>
+                                        <span class="coin">300,000.00</span>
+                                    </span>
+                                    <div
+                                        class="hidden absolute left-1/2 top-9 transform -translate-x-1/2 z-20 coin-info">
+                                        <div class="relative left-1/2 top-px transform -translate-x-1/2 z-30 triangle">
+                                        </div>
+                                        <div
+                                            class="w-56 px-6 py-5 text-sm font-normal rounded-xl absolute left-1/2 transform -translate-x-1/2 z-20 bg-1f1f1f border border-solid border-color-353535">
+                                            唉呀~您已少賺了6,666顆蛋幣，趕快來 Play and Earn! <a href="shop.html"
+                                                class="font-bold color-7e97f0">我想賺幣！</a></div>
+                                    </div>
+                                </li>
+                            </ul>
+                            <ul class="flex items-center sm:flex lg:hidden">
+                                <!-- mobile -->
+                                <!-- 20220621 -->
+                                <li class="flex justify-center items-center w-10 h-10 mx-1 block">
+                                    <a href="##" class="block w-full" target="_blank">
+                                        <img src="images/icon/icon-discord.svg" class="w-full">
+                                    </a>
+                                </li>
+                                <li class="flex justify-center items-center w-10 h-10 mx-1 btn-hamburger">
+                                    <a href="##" class="block w-full">
+                                        <img src="images/icon/icon-menu.svg" class="w-full">
+                                    </a>
+                                </li>
+                                <li class="flex justify-center items-center w-11 h-11 mx-1 mr-0 hidden">
+                                    <a href="##" class="w-full">
+                                        <img src="images/icon/personal.svg" class="w-full">
+                                    </a>
+                                </li>
+                            </ul>
+                            <!-- pc btn wallet -->
+                            <div class="relative">
+                                <a href="##" id="btn-change"
+                                    class="hidden text-sm rounded-full py-3 px-6 text-white font-bold whitespace-nowrap bg-from-e63eb6-to-749ff5 btn-wallet sm:block lg:text-xs">連接錢包</a>
+                                <ul
+                                    class="hidden w-40 py-6 text-center mt-3 border border-solid absolute top-11 left-1/2 transform -translate-x-1/2 rounded-xl text-sm font-bold color-898989 hover:color-white bg-1f1f1f border-color-353535 panel-wallet">
+                                    <li class="">
+                                        <a href="personal.html" onclick="textChange1()"
+                                            class="block p-2 text-white whitespace-nowrap">個人資產</a>
+                                    </li>
+                                    <li class="">
+                                        <a href="record.html" class="block p-2 text-white whitespace-nowrap">歷史紀錄</a>
+                                    </li>
+                                    <li class="">
+                                        <a href="##" onclick="textChange2()"
+                                            class="block p-2 hover:text-white whitespace-nowrap">登出</a>
+                                    </li>
+                                </ul>
+                            </div>
+                            <!-- mobile btn wallet -->
+                            <div>
+                                <a href="javascript:void(0)"
+                                    class="mr-0 text-sm font-bold rounded-full py-3 px-5 mx-1 text-white whitespace-nowrap bg-from-e63eb6-to-749ff5 btn-m-wallet sm:hidden">連接錢包</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </nav>
+
+        <!-- mobile menu -->
+        <div class="hidden w-full h-full text-lg fixed top-0 left-0 z-30 bg-121212 m-menu lg:hidden">
+            <ul class="text-center relative font-bold top-24 color-efefef">
+                <li class="py-4">
+                    <a href="shop.html" class="block">商城</a>
+                </li>
+                <li class="py-4">
+                    <a href="##" class="block">白皮書</a>
+                </li>
+                <li class="py-4">
+                    <a href="pledge.html" class="block">質押</a>
+                </li>
+                <li class="py-4">
+                    <a href="##" class="block">DEX</a>
+                </li>
+                <li class="py-4 relative top-60">
+                    <a href="##" class="block space-x-1  btn-m-language">
+                        <img src="images/icon/icon-language.svg" class="inline-block align-middle">
+                        <span class="inline-block align-middle text-sm">繁體中文</span>
+                        <img src="images/icon/icon-arrow-top.svg" class="inline-block align-middle">
+                    </a>
+                    <ul
+                        class="hidden w-40 py-6 text-sm font-bold text-center border border-solid absolute -top-48 left-1/2 transform -translate-x-1/2 rounded-xl bg-1f1f1f border-color-353535 m-language-menu">
+                        <li class="">
+                            <a href="##" class="block p-2 color-898989 focus:text-white">繁體中文</a>
+                        </li>
+                        <li class="">
+                            <a href="##" class="block p-2 color-898989 focus:text-white">简体中文</a>
+                        </li>
+                        <li class="">
+                            <a href="##" class="block p-2 color-898989 focus:text-white">English</a>
+                        </li>
+                        <li class="">
+                            <a href="##" class="block p-2 color-898989 focus:text-white">한국어</a>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+            <button class="absolute top-4 right-4 btn-close">
+                <img src="images/icon/icon-close.svg">
+            </button>
+        </div>
+
+        <!-- mobile wallet -->
+        <div class="hidden w-full h-full fixed top-0 left-0 z-30 bg-353535 bg-353535-80 m-bg-wallet lg:hidden">
+            <div class="w-full p-6 absolute bottom-0 z-20 rounded-t-2xl bg-1f1f1f m-panel-wallet">
+                <div
+                    class="flex flex-col items-center justify-between px-5 py-4 mt-11 mb-7 border border-solid rounded-3xl bg-5e5e5e-30 color-efefef border-color-353535">
+                    <div class="w-full flex items-center space-x-3 mb-2">
+                        <div><img src="images/icon/icon-account.svg"></div>
+                        <div class="text-base font-bold">0x130...123D</div>
+                    </div>
+                    <div class="w-full flex flex-row-reverse space-x-2">
+                        <div class="flex">
+                            <div class="mr-2"><img src="images/icon/icon-coin.svg"></div>
+                            <div class="text-base font-bold">300,000</div>
+                        </div>
+                    </div>
+                </div>
+                <div
+                    class="mb-3 rounded-full border border-solid border-transparent text-sm text-center border-linear-gradient-1f1f1f-e63eb6-749ff5">
+                    <a href="personal.html"
+                        class="w-full flex items-center justify-center py-3 px-6 border-transparent font-bold color-efefef">個人資產</a>
+                </div>
+                <div
+                    class="mb-3 rounded-full border border-solid border-transparent text-sm text-center border-linear-gradient-1f1f1f-e63eb6-749ff5">
+                    <a href="record.html"
+                        class="w-full flex items-center justify-center py-3 px-6 border-transparent font-bold color-efefef">歷史紀錄</a>
+                </div>
+                <div
+                    class="text-center border border-solid rounded-full text-sm font-bold color-efefef border-color-353535">
+                    <a href="##" class="w-full flex items-center justify-center py-3 px-6">登出</a>
+                </div>
+                <button class="absolute top-4 right-4 btn-wallet-close">
+                    <img src="images/icon/icon-close.svg">
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- 背景漸層色 -->
+    <div class="w-full absolute top-0 left-0 -z-1">
+        <img src="images/product/bg-gradient.svg" class="w-full">
+    </div>
+
+    <div class="max-w-6xl mx-auto px-5 sm:px-6 lg:px-8">
+        <!-- 麵包屑 -->
+        <div class="flex items-center space-x-1 pt-24 mb-5 sm:mb-11">
+            <a href="index.html" class="text-sm font-normal sm:text-xs color-898989">首頁</a>
+            <span><img src="images/icon/icon-arrow-right.svg"></span>
+            <a href="##" class="text-sm font-bold sm:text-xs color-898989">歷史紀錄</a>
+        </div>
+
+
+        <!-- 歷史紀錄 -->
+        <div class="record">
+            <h2>歷史紀錄</h2>
+            <ul class="record-tab">
+                <li id="record-tab-1" class="active"><a href="javascript:void(0)">資產兌換</a></li>
+                <li id="record-tab-2"><a href="javascript:void(0)">蟲蟲幣獲得/提領</a></li>
+                <li id="record-tab-3"><a href="javascript:void(0)">質押</a></li>
+            </ul>
+            <div class="no-record" style="display: none;">
+                <div>
+                    <p class="title">沒有紀錄</p>
+                    <p class="desc">快前往商城兌換入場券或道具，一起邊玩邊轉吧！</p>
+                    <button class="btn-gradient">前往商城</button>
+                </div>
+            </div>
+            <div class="record-content">
+                <div class="filter">
+                    <div class="days">
+                        篩選
+                        <button>30天 <img src="images/icon/icon-arrow-bottom-7e97f0.svg"></button>
+                        <div class="items">
+                            <ul>
+                                <li>30天</li>
+                                <li>3個月</li>
+                                <li>6個月</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="pages">
+                        頁數
+                        <button>1 <img src="images/icon/icon-arrow-bottom-7e97f0.svg"></button>
+                        <div class="items">
+                            <ul>
+                                <li>1</li>
+                                <li>2</li>
+                                <li>3</li>
+                                <li>4</li>
+                                <li>5</li>
+                                <li>6</li>
+                                <li>7</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="status">
+                        狀態 <a id="status--open-4" href="javascript:void(0)"><img src="images/icon/icon-info.svg"></a>
+                    </div>
+                </div>
+                <table id="content-table-1" class="active">
+                    <thead>
+                        <tr>
+                            <th>時間</th>
+                            <th>訂單編號</th>
+                            <th>兌換商品</th>
+                            <th>單價</th>
+                            <th>數量</th>
+                            <th>總價</th>
+                            <th>狀態 <a id="status--open-1" href="javascript:void(0)"><img
+                                        src="images/icon/icon-info.svg"></a></th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr class="win">
+                            <td class="title-time">2020-03-03 23:55</td>
+                            <td class="title-trackno">TOR20221214361430000016</td>
+                            <td class="title-name">GameFi Pass - 移動式 ★ 免費試玩限定 ★</td>
+                            <td class="title-price">0 <span class="currency">BNB</span></td>
+                            <td class="title-number">2</td>
+                            <td class="title-total">0 <span class="currency">BNB</span></td>
+                            <td class="title-status"><span><i class="success">•</i>成功</span></td>
+                        </tr>
+                        <tr>
+                            <td class="title-time">2020-03-03 23:55</td>
+                            <td class="title-trackno">TOR20221214361430000016</td>
+                            <td class="title-name">超級入場券好大盾超級盾牌</td>
+                            <td class="title-price">300,000,000 <span class="currency">TWD</span></td>
+                            <td class="title-number">2</td>
+                            <td class="title-total">600,000 <span class="currency">TWD</span></td>
+                            <td class="title-status"><span><i class="neutral">•</i>進行中進行中進行中進行中</span></td>
+                        </tr>
+                        <tr>
+                            <td class="title-time">2020-03-03 23:55</td>
+                            <td class="title-trackno">TOR20221214361430000016</td>
+                            <td class="title-name">超級入場券好大盾超級盾牌</td>
+                            <td class="title-price">300,000.123456 <span class="currency">BUG</span></td>
+                            <td class="title-number">2</td>
+                            <td class="title-total">2,600,000.789456 <span class="currency">BUG</span></td>
+                            <td class="title-status">
+                                <span><i class="error">•</i>失敗</span>
+                                <a href="javascript:void(0)">補領道具</a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="title-time">2020-03-03 23:55</td>
+                            <td class="title-trackno">TOR20221214361430000016</td>
+                            <td class="title-name">超級入場券好大盾超級盾牌好大盾超級盾牌好大盾超級盾牌好</td>
+                            <td class="title-price">300,000.123456 <span class="currency">BUG</span></td>
+                            <td class="title-number">2</td>
+                            <td class="title-total">2,600,000.789456 <span class="currency">BUG</span></td>
+                            <td class="title-status"><span><i class="success">•</i>成功</span></td>
+                        </tr>
+                        <tr>
+                            <td class="title-time">2020-03-03 23:55</td>
+                            <td class="title-trackno">TOR20221214361430000016</td>
+                            <td class="title-name">超級入場券好大盾超級盾牌好大盾超級</td>
+                            <td class="title-price">300,000.123456 <span class="currency">BUG</span></td>
+                            <td class="title-number">2</td>
+                            <td class="title-total">2,600,000.789456 <span class="currency">BUG</span></td>
+                            <td class="title-status"><span><i class="neutral">•</i>進行中</span></td>
+                        </tr>
+                        <tr>
+                            <td class="title-time">2020-03-03 23:55</td>
+                            <td class="title-trackno">TOR20221214361430000016</td>
+                            <td class="title-name">超級入場券好大盾超級盾牌好大盾超級盾牌好大盾超級盾牌好</td>
+                            <td class="title-price">300,000.123456 <span class="currency">BUG</span></td>
+                            <td class="title-number">2</td>
+                            <td class="title-total">2,600,000.789456 <span class="currency">BUG</span></td>
+                            <td class="title-status"><span><i class="success">•</i>成功</span></td>
+                        </tr>
+                        <tr>
+                            <td class="title-time">2020-03-03 23:55</td>
+                            <td class="title-trackno">TOR20221214361430000016</td>
+                            <td class="title-name">超級入場券好大盾超級盾牌好大盾超級盾牌好大盾超級盾牌好</td>
+                            <td class="title-price">300,000.123456 <span class="currency">BUG</span></td>
+                            <td class="title-number">2</td>
+                            <td class="title-total">2,600,000.789456 <span class="currency">BUG</span></td>
+                            <td class="title-status"><span><i class="success">•</i>成功</span></td>
+                        </tr>
+                        <tr>
+                            <td class="title-time">2020-03-03 23:55</td>
+                            <td class="title-trackno">TOR20221214361430000016</td>
+                            <td class="title-name">超級入場券好大盾超級盾牌好大盾超級盾牌好大盾超級盾牌好</td>
+                            <td class="title-price">300,000 TWD</td>
+                            <td class="title-number">2</td>
+                            <td class="title-total">600,000 TWD</td>
+                            <td class="title-status"><span><i class="success">•</i>成功</span></td>
+                        </tr>
+                        <tr>
+                            <td class="title-time">2020-03-03 23:55</td>
+                            <td class="title-trackno">TOR20221214361430000016</td>
+                            <td class="title-name">超級入場券好大盾超級盾牌好大盾超級盾牌好大盾超級盾牌好</td>
+                            <td class="title-price">300,000 TWD</td>
+                            <td class="title-number">2</td>
+                            <td class="title-total">600,000 TWD</td>
+                            <td class="title-status"><span><i class="success">•</i>成功</span></td>
+                        </tr>
+                        <tr>
+                            <td class="title-time">2020-03-03 23:55</td>
+                            <td class="title-trackno">TOR20221214361430000016</td>
+                            <td class="title-name">超級入場券好大盾超級盾牌好大盾超級盾牌好大盾超級盾牌好</td>
+                            <td class="title-price">300,000.123456 <span class="currency">BUG</span></td>
+                            <td class="title-number">2</td>
+                            <td class="title-total">2,600,000.789456 <span class="currency">BUG</span></td>
+                            <td class="title-status"><span><i class="success">•</i>成功</span></td>
+                        </tr>
+                        <tr>
+                            <td class="title-time">2020-03-03 23:55</td>
+                            <td class="title-trackno">TOR20221214361430000016</td>
+                            <td class="title-name">超級入場券好大盾超級盾牌好大盾超級盾牌好大盾超級盾牌好</td>
+                            <td class="title-price">300,000.123456 <span class="currency">BUG</span></td>
+                            <td class="title-number">2</td>
+                            <td class="title-total">2,600,000.789456 <span class="currency">BUG</span></td>
+                            <td class="title-status"><span><i class="success">•</i>成功</span></td>
+                        </tr>
+                        <tr>
+                            <td class="title-time">2020-03-03 23:55</td>
+                            <td class="title-trackno">TOR20221214361430000016</td>
+                            <td class="title-name">超級入場券好大盾超級盾牌好大盾超級盾牌好大盾超級盾牌好</td>
+                            <td class="title-price">300,000.123456 <span class="currency">BUG</span></td>
+                            <td class="title-number">2</td>
+                            <td class="title-total">2,600,000.789456 <span class="currency">BUG</span></td>
+                            <td class="title-status"><span><i class="success">•</i>成功</span></td>
+                        </tr>
+                        <tr>
+                            <td class="title-time">2020-03-03 23:55</td>
+                            <td class="title-trackno">TOR20221214361430000016</td>
+                            <td class="title-name">超級入場券好大盾超級盾牌好大盾超級盾牌好大盾超級盾牌好</td>
+                            <td class="title-price">300,000 TWD</td>
+                            <td class="title-number">2</td>
+                            <td class="title-total">600,000 TWD</td>
+                            <td class="title-status"><span><i class="success">•</i>成功</span></td>
+                        </tr>
+                        <tr>
+                            <td class="title-time">2020-03-03 23:55</td>
+                            <td class="title-trackno">TOR20221214361430000016</td>
+                            <td class="title-name">超級入場券好大盾超級盾牌好大盾超級盾牌好大盾超級盾牌好</td>
+                            <td class="title-price">300,000 TWD</td>
+                            <td class="title-number">2</td>
+                            <td class="title-total">600,000 TWD</td>
+                            <td class="title-status"><span><i class="success">•</i>成功</span></td>
+                        </tr>
+                        <tr>
+                            <td class="title-time">2020-03-03 23:55</td>
+                            <td class="title-trackno">TOR20221214361430000016</td>
+                            <td class="title-name">超級入場券好大盾超級盾牌好大盾超級盾牌好大盾超級盾牌好</td>
+                            <td class="title-price">300,000.123456 <span class="currency">BUG</span></td>
+                            <td class="title-number">2</td>
+                            <td class="title-total">2,600,000.789456 <span class="currency">BUG</span></td>
+                            <td class="title-status"><span><i class="success">•</i>成功</span></td>
+                        </tr>
+                    </tbody>
+                </table>
+                <table id="content-table-2">
+                    <thead>
+                        <tr>
+                            <th>時間</th>
+                            <th>訂單編號</th>
+                            <th>活動名稱</th>
+                            <th>單價 (加乘)</th>
+                            <th>手續費</th>
+                            <th>總價</th>
+                            <th>狀態 <a id="status--open-2" href="javascript:void(0)"><img
+                                        src="images/icon/icon-info.svg"></a></th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td class="title-time">2020-03-03 23:55</td>
+                            <td class="title-trackno">TOR20221214361430000016</td>
+                            <td class="title-name">鏡子國解磚排名賽(第N 名) 鏡子國解磚排名賽</td>
+                            <td class="title-price-plus">-1060.40 <span class="currency">BUG</span></td>
+                            <td class="title-fee">0.99 <span class="currency">BUG</span></td>
+                            <td class="title-total">-1061.39 <span class="currency">BUG</span></td>
+                            <td class="title-status"><span><i class="success">•</i>成功</span></td>
+                        </tr>
+                        <tr>
+                            <td class="title-time">2020-03-03 23:55</td>
+                            <td class="title-trackno">TOR20221214361430000016</td>
+                            <td class="title-name">拉新活動獎勵</td>
+                            <td class="title-price-plus">+5.00<span class="currency">BUG</span></td>
+                            <td class="title-fee">－</td>
+                            <td class="title-total">+6.99 <span class="currency">BUG</span></td>
+                            <td class="title-status"><span><i class="neutral">•</i>進行中</span></td>
+                        </tr>
+                        <tr>
+                            <td class="title-time">2020-03-03 23:55</td>
+                            <td class="title-trackno">TOR20221214361430000016</td>
+                            <td class="title-name">提領至MetaMask</td>
+                            <td class="title-price-plus">+5.00<span class="currency">BUG</span></td>
+                            <td class="title-fee">－</td>
+                            <td class="title-total">+6.99 <span class="currency">BUG</span></td>
+                            <td class="title-status"><span class="error">•</span>失敗</td>
+                        </tr>
+                        <tr>
+                            <td class="title-time">2020-03-03 23:55</td>
+                            <td class="title-trackno">TOR20221214361430000016</td>
+                            <td class="title-name">鏡子國解磚排名賽(第N 名) 鏡子國解磚排名賽</td>
+                            <td class="title-price-plus">-1060.40 <span class="currency">BUG</span></td>
+                            <td class="title-fee">0.99 <span class="currency">BUG</span></td>
+                            <td class="title-total">-1061.39 BUG</td>
+                            <td class="title-status"><span><i class="success">•</i>成功</span></td>
+                        </tr>
+                        <tr>
+                            <td class="title-time">2020-03-03 23:55</td>
+                            <td class="title-trackno">TOR20221214361430000016</td>
+                            <td class="title-name">鏡子國解磚排名賽(第N 名) 鏡子國解磚排名賽</td>
+                            <td class="title-price-plus">-1060.40 BUG</td>
+                            <td class="title-fee">0.99 BUG</td>
+                            <td class="title-total">-1061.39 BUG</td>
+                            <td class="title-status"><span><i class="success">•</i>成功</span></td>
+                        </tr>
+                    </tbody>
+                </table>
+                <table id="content-table-3">
+                    <thead>
+                        <tr>
+                            <th>時間</th>
+                            <th>訂單編號</th>
+                            <th>項目</th>
+                            <th>手續費</th>
+                            <th>收益</th>
+                            <th>狀態 <a id="status--open-3" href="javascript:void(0)"><img
+                                        src="images/icon/icon-info.svg"></a></th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td class="title-time">2020-03-03 23:55</td>
+                            <td class="title-trackno"><a href="">TOR202212 <img src="images/icon/icon-open.svg"></a>
+                            </td>
+                            <td class="title-name">開始質押NFT<br>NFT項目：移動式 x1、希克斯 x1、大波斯菊 x1</td>
+                            <td class="title-fee">30.00 BNB</td>
+                            <td class="title-benefit">－</td>
+                            <td class="title-status"><span><i class="success">•</i>成功</span></td>
+                        </tr>
+                        <tr>
+                            <td class="title-time">2020-03-03 23:55</td>
+                            <td class="title-trackno"><a href="">feadsxTOR202212143614300fewasd00016 <img
+                                        src="images/icon/icon-open.svg"></a></td>
+                            <td class="title-name">領取收益</td>
+                            <td class="title-fee">30.00 BNB</td>
+                            <td class="title-benefit">6.99 BUG</td>
+                            <td class="title-status"><span><i class="neutral">•</i>進行中</span></td>
+                        </tr>
+                        <tr>
+                            <td class="title-time">2020-03-03 23:55</td>
+                            <td class="title-trackno"><a href="">1430000016 <img src="images/icon/icon-open.svg"></a>
+                            </td>
+                            <td class="title-name">解除質押NFT<br>解除NFT項目：移動式 x1、希克斯 x1、大波斯菊 x1</td>
+                            <td class="title-fee">30.00 BNB</td>
+                            <td class="title-benefit">6.99 BUG</td>
+                            <td class="title-status"><span class="error">•</span>失敗</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+
+    <!-- footer -->
+    <footer>
+        <div class="copyright">
+            <dl>
+                <dt><img src="images/product/Logo_GASH.png"></dt>
+                <dt><img src="images/product/Logo_Naddic.png"></dt>
+                <dd>© 2022 GASH POINT Co., Ltd. All right reserved</dd>
+            </dl>
+            <div><img src="images/icon/icon-pg-12.svg"></div>
+        </div>
+    </footer>
+
+    <!-- social link -->
+    <div class="hidden fixed right-16 bottom-11 sm:hidden lg:block">
+        <a href="##" class="block" target="_blank">
+            <img src="images/icon/icon-dioscord-pc.svg">
+        </a>
+    </div>
+
+    <!-- toast 補領道具成功 -->
+    <div class="toast toast--primary active">
+        <img src="images/icon/icon-check.svg">
+        <span>補領道具成功</span>
+    </div>
+
+    <!-- toast 補領道具失敗 -->
+    <div class="toast toast--warning">
+        <img src="images/icon/icon-bell.svg">
+        <span>領道具失敗，請再試一次</span>
+    </div>
+
+    <!-- pop up 中獎通知 -->
+    <div id="win--popUp" class="popUp active">
+        <div class="popUp--container">
+            <button id="win--close" class="popUp--close"><img src="images/icon/icon-minus.svg"></button>
+            <h2>恭喜獲得遊玩資格！</h2>
+            <div class="popUp--content">
+                <p class="desc">恭喜您獲得我們的遊玩資格！天選之人，快來一起進入遊戲世界吧！</p>
+                <img src="images/win.jpg">
+            </div>
+            <a href="#" class="button btn-gradient">前往活動</a>
+        </div>
+
+        <div class="win_ribbon">
+            <button id="button" class="btn-win ready">
+
+                <div class="message submitMessage">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 13 12.2">
+                        <polyline stroke="currentColor" points="2,7.1 6.5,11.1 11,7.1 " />
+                        <line stroke="currentColor" x1="6.5" y1="1.2" x2="6.5" y2="10.3" />
+                    </svg> <span class="button-text">Click Me!</span>
+                </div>
+
+                <div class="message loadingMessage">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 19 17">
+                        <circle class="loadingCircle" cx="2.2" cy="10" r="1.6" />
+                        <circle class="loadingCircle" cx="9.5" cy="10" r="1.6" />
+                        <circle class="loadingCircle" cx="16.8" cy="10" r="1.6" />
+                    </svg>
+                </div>
+
+                <div class="message successMessage">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 13 11">
+                        <polyline stroke="currentColor" points="1.4,5.8 5.1,9.5 11.6,2.1 " />
+                    </svg> <span class="button-text">Success</span>
+                </div>
+            </button>
+            <canvas id="canvas"></canvas>
+        </div>
+    </div>
+
+    <!-- pop up 槓龜通知 -->
+    <div id="fail--popUp" class="popUp">
+        <div class="popUp--container">
+            <button id="fail--close" class="popUp--close"><img src="images/icon/icon-minus.svg"></button>
+            <h2>太可惜了！</h2>
+            <div class="popUp--content">
+                <p class="desc">別氣餒，您還是有遊玩的資格喔~ 快來參加Discord社群活動成為天選之人吧！</p>
+                <img src="images/fail.jpg">
+            </div>
+            <a href="#" class="button btn-gradient">前往活動</a>
+        </div>
+        <div class="fail_ribbon">
+            <div class="confetti-99"></div>
+            <div class="confetti-98"></div>
+            <div class="confetti-97"></div>
+            <div class="confetti-96"></div>
+            <div class="confetti-95"></div>
+            <div class="confetti-94"></div>
+            <div class="confetti-93"></div>
+            <div class="confetti-92"></div>
+            <div class="confetti-91"></div>
+            <div class="confetti-90"></div>
+            <div class="confetti-89"></div>
+            <div class="confetti-88"></div>
+            <div class="confetti-87"></div>
+            <div class="confetti-86"></div>
+            <div class="confetti-85"></div>
+            <div class="confetti-84"></div>
+            <div class="confetti-83"></div>
+            <div class="confetti-82"></div>
+            <div class="confetti-81"></div>
+            <div class="confetti-80"></div>
+            <div class="confetti-79"></div>
+            <div class="confetti-78"></div>
+            <div class="confetti-77"></div>
+            <div class="confetti-76"></div>
+            <div class="confetti-75"></div>
+            <div class="confetti-74"></div>
+            <div class="confetti-73"></div>
+            <div class="confetti-72"></div>
+            <div class="confetti-71"></div>
+            <div class="confetti-70"></div>
+            <div class="confetti-69"></div>
+            <div class="confetti-68"></div>
+            <div class="confetti-67"></div>
+            <div class="confetti-66"></div>
+            <div class="confetti-65"></div>
+            <div class="confetti-64"></div>
+            <div class="confetti-63"></div>
+            <div class="confetti-62"></div>
+            <div class="confetti-61"></div>
+            <div class="confetti-60"></div>
+            <div class="confetti-59"></div>
+            <div class="confetti-58"></div>
+            <div class="confetti-57"></div>
+            <div class="confetti-56"></div>
+            <div class="confetti-55"></div>
+            <div class="confetti-54"></div>
+            <div class="confetti-53"></div>
+            <div class="confetti-52"></div>
+            <div class="confetti-51"></div>
+            <div class="confetti-50"></div>
+            <div class="confetti-49"></div>
+            <div class="confetti-48"></div>
+            <div class="confetti-47"></div>
+            <div class="confetti-46"></div>
+            <div class="confetti-45"></div>
+            <div class="confetti-44"></div>
+            <div class="confetti-43"></div>
+            <div class="confetti-42"></div>
+            <div class="confetti-41"></div>
+            <div class="confetti-40"></div>
+            <div class="confetti-39"></div>
+            <div class="confetti-38"></div>
+            <div class="confetti-37"></div>
+            <div class="confetti-36"></div>
+            <div class="confetti-35"></div>
+            <div class="confetti-34"></div>
+            <div class="confetti-33"></div>
+            <div class="confetti-32"></div>
+            <div class="confetti-31"></div>
+            <div class="confetti-30"></div>
+            <div class="confetti-29"></div>
+            <div class="confetti-28"></div>
+            <div class="confetti-27"></div>
+            <div class="confetti-26"></div>
+            <div class="confetti-25"></div>
+            <div class="confetti-24"></div>
+            <div class="confetti-23"></div>
+            <div class="confetti-22"></div>
+            <div class="confetti-21"></div>
+            <div class="confetti-20"></div>
+            <div class="confetti-19"></div>
+            <div class="confetti-18"></div>
+            <div class="confetti-17"></div>
+            <div class="confetti-16"></div>
+            <div class="confetti-15"></div>
+            <div class="confetti-14"></div>
+            <div class="confetti-13"></div>
+            <div class="confetti-12"></div>
+            <div class="confetti-11"></div>
+            <div class="confetti-10"></div>
+            <div class="confetti-9"></div>
+            <div class="confetti-8"></div>
+            <div class="confetti-7"></div>
+            <div class="confetti-6"></div>
+            <div class="confetti-5"></div>
+            <div class="confetti-4"></div>
+            <div class="confetti-3"></div>
+            <div class="confetti-2"></div>
+            <div class="confetti-1"></div>
+            <div class="confetti-0"></div>
+        </div>
+    </div>
+
+    <!-- pop up 狀態 -->
+    <div id="status--popUp" class="popUp">
+        <div class="popUp--container">
+            <button id="status--close" class="popUp--close"><img src="images/icon/icon-minus.svg"></button>
+            <h2>狀態</h2>
+            <div class="popUp--content">
+                <p class="desc">狀態說明內容放這裡狀態說明內容放這裡。狀態說明內容放這裡狀態說明內容放這裡。狀態說明內容放這裡狀態說明內容放這裡。狀態說明內容放這裡狀態說明內容放這裡<a
+                        href="#">這是連結</a>。</p>
+                <p class="warning">一些比較重要的說明可以是紅色。</p>
+            </div>
+            <button id="status--submit" class="popUp--submit">確認</button>
+        </div>
+    </div>
+
+</body>
+
+
+<!-- popup bg-->
+<!-- 20220704 -->
+<div class="hidden w-full h-full fixed top-0 left-0 z-40 opacity-88 bg-121212 popup-bg"></div>
+
+<!-- 連接錢包 8-1 -->
+<div
+    class="hidden w-11/12 p-10 mx-auto fixed top-1/4 left-1/2 z-40 transform -translate-x-1/2 rounded-3xl text-center text-xs tracking-wider z-20 border border-solid bg-1f1f1f color-efefef border-color-353535 popup-wrap w-469px">
+    <div>
+        <div class="mb-7 text-lg font-bold">連接錢包</div>
+        <div class="mb-7 text-sm font-noraml text-left color-efefef max-h-64 overflow-y-auto scroll-style">
+            請先連結MetaMask錢包。</div>
+        <a href="##"
+            class="block w-full py-3 px-6 border-transparent rounded-full text-sm font-bold color-efefef bg-from-e63eb6-to-749ff5">連接錢包</a>
+    </div>
+    <button class="absolute top-5 right-5 btn-close">
+        <img src="images/icon/icon-close.svg">
+    </button>
+</div>
+
+<!-- 功能維護中 8-2-11 -->
+<div
+    class="hidden w-11/12 p-10 mx-auto fixed top-1/4 left-1/2 z-40 transform -translate-x-1/2 rounded-3xl text-center text-xs tracking-wider z-20 border border-solid bg-1f1f1f color-efefef border-color-353535 popup-wrap w-469px">
+    <div>
+        <div class="mb-7 text-lg font-bold">功能維護中</div>
+        <div class="mb-7 text-sm font-noraml text-left color-efefef">功能維護中，暫時關閉。</div>
+        <a href="##"
+            class="block w-full py-3 px-6 border-transparent rounded-full text-sm font-bold color-efefef bg-from-e63eb6-to-749ff5">確認</a>
+    </div>
+</div>
+
+<!-- 系統發生問題 8-2-13 -->
+<div
+    class="hidden w-11/12 p-10 mx-auto fixed top-1/4 left-1/2 z-40 transform -translate-x-1/2 rounded-3xl text-center text-xs tracking-wider z-20 border border-solid bg-1f1f1f color-efefef border-color-353535 popup-wrap w-469px">
+    <div>
+        <div class="mb-7 text-lg font-bold">系統發生問題</div>
+        <div class="mb-7 text-sm font-noraml text-left color-efefef">錯誤代碼(ERRXXXXXXX)，請重新嘗試或 <a href="##"
+                target="_blank" class="font-bold color-7e97f0">洽客服</a></div>
+        <a href="##"
+            class="block w-full py-3 px-6 border-transparent rounded-full text-sm font-bold color-efefef bg-from-e63eb6-to-749ff5">確認</a>
+    </div>
+</div>
+
+<!-- 功能建置中 8-2-16 -->
+<div
+    class="hidden w-11/12 p-10 mx-auto fixed top-1/4 left-1/2 z-40 transform -translate-x-1/2 rounded-3xl text-center text-xs tracking-wider z-20 border border-solid bg-1f1f1f color-efefef border-color-353535 popup-wrap coming-soon-wrap w-469px">
+    <div>
+        <div class="mb-7 text-lg font-bold">功能建置中</div>
+        <div class="mb-7 text-sm font-noraml text-left color-efefef">功能建置中，敬請期待！</div>
+        <a href="##"
+            class="block w-full py-3 px-6 border-transparent rounded-full text-sm font-bold color-efefef bg-from-e63eb6-to-749ff5 btn-confirm">確認</a>
+    </div>
+</div>
+
+<!-- 等待確認中 8-3-1 -->
+<div
+    class="hidden w-11/12 p-10 mx-auto fixed top-1/4 left-1/2 z-40 transform -translate-x-1/2 rounded-3xl text-center text-xs tracking-wider z-20 border border-solid bg-1f1f1f color-efefef border-color-353535 popup-wrap w-469px">
+    <div>
+        <div class="mb-7 text-lg font-bold">等待確認中</div>
+        <div class="mb-7 text-sm font-noraml text-center color-efefef">等待MetaMask錢包確認中，請稍候。</div>
+        <div class="text-sm font-noraml text-center color-efefef">還沒下載MetaMask錢包? <a href="##" target="_blank"
+                class="font-bold color-7e97f0">前往下載</a></div>
+    </div>
+</div>
+
+<!-- 個人資產的table 3-1-2-->
+<div
+    class="hidden w-11/12 p-10 mx-auto fixed top-1/4 left-1/2 z-40 transform -translate-x-1/2 rounded-3xl text-center text-xs tracking-wider z-20 border border-solid bg-1f1f1f color-efefef border-color-353535 popup-wrap w-469px">
+    <div>
+        <div class="mb-7 text-lg font-bold">狀態說明</div>
+        <div class="mb-7 text-sm font-noraml text-left color-efefef max-h-64 overflow-y-auto scroll-style"><span
+                class="inline-block w-1 h-1 mx-1 align-middle rounded-full bg-7ef09e"></span>成功 - Are you sure you want
+            to deactivate your account</div>
+        <div class="mb-7 text-sm font-noraml text-left color-efefef max-h-64 overflow-y-auto scroll-style"><span
+                class="inline-block w-1 h-1 mx-1 align-middle rounded-full bg-cc47a6"></span>失敗 - Are you sure you want
+            to deactivate your account</div>
+        <div class="mb-7 text-sm font-noraml text-left color-efefef max-h-64 overflow-y-auto scroll-style"><span
+                class="inline-block w-1 h-1 mx-1 align-middle rounded-full bg-d8b42c"></span>提領中 - Are you sure you want
+            to deactivate your account</div>
+        <div class="mb-7 text-sm font-noraml text-left color-efefef max-h-64 overflow-y-auto scroll-style"><span
+                class="inline-block w-1 h-1 mx-1 align-middle rounded-full bg-d8b42c"></span>存入中 - Are you sure you want
+            to deactivate your account</div>
+    </div>
+    <button class="absolute top-5 right-5 btn-close">
+        <img src="images/icon/icon-close.svg">
+    </button>
+</div>
+
+<!-- 右邊蟲蟲幣的提領按鈕 8-2-15 -->
+<div
+    class="hidden w-11/12 p-10 mx-auto fixed top-1/4 left-1/2 z-40 transform -translate-x-1/2 rounded-3xl text-center text-xs tracking-wider z-20 border border-solid bg-1f1f1f color-efefef border-color-353535 popup-wrap w-469px">
+    <div>
+        <div class="mb-7 text-lg font-bold">提醒</div>
+        <div class="mb-7 text-sm font-noraml text-left color-efefef max-h-64 overflow-y-auto scroll-style">
+            免費試玩等級不開放提領功能。<a href="##" target="_blank" class="font-bold color-7e97f0">購買入場券</a></div>
+        <a href="##"
+            class="block w-full py-3 px-6 border-transparent rounded-full text-sm font-bold color-efefef bg-from-e63eb6-to-749ff5">確認</a>
+    </div>
+</div>
+
+<!-- 入場券等級 8-2-12 -->
+<div
+    class="hidden w-11/12 p-10 mx-auto fixed top-1/4 left-1/2 z-40 transform -translate-x-1/2 rounded-3xl text-center text-xs tracking-wider z-20 border border-solid bg-1f1f1f color-efefef border-color-353535 popup-wrap w-469px">
+    <div>
+        <div class="mb-7 text-lg font-bold">入場券等級</div>
+        <div class="text-sm font-noraml text-left color-efefef max-h-64 overflow-y-auto scroll-style">待營運確認中</div>
+    </div>
+    <button class="absolute top-5 right-5 btn-close">
+        <img src="images/icon/icon-close.svg">
+    </button>
+</div>
+
+
+
+
+<script>
+    // 頁籤切換
+    $(function () {
+        for (let i = 1; i <= 3; i++) {
+            let recordTab = $('#record-tab-' + i)
+            let recordContent = $('#content-table-' + i)
+            $(recordTab).click(function () {
+                $('.record-tab li').removeClass('active')
+                $(this).addClass('active')
+                $('.record-content table').removeClass('active')
+                $(recordContent).addClass('active')
+            })
+        }
+    })
+
+    // pop up 中獎通知
+    $('#win--close').click(function () {
+        $('#win--popUp').removeClass('active')
+    })
+    const button = document.getElementById('button');
+    var disabled = false;
+    const canvas = document.getElementById('canvas');
+    const ctx = canvas.getContext('2d');
+    canvas.width = window.innerWidth;
+    canvas.height = window.innerHeight;
+    let cx = ctx.canvas.width / 2;
+    let cy = ctx.canvas.height / 2;
+
+    // add Confetti/Sequince objects to arrays to draw them
+    let confetti = [];
+    let sequins = [];
+
+    // ammount to add on each button press
+    const confettiCount = 100;
+    const sequinCount = 50;
+
+    // "physics" variables
+    const gravityConfetti = 0.3;
+    const gravitySequins = 0.55;
+    const dragConfetti = 0.075;
+    const dragSequins = 0.02;
+    const terminalVelocity = 3;
+
+    // colors, back side is darker for confetti flipping
+    const colors = [
+        { front: '#7B61FF', back: '#6245e0' }, // Purple
+        { front: '#AAF3F5', back: '#8fa5e5' }, // Light Blue
+        { front: '#E142B9', back: '#345dd1' }  // Darker Blue
+    ];
+
+    // helper function to pick a random number within a range
+    randomRange = (min, max) => Math.random() * (max - min) + min;
+
+    // helper function to get initial velocities for confetti
+    // this weighted spread helps the confetti look more realistic
+    initConfettoVelocity = (xRange, yRange) => {
+        const x = randomRange(xRange[0], xRange[1]);
+        const range = yRange[1] - yRange[0] + 1;
+        let y = yRange[1] - Math.abs(randomRange(0, range) + randomRange(0, range) - range);
+        if (y >= yRange[1] - 1) {
+            // Occasional confetto goes higher than the max
+            y += (Math.random() < .25) ? randomRange(1, 3) : 0;
+        }
+        return { x: x, y: -y };
+    }
+
+    // Confetto Class
+    function Confetto() {
+        this.randomModifier = randomRange(0, 99);
+        this.color = colors[Math.floor(randomRange(0, colors.length))];
+        this.dimensions = {
+            x: randomRange(5, 9),
+            y: randomRange(8, 15),
+        };
+        this.position = {
+            x: randomRange(canvas.width / 2 - button.offsetWidth / 4, canvas.width / 2 + button.offsetWidth / 4),
+            y: randomRange(canvas.height / 2 + button.offsetHeight / 2 + 8, canvas.height / 2 + (1.5 * button.offsetHeight) - 8),
+        };
+        this.rotation = randomRange(0, 2 * Math.PI);
+        this.scale = {
+            x: 1,
+            y: 1,
+        };
+        this.velocity = initConfettoVelocity([-9, 9], [6, 11]);
+    }
+    Confetto.prototype.update = function () {
+        // apply forces to velocity
+        this.velocity.x -= this.velocity.x * dragConfetti;
+        this.velocity.y = Math.min(this.velocity.y + gravityConfetti, terminalVelocity);
+        this.velocity.x += Math.random() > 0.5 ? Math.random() : -Math.random();
+
+        // set position
+        this.position.x += this.velocity.x;
+        this.position.y += this.velocity.y;
+
+        // spin confetto by scaling y and set the color, .09 just slows cosine frequency
+        this.scale.y = Math.cos((this.position.y + this.randomModifier) * 0.09);
+    }
+
+    // Sequin Class
+    function Sequin() {
+        this.color = colors[Math.floor(randomRange(0, colors.length))].back,
+            this.radius = randomRange(1, 2),
+            this.position = {
+                x: randomRange(canvas.width / 2 - button.offsetWidth / 3, canvas.width / 2 + button.offsetWidth / 3),
+                y: randomRange(canvas.height / 2 + button.offsetHeight / 2 + 8, canvas.height / 2 + (1.5 * button.offsetHeight) - 8),
+            },
+            this.velocity = {
+                x: randomRange(-20, 20),
+                y: randomRange(-8, -20)
+            }
+    }
+    Sequin.prototype.update = function () {
+        // apply forces to velocity
+        this.velocity.x -= this.velocity.x * dragSequins;
+        this.velocity.y = this.velocity.y + gravitySequins;
+
+        // set position
+        this.position.x += this.velocity.x;
+        this.position.y += this.velocity.y;
+    }
+
+    // add elements to arrays to be drawn
+    initBurst = () => {
+        for (let i = 0; i < confettiCount; i++) {
+            confetti.push(new Confetto());
+        }
+        for (let i = 0; i < sequinCount; i++) {
+            sequins.push(new Sequin());
+        }
+    }
+
+    // draws the elements on the canvas
+    render = () => {
+        ctx.clearRect(0, 0, canvas.width, canvas.height);
+
+        confetti.forEach((confetto, index) => {
+            let width = (confetto.dimensions.x * confetto.scale.x);
+            let height = (confetto.dimensions.y * confetto.scale.y);
+
+            // move canvas to position and rotate
+            ctx.translate(confetto.position.x, confetto.position.y);
+            ctx.rotate(confetto.rotation);
+
+            // update confetto "physics" values
+            confetto.update();
+
+            // get front or back fill color
+            ctx.fillStyle = confetto.scale.y > 0 ? confetto.color.front : confetto.color.back;
+
+            // draw confetto
+            ctx.fillRect(-width / 2, -height / 2, width, height);
+
+            // reset transform matrix
+            ctx.setTransform(1, 0, 0, 1, 0, 0);
+
+            // clear rectangle where button cuts off
+            if (confetto.velocity.y < 0) {
+                ctx.clearRect(canvas.width / 2 - button.offsetWidth / 2, canvas.height / 2 + button.offsetHeight / 2, button.offsetWidth, button.offsetHeight);
+            }
+        })
+
+        sequins.forEach((sequin, index) => {
+            // move canvas to position
+            ctx.translate(sequin.position.x, sequin.position.y);
+
+            // update sequin "physics" values
+            sequin.update();
+
+            // set the color
+            ctx.fillStyle = sequin.color;
+
+            // draw sequin
+            ctx.beginPath();
+            ctx.arc(0, 0, sequin.radius, 0, 2 * Math.PI);
+            ctx.fill();
+
+            // reset transform matrix
+            ctx.setTransform(1, 0, 0, 1, 0, 0);
+
+            // clear rectangle where button cuts off
+            if (sequin.velocity.y < 0) {
+                ctx.clearRect(canvas.width / 2 - button.offsetWidth / 2, canvas.height / 2 + button.offsetHeight / 2, button.offsetWidth, button.offsetHeight);
+            }
+        })
+
+        // remove confetti and sequins that fall off the screen
+        // must be done in seperate loops to avoid noticeable flickering
+        confetti.forEach((confetto, index) => {
+            if (confetto.position.y >= canvas.height) confetti.splice(index, 1);
+        });
+        sequins.forEach((sequin, index) => {
+            if (sequin.position.y >= canvas.height) sequins.splice(index, 1);
+        });
+
+        window.requestAnimationFrame(render);
+    }
+
+    // cycle through button states when clicked
+    winRibbon = () => {
+        if (!disabled) {
+            disabled = true;
+            // Loading stage
+            button.classList.add('loading');
+            button.classList.remove('ready');
+            // Completed stage
+            button.classList.add('complete');
+            button.classList.remove('loading');
+            setTimeout(() => {
+                window.initBurst();
+                setTimeout(() => {
+                    // Reset button so user can select it again
+                    disabled = false;
+                    button.classList.add('ready');
+                    button.classList.remove('complete');
+                }, 4000);
+            }, 320);
+        }
+    }
+
+    // re-init canvas if the window size changes
+    resizeCanvas = () => {
+        canvas.width = window.innerWidth;
+        canvas.height = window.innerHeight;
+        cx = ctx.canvas.width / 2;
+        cy = ctx.canvas.height / 2;
+    }
+
+    // resize listenter
+    window.addEventListener('resize', () => {
+        resizeCanvas();
+    });
+
+    // click button on spacebar or return keypress
+    document.body.onkeyup = (e) => {
+        if (e.keyCode == 13 || e.keyCode == 32) {
+            clickButton();
+        }
+    }
+
+    // Set up button text transition timings on page load
+    textElements = button.querySelectorAll('.button-text');
+    textElements.forEach((element) => {
+        characters = element.innerText.split('');
+        let characterHTML = '';
+        characters.forEach((letter, index) => {
+            characterHTML += `<span class="char${index}" style="--d:${index * 30}ms; --dr:${(characters.length - index - 1) * 30}ms;">${letter}</span>`;
+        })
+        element.innerHTML = characterHTML;
+    })
+
+    // kick off the render loop
+    render();
+
+    // pop up 槓龜通知
+    $('#fail--close').click(function () {
+        $('#fail--popUp').removeClass('active')
+    })
+    setTimeout(function () {
+        $(".fail_ribbon").css('display', 'none');
+    }, 5000);
+
+    // pop up 狀態
+    $(function () {
+        for (let i = 1; i <= 4; i++) {
+            $('#status--open-' + i).click(function () {
+                $('#status--popUp').addClass('active')
+            })
+        }
+    })
+    $('#status--close').click(function () {
+        $('#status--popUp').removeClass('active')
+    })
+    $('#status--submit').click(function () {
+        $('#status--popUp').removeClass('active')
+    })
+
+    // 篩選下拉
+    $('.days').click(function () {
+        $('.pages').removeClass('active')
+        $(this).toggleClass('active')
+    })
+
+    // 頁碼下拉
+    $('.pages').click(function () {
+        $('.days').removeClass('active')
+        $(this).toggleClass('active')
+    })
+</script>
+
+</html>

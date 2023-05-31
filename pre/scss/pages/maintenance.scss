@@ -1,0 +1,35 @@
+@import "../variable";
+
+.maintenance {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    height: calc(100svh - 200px);
+    margin: 80px 0 -228px;
+    color: $lightGrey;
+
+    img {
+        width: 250px;
+        margin-bottom: 64px;
+    }
+
+    h2 {
+        font-size: 26px;
+        font-weight: 700;
+        margin-bottom: 16px;
+    }
+
+    p {
+        font-size: 16px;
+    }
+}
+
+@media screen and (max-width: 515px) {
+    .maintenance {
+        margin-bottom: -120px;
+    }
+}
+
+// mobile

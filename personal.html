@@ -1,0 +1,1219 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="format-detection" content="telephone=no">
+    <title>遊戲完蛋了</title>
+    <link rel="shortcut icon" href="images/icon/favicon.ico" type="images/icon/favicon.ico" />
+
+    <!-- share info -->
+    <meta property="og:url" content="https://buggedgame.io/" />
+    <meta property="og:locale" content="zh-Hant" />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="遊戲完蛋了! The Game is Bugged!" />
+    <meta property="og:description" content="樂玩享賺！ Play for Fun & Earn!" />
+    <meta property="og:image" content="https://g-jiuyang.github.io/buggedgame/images/og-img.png" />
+    <meta property="og:image:type" content="image/png" />
+    <meta property="og:image:width" content="1400" />
+    <meta property="og:image:height" content="770" />
+
+    <!-- tailwind css -->
+    <link rel="stylesheet" href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css">
+
+    <!-- Custom styles -->
+    <link rel="stylesheet" href="css/custom-style.css">
+    <link rel="stylesheet" href="css/custom-animation.css">
+    <link rel="stylesheet" href="css/global.css">
+    <link rel="stylesheet" href="css/personal.css">
+    <link rel="stylesheet" href="css/toast.css">
+    <link rel="stylesheet" href="css/pop-up.css">
+
+    <!-- jQuery -->
+    <script src="js/jquery-3.4.1.min.js"></script>
+
+    <!-- tailwind js -->
+    <!-- <script src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.3.5/dist/alpine.min.js" defer></script> -->
+
+    <script src="js/cookie.js"></script>
+    <script src="js/step.js"></script>
+    <script src="js/tabs.js"></script>
+    <script src="js/switch.js"></script>
+    <script src="js/dropdown.js"></script>
+    <script src="js/mobile-menu.js"></script>
+    <script src="js/mobile-wallet.js"></script>
+    <script src="js/wallet-text-change.js"></script>
+    <script src="js/faq.js"></script>
+    <script src="js/table-show.js"></script>
+    <script src="js/nav-blur.js"></script>
+    <script src="js/popup.js"></script>
+</head>
+
+<body class="overflow-x-hidden bg-121212">
+
+    <!-- header -->
+    <div class="min-h-full">
+        <!-- 20220620 -->
+        <nav id="navH" class="bg-opacity-0 w-full fixed top-0 z-10">
+            <div class="max-w-7xl mx-auto px-5 sm:px-6 lg:px-8">
+                <div class="flex items-center h-20">
+                    <div class="flex items-center justify-between w-full">
+                        <!-- 20220628 20220629-->
+                        <div class="w-24 lg:w-32 flex-shrink-0 lg:w-auto">
+                            <a href="index.html">
+                                <img src="images/product/logo.png" alt="">
+                            </a>
+                        </div>
+                        <!-- pc and mobile menu -->
+                        <div class="flex items-center">
+                            <ul class="items-center text-base text-white font-bold hidden lg:flex">
+                                <!-- pc -->
+                                <li class="-ty-3">
+                                    <a href="shop.html" class="block px-5">商城</a>
+                                </li>
+                                <li class="-ty-3">
+                                    <a href="##" class="block px-5">白皮書</a>
+                                </li>
+                                <li class="-ty-3">
+                                    <a href="pledge.html" class="block px-5">質押</a>
+                                </li>
+                                <li class="-ty-3">
+                                    <a href="##" class="block px-5">DEX</a>
+                                </li>
+                                <li class="relative font-bold">
+                                    <a href="##" class="px-5 flex items-center space-x-1 btn-language">
+                                        <img src="images/icon/icon-language.svg" alt="">
+                                        <span class="text-sm">繁體中文</span>
+                                        <img src="images/icon/icon-arrow-bottom.svg" alt="" class="icon-arrow-bottom">
+                                    </a>
+                                    <ul
+                                        class="hidden w-40 py-6 text-center font-bold mt-3 border border-solid text-sm absolute top-9 left-1/2 transform -translate-x-1/2 rounded-xl bg-1f1f1f border-color-353535 color-898989 language-menu">
+                                        <li>
+                                            <a href="##" class="block p-2 text-white">繁體中文</a>
+                                        </li>
+                                        <li>
+                                            <a href="##" class="block p-2 text-white">简体中文</a>
+                                        </li>
+                                        <li>
+                                            <a href="##" class="block p-2 text-white">English</a>
+                                        </li>
+                                        <li>
+                                            <a href="##" class="block p-2 text-white">한국어</a>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li class="hidden mr-10 relative font-normal coin-box">
+                                    <span class="flex space-x-2">
+                                        <span><img src="images/icon/icon-coin.svg" alt=""></span>
+                                        <span class="coin">300,000.00</span>
+                                    </span>
+                                    <div
+                                        class="hidden absolute left-1/2 top-9 transform -translate-x-1/2 z-20 coin-info">
+                                        <div class="relative left-1/2 top-px transform -translate-x-1/2 z-30 triangle">
+                                        </div>
+                                        <div
+                                            class="w-56 px-6 py-5 text-sm font-normal rounded-xl absolute left-1/2 transform -translate-x-1/2 z-20 bg-1f1f1f border border-solid border-color-353535">
+                                            唉呀~您已少賺了6,666顆蛋幣，趕快來 Play and Earn! <a href="shop.html"
+                                                class="font-bold color-7e97f0">我想賺幣！</a></div>
+                                    </div>
+                                </li>
+                            </ul>
+                            <ul class="flex items-center sm:flex lg:hidden">
+                                <!-- mobile -->
+                                <!-- 20220621 -->
+                                <li class="flex justify-center items-center w-10 h-10 mx-1 block">
+                                    <a href="##" class="block w-full" target="_blank">
+                                        <img src="images/icon/icon-discord.svg" alt="" class="w-full">
+                                    </a>
+                                </li>
+                                <li class="flex justify-center items-center w-10 h-10 mx-1 btn-hamburger">
+                                    <a href="##" class="block w-full">
+                                        <img src="images/icon/icon-menu.svg" alt="" class="w-full">
+                                    </a>
+                                </li>
+                                <li class="flex justify-center items-center w-11 h-11 mx-1 mr-0 hidden">
+                                    <a href="##" class="w-full">
+                                        <img src="images/icon/personal.svg" alt="" class="w-full">
+                                    </a>
+                                </li>
+                            </ul>
+                            <!-- pc btn wallet -->
+                            <div class="relative">
+                                <a href="##" id="btn-change"
+                                    class="hidden text-sm rounded-full py-3 px-6 text-white font-bold whitespace-nowrap bg-from-e63eb6-to-749ff5 btn-wallet sm:block lg:text-xs">連接錢包</a>
+                                <ul
+                                    class="hidden w-40 py-6 text-center mt-3 border border-solid absolute top-11 left-1/2 transform -translate-x-1/2 rounded-xl text-sm font-bold color-898989 hover:color-white bg-1f1f1f border-color-353535 panel-wallet">
+                                    <li class="">
+                                        <a href="personal.html" onclick="textChange1()"
+                                            class="block p-2 text-white whitespace-nowrap">個人資產</a>
+                                    </li>
+                                    <li class="">
+                                        <a href="record.html" class="block p-2 text-white whitespace-nowrap">歷史紀錄</a>
+                                    </li>
+                                    <li class="">
+                                        <a href="##" onclick="textChange2()"
+                                            class="block p-2 hover:text-white whitespace-nowrap">登出</a>
+                                    </li>
+                                </ul>
+                            </div>
+                            <!-- mobile btn wallet -->
+                            <div>
+                                <a href="javascript:void(0)"
+                                    class="mr-0 text-sm font-bold rounded-full py-3 px-5 mx-1 text-white whitespace-nowrap bg-from-e63eb6-to-749ff5 btn-m-wallet sm:hidden">連接錢包</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </nav>
+
+        <!-- mobile menu -->
+        <div class="hidden w-full h-full text-lg fixed top-0 left-0 z-30 bg-121212 m-menu lg:hidden">
+            <ul class="text-center relative font-bold top-24 color-efefef">
+                <li class="py-4">
+                    <a href="shop.html" class="block">商城</a>
+                </li>
+                <li class="py-4">
+                    <a href="##" class="block">白皮書</a>
+                </li>
+                <li class="py-4">
+                    <a href="pledge.html" class="block">質押</a>
+                </li>
+                <li class="py-4">
+                    <a href="##" class="block">DEX</a>
+                </li>
+                <li class="py-4 relative top-60">
+                    <a href="##" class="block space-x-1  btn-m-language">
+                        <img src="images/icon/icon-language.svg" alt="" class="inline-block align-middle">
+                        <span class="inline-block align-middle text-sm">繁體中文</span>
+                        <img src="images/icon/icon-arrow-top.svg" alt="" class="inline-block align-middle">
+                    </a>
+                    <ul
+                        class="hidden w-40 py-6 text-sm font-bold text-center border border-solid absolute -top-48 left-1/2 transform -translate-x-1/2 rounded-xl bg-1f1f1f border-color-353535 m-language-menu">
+                        <li class="">
+                            <a href="##" class="block p-2 color-898989 focus:text-white">繁體中文</a>
+                        </li>
+                        <li class="">
+                            <a href="##" class="block p-2 color-898989 focus:text-white">简体中文</a>
+                        </li>
+                        <li class="">
+                            <a href="##" class="block p-2 color-898989 focus:text-white">English</a>
+                        </li>
+                        <li class="">
+                            <a href="##" class="block p-2 color-898989 focus:text-white">한국어</a>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+            <button class="absolute top-4 right-4 btn-close">
+                <img src="images/icon/icon-close.svg" alt="">
+            </button>
+        </div>
+
+        <!-- mobile wallet -->
+        <div class="hidden w-full h-full fixed top-0 left-0 z-30 bg-353535 bg-353535-80 m-bg-wallet lg:hidden">
+            <div class="w-full p-6 absolute bottom-0 z-20 rounded-t-2xl bg-1f1f1f m-panel-wallet">
+                <div
+                    class="flex flex-col items-center justify-between px-5 py-4 mt-11 mb-7 border border-solid rounded-3xl bg-5e5e5e-30 color-efefef border-color-353535">
+                    <div class="w-full flex items-center space-x-3 mb-2">
+                        <div><img src="images/icon/icon-account.svg" alt=""></div>
+                        <div class="text-base font-bold">0x130...123D</div>
+                    </div>
+                    <div class="w-full flex flex-row-reverse space-x-2">
+                        <div class="flex">
+                            <div class="mr-2"><img src="images/icon/icon-coin.svg" alt=""></div>
+                            <div class="text-base font-bold">300,000</div>
+                        </div>
+                    </div>
+                </div>
+                <div
+                    class="mb-3 rounded-full border border-solid border-transparent text-sm text-center border-linear-gradient-1f1f1f-e63eb6-749ff5">
+                    <a href="personal.html"
+                        class="w-full flex items-center justify-center py-3 px-6 border-transparent font-bold color-efefef">個人資產</a>
+                </div>
+                <div
+                    class="mb-3 rounded-full border border-solid border-transparent text-sm text-center border-linear-gradient-1f1f1f-e63eb6-749ff5">
+                    <a href="record.html"
+                        class="w-full flex items-center justify-center py-3 px-6 border-transparent font-bold color-efefef">歷史紀錄</a>
+                </div>
+                <div
+                    class="text-center border border-solid rounded-full text-sm font-bold color-efefef border-color-353535">
+                    <a href="##" class="w-full flex items-center justify-center py-3 px-6">登出</a>
+                </div>
+                <button class="absolute top-4 right-4 btn-wallet-close">
+                    <img src="images/icon/icon-close.svg" alt="">
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- 背景漸層色 -->
+    <div class="w-full absolute top-0 left-0 -z-1">
+        <img src="images/product/bg-gradient.svg" alt="" class="w-full">
+    </div>
+
+    <div class="max-w-6xl mx-auto px-5 sm:px-6 lg:px-8">
+        <!-- 麵包屑 -->
+        <div class="flex items-center space-x-1 pt-24 mb-5 sm:mb-11">
+            <a href="index.html" class="text-sm font-normal sm:text-xs color-898989">首頁</a>
+            <span><img src="images/icon/icon-arrow-right.svg" alt=""></span>
+            <a href="#" class="text-sm font-bold sm:text-xs color-898989">個人資產</a>
+        </div>
+
+        <ul class="dashboard">
+            <li class="account">
+                <div class="account__info">
+                    <div class="passlevel">
+                        <!-- <img src="images/icon/personal.svg"> 當使用者未持有GameFi Pass時顯示此icon -->
+                        <img src="images/icon/icon-pass-10000.svg"><!-- 當使用者擁有GameFi Pass時，依照等級顯示不同icon -->
+                        黃金級
+                        <a id="passlevel--open" href="javascript:void(0)"><img src="images/icon/icon-info.svg"></a>
+                    </div>
+                    <div class="address">0x130...123D</div>
+                    <!--  <span>* 帳號已鎖定，如有問題 <a href="#">請洽客服</a></span>帳號有問題時顯示 -->
+                </div>
+                <div class="account__gamepass">
+                    <div class="account__gamepass--title">
+                        <div>GAMEFI PASS 生命值</div>
+                        <a id="gamepass--open" href="javascript:void(0)"><img src="images/icon/icon-info.svg"></a>
+                    </div>
+                    <div class="account__gamepass--repair">
+                        <a href="javascript:void(0)" id="repair--open" class="button"><img
+                                src="images/icon/icon-gear.svg"> 修復</a> <!-- 生命值100%時不可點選，設定為disable -->
+                        <!-- <a href="#" class="button btn-gradient"><img src="images/icon/icon-enable.svg"> 購買</a> 未購買GameFi Pass時，修復按鈕改為此按鈕 -->
+                    </div>
+                </div>
+                <div class="desc">*如果有需要一些注意事項可在這，沒的話隱藏起來，沒的話隱藏起來。</div>
+                <div class="bottom">
+                    <p>5 / 100</p>
+                    <div class="bar">
+                        <div style="width: 5%; background-color: #CC47A6;"></div>
+                        <!-- 更改width的值即可調整百分比 -->
+                        <!-- 51~100% 時 backgroung-color:「#7EF09E」 -->
+                        <!-- 11~50 時 backgroung-color:「#D8B42C」 -->
+                        <!-- 1~10 時 backgroung-color:「#CC47A6」 -->
+                    </div>
+                    <p>* 少拿了 60% 回饋，該修復囉！</p>
+                    <!-- 51~100% 時顯示「* 很棒，你現在是獎勵完全體！」 -->
+                    <!-- 11~50% 時顯示「* 少拿了 40% 回饋，該修復囉！」 -->
+                    <!-- 1~10% 時顯示「* 少拿了 60% 回饋，該修復囉！」 -->
+                    <!-- 0% 時顯示「* 已失去回饋資格，快修復囉！」 -->
+                    <!-- 未購買GAMEPASS時顯示「* 目前無GAMEFI PASS，已少賺好多蟲蟲幣拉！快去購買啟用！」 -->
+                </div>
+            </li>
+
+            <li class="bugCoin">
+                <div class="info">
+                    <p>
+                        <img src="images/icon/icon-coin.svg">
+                        <span>蟲蟲幣</span>
+                        <a id="bugCoin--open" href="javascript:void(0)"><img src="images/icon/icon-info.svg"></a>
+                    </p>
+                    <p>300,000.123456</p>
+                </div>
+                <!-- <div class="desc">*如果有需要一些注意事項可在這，沒的話隱藏起來，沒的話隱藏起來。</div> -->
+                <div class="bottom">
+                    <div class="bugCoin--password">
+                        <a href="password-enable.html">啟用提領密碼</a><!-- 提領密碼已啟用的用戶，文字改為「修改提領密碼」，連至password-reset.html -->
+                    </div>
+                    <div class="bugCoin--password"><a href="#">新增BUG到錢包</a></div>
+                    <div class="btns">
+                        <a href="withdraw.html" class="button btn-outline">提領</a>
+                        <a id="deposit--open" href="javascript:void(0)" class="button btn-outline">存入</a>
+                    </div>
+                </div>
+            </li>
+
+            <li class="pledge">
+                <div class="info">
+                    <p>質押收益</p>
+                    <p>168.00 BUG</p>
+                </div>
+                <!-- <div class="desc">*如果有需要一些注意事項可在這，沒的話隱藏起來，沒的話隱藏起來。</div> -->
+                <div class="bottom">
+                    <div class="btns">
+                        <a href="pledge.html" class="button btn-outline">前往質押</a>
+                    </div>
+                </div>
+            </li>
+        </ul>
+
+        <!-- 我的NFT -->
+        <div class="myNft">
+            <div class="title">
+                <h2>我的NFT </h2>
+                <a id="nftinfo--open" href="javascript:void(0)"><img src="images/icon/icon-info.svg"></a>
+            </div>
+            <div class="nft-tab">
+                <ul>
+                    <li id="nft-tab-1" class="active"><a href="javascript:void(0)">GameFi Pass</a></li>
+                    <li id="nft-tab-2"><a href="javascript:void(0)">榮譽</a></li>
+                    <li id="nft-tab-3"><a href="javascript:void(0)">成就</a></li>
+                    <li id="nft-tab-4"><a href="javascript:void(0)">裝備</a></li>
+                </ul>
+            </div>
+            <ul id="nft-list-1" class="nft-list active">
+                <!-- ↓此處每個<li>點開的 pop up 內容都不一樣 -->
+                <li>
+                    <div class="img"><img src="images/product/nft-01.png"></div>
+                    <div class="desc">
+                        <p class="nft--name">移動式</p>
+                        <p class="nft--id">8be8k...12g5</p> <!-- 前5後4，中間... -->
+                    </div>
+                </li>
+                <li class="pledging">
+                    <div class="img">
+                        <img src="images/product/nft-02.png">
+                        <span>質押中</span>
+                    </div>
+                    <div class="desc">
+                        <p class="nft--name">希克斯</p>
+                        <p class="nft--id">8be8k...12g5</p>
+                    </div>
+                </li>
+                <li>
+                    <div class="img"><img src="images/product/nft-03.png"></div>
+                    <div class="desc">
+                        <p class="nft--name">大波斯菊</p>
+                        <p class="nft--id">8be8k...12g5</p>
+                    </div>
+                </li>
+                <li>
+                    <div class="img"><img src="images/product/nft-01.png"></div>
+                    <div class="desc">
+                        <p class="nft--name">移動式</p>
+                        <p class="nft--id">8be8k...12g5</p> <!-- 前5後4，中間... -->
+                    </div>
+                </li>
+                <li>
+                    <div class="img"><img src="images/product/nft-02.png"></div>
+                    <div class="desc">
+                        <p class="nft--name">希克斯</p>
+                        <p class="nft--id">8be8k...12g5</p>
+                    </div>
+                </li>
+                <li>
+                    <div class="img"><img src="images/product/nft-03.png"></div>
+                    <div class="desc">
+                        <p class="nft--name">大波斯菊</p>
+                        <p class="nft--id">8be8k...12g5</p>
+                    </div>
+                </li>
+            </ul>
+            <ul id="nft-list-2" class="nft-list">
+                <li class="HerosBirth">
+                    <div class="img">
+                        <img src="images/nft/HerosBirth.png">
+                    </div>
+                    <div class="desc">
+                        <p class="nft--name">Hero's Birth NFT</p>
+                        <p class="nft--id">P2O The Game is Bugged</p>
+                        <!-- <p class="nft--num"><span>4</span></p> -->
+                    </div>
+                </li>
+                <li class="coming_soon HonorLevel">
+                    <div class="img">
+                        <img src="images/nft/HonorLevel.png">
+                        <span>即將開放</span>
+                    </div>
+                    <div class="desc">
+                        <p class="nft--name">The Excellent Records of Lv. 60</p>
+                        <p class="nft--id">P2O The Game is Bugged</p>
+                        <!-- <p class="nft--num"><span>4</span></p> -->
+                    </div>
+                </li>
+                <li class="coming_soon HonorLevel">
+                    <div class="img">
+                        <img src="images/nft/HonorLevel.png">
+                        <span>即將開放</span>
+                    </div>
+                    <div class="desc">
+                        <p class="nft--name">The Excellent Records of Lv. 80</p>
+                        <p class="nft--id">P2O The Game is Bugged</p>
+                        <!-- <p class="nft--num"><span>4</span></p> -->
+                    </div>
+                </li>
+                <li class="coming_soon HonorLevel">
+                    <div class="img">
+                        <img src="images/nft/HonorLevel.png">
+                        <span>即將開放</span>
+                    </div>
+                    <div class="desc">
+                        <p class="nft--name">The Excellent Records of Lv. 100</p>
+                        <p class="nft--id">P2O The Game is Bugged</p>
+                        <!-- <p class="nft--num"><span>4</span></p> -->
+                    </div>
+                </li>
+                <li class="coming_soon HonorLevel">
+                    <div class="img">
+                        <img src="images/nft/HonorLevel.png">
+                        <span>即將開放</span>
+                    </div>
+                    <div class="desc">
+                        <p class="nft--name">The Excellent Records of Lv. 150</p>
+                        <p class="nft--id">P2O The Game is Bugged</p>
+                        <!-- <p class="nft--num"><span>1</span></p> -->
+                    </div>
+                </li>
+                <li class="coming_soon HonorRanking">
+                    <div class="img">
+                        <img src="images/nft/HonorRanking.png">
+                        <span>即將開放</span>
+                    </div>
+                    <div class="desc">
+                        <p class="nft--name">The Glorious Honor of Ranking 1st Place</p>
+                        <p class="nft--id">P2O The Game is Bugged</p>
+                        <!-- <p class="nft--num"><span>1</span></p> -->
+                    </div>
+                </li>
+                <li class="coming_soon HonorRanking">
+                    <div class="img">
+                        <img src="images/nft/HonorRanking.png">
+                        <span>即將開放</span>
+                    </div>
+                    <div class="desc">
+                        <p class="nft--name">The Glorious Honor of Ranking 5th Place</p>
+                        <p class="nft--id">P2O The Game is Bugged</p>
+                        <!-- <p class="nft--num"><span>1</span></p> -->
+                    </div>
+                </li>
+                <li class="coming_soon HonorRanking">
+                    <div class="img">
+                        <img src="images/nft/HonorRanking.png">
+                        <span>即將開放</span>
+                    </div>
+                    <div class="desc">
+                        <p class="nft--name">The Glorious Honor of Ranking 15th Place</p>
+                        <p class="nft--id">P2O The Game is Bugged</p>
+                        <!-- <p class="nft--num"><span>2</span></p> -->
+                    </div>
+                </li>
+                <li class="coming_soon HonorRanking">
+                    <div class="img">
+                        <img src="images/nft/HonorRanking.png">
+                        <span>即將開放</span>
+                    </div>
+                    <div class="desc">
+                        <p class="nft--name">The Glorious Honor of Ranking 30th Place</p>
+                        <p class="nft--id">P2O The Game is Bugged</p>
+                        <!-- <p class="nft--num"><span>2</span></p> -->
+                    </div>
+                </li>
+                <li class="coming_soon HonorRanking">
+                    <div class="img">
+                        <img src="images/nft/HonorRanking.png">
+                        <span>即將開放</span>
+                    </div>
+                    <div class="desc">
+                        <p class="nft--name">The Glorious Honor of Ranking 50th Place</p>
+                        <p class="nft--id">P2O The Game is Bugged</p>
+                        <!-- <p class="nft--num"><span>1</span></p> -->
+                    </div>
+                </li>
+                <li class="coming_soon HonorRanking">
+                    <div class="img">
+                        <img src="images/nft/HonorRanking.png">
+                        <span>即將開放</span>
+                    </div>
+                    <div class="desc">
+                        <p class="nft--name">The Glorious Honor of Ranking 100th Place</p>
+                        <p class="nft--id">P2O The Game is Bugged</p>
+                        <!-- <p class="nft--num"><span>6</span></p> -->
+                    </div>
+                </li>
+                <li class="coming_soon HonorRanking">
+                    <div class="img">
+                        <img src="images/nft/HonorRanking.png">
+                        <span>即將開放</span>
+                    </div>
+                    <div class="desc">
+                        <p class="nft--name">The Glorious Honor of Ranking 150th Place</p>
+                        <p class="nft--id">P2O The Game is Bugged</p>
+                        <!-- <p class="nft--num"><span>6</span></p> -->
+                    </div>
+                </li>
+                <li class="coming_soon HonorRanking">
+                    <div class="img">
+                        <img src="images/nft/HonorRanking.png">
+                        <span>即將開放</span>
+                    </div>
+                    <div class="desc">
+                        <p class="nft--name">The Glorious Honor of Ranking 200th Place</p>
+                        <p class="nft--id">P2O The Game is Bugged</p>
+                        <!-- <p class="nft--num"><span>6</span></p> -->
+                    </div>
+                </li>
+                <li class="coming_soon HonorRanking">
+                    <div class="img">
+                        <img src="images/nft/HonorRanking.png">
+                        <span>即將開放</span>
+                    </div>
+                    <div class="desc">
+                        <p class="nft--name">The Glorious Honor of Ranking 500th Place</p>
+                        <p class="nft--id">P2O The Game is Bugged</p>
+                        <!-- <p class="nft--num"><span>6</span></p> -->
+                    </div>
+                </li>
+                <li class="coming_soon HonorRanking">
+                    <div class="img">
+                        <img src="images/nft/HonorRanking.png">
+                        <span>即將開放</span>
+                    </div>
+                    <div class="desc">
+                        <p class="nft--name">The Glorious Honor of Ranking 1,000th Place</p>
+                        <p class="nft--id">P2O The Game is Bugged</p>
+                        <!-- <p class="nft--num"><span>6</span></p> -->
+                    </div>
+                </li>
+            </ul>
+            <ul id="nft-list-3" class="nft-list">
+                <li class="stay_tuned">
+                    <div class="img">
+                        <img src="images/nft/Achievement.png">
+                        <span>敬請期待</span>
+                    </div>
+                    <div class="desc">
+                        <p class="nft--name">Locked</p>
+                        <p class="nft--id">P2O The Game is Bugged</p>
+                        <!-- <p class="nft--num"><span>6</span></p> -->
+                    </div>
+                </li>
+            </ul>
+            <ul id="nft-list-4" class="nft-list">
+                <li class="stay_tuned">
+                    <div class="img">
+                        <img src="images/nft/Equipment.png">
+                        <span>敬請期待</span>
+                    </div>
+                    <div class="desc">
+                        <p class="nft--name">Locked</p>
+                        <p class="nft--id">P2O The Game is Bugged</p>
+                        <!-- <p class="nft--num"><span>6</span></p> -->
+                    </div>
+                </li>
+                <li class="stay_tuned">
+                    <div class="img">
+                        <img src="images/nft/Equipment.png">
+                        <span>敬請期待</span>
+                    </div>
+                    <div class="desc">
+                        <p class="nft--name">Locked</p>
+                        <p class="nft--id">P2O The Game is Bugged</p>
+                        <!-- <p class="nft--num"><span>6</span></p> -->
+                    </div>
+                </li>
+            </ul>
+        </div>
+
+        <!-- toast 提領密碼設定成功訊息 (出現5秒後消失) -->
+        <div class="toast toast--primary active">
+            <img src="images/icon/icon-check.svg">
+            <span>提領密碼設定成功</span>
+        </div>
+
+        <!-- toast 生命值修復成功訊息 (出現5秒後消失) -->
+        <div id="repair--toast" class="toast toast--primary">
+            <img src="images/icon/icon-check.svg">
+            <span>生命值修復成功</span>
+        </div>
+    </div>
+
+
+
+    <!-- footer -->
+    <footer>
+        <div class="copyright">
+            <dl>
+                <dt><img src="images/product/Logo_GASH.png"></dt>
+                <dt><img src="images/product/Logo_Naddic.png"></dt>
+                <dd>© 2022 GASH POINT Co., Ltd. All right reserved <br>商家名稱：樂點股份有限公司 | 統一編號：53209324</dd>
+            </dl>
+            <div><img src="images/icon/icon-pg-12.svg"></div>
+        </div>
+    </footer>
+
+
+    <!-- social link -->
+    <div class="btn-sns">
+        <a href="#" target="_blank">
+            <img src="images/icon/icon-telegram-pc.svg">
+        </a>
+        <a href="#" target="_blank">
+            <img src="images/icon/icon-twitter-pc.svg">
+        </a>
+        <a href="#" target="_blank">
+            <img src="images/icon/icon-dioscord-pc.svg">
+        </a>
+    </div>
+
+    <!-- pop up PASS等級說明 -->
+    <div id="passlevel--popUp" class="popUp">
+        <div class="popUp--container">
+            <button id="passlevel--close" class="popUp--close"><img src="images/icon/icon-minus.svg"></button>
+            <h2>各級 PASS 賦能說明</h2>
+            <div class="popUp--content">
+                <p>當GAMEFI PASS生命值不同時，在日常、長期任務中會有不同的回饋。</p>
+                <img src="images/pass-10000.png">
+                <p>【 金色 10,000 最強級別 】</p>
+                <ul>
+                    <li>獎勵來源 : 全任務</li>
+                    <li>獎勵比例 : 100%</li>
+                    <li>功能 : 提領/存入</li>
+                </ul>
+                <img src="images/pass-2000.png">
+                <p>【 銀色 2,000 最強級別 】</p>
+                <ul>
+                    <li>獎勵來源 : 日常任務 & 10vs10</li>
+                    <li>獎勵比例 : 20%</li>
+                    <li>功能 : 提領/存入</li>
+                </ul>
+                <img src="images/pass-1000.png">
+                <p>【 銅色 1,000 最強級別 】</p>
+                <ul>
+                    <li>獎勵來源 : 日常任務 & 10vs10</li>
+                    <li>獎勵比例 : 20%</li>
+                    <li>功能 : 提領/存入</li>
+                </ul>
+                <img src="images/pass-free.png">
+                <p>【 灰鐵色 FREE 自由級別 】</p>
+                <ul>
+                    <li>獎勵來源 : 日常任務 & 10vs10</li>
+                    <li>獎勵比例 : 10%</li>
+                    <li>功能 : 提領/存入(X)</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <!-- pop up 生命值說明 -->
+    <div id="gamepass--popUp" class="popUp">
+        <div class="popUp--container">
+            <button id="gamepass--close" class="popUp--close"><img src="images/icon/icon-minus.svg"></button>
+            <h2>GAMEFI PASS 生命值</h2>
+            <div class="popUp--content">
+                <p>當GAMEFI PASS生命值不同時，在日常、長期任務中會有不同的回饋。</p>
+                <div>
+                    <p>【 日常任務 】</p>
+                    <ul>
+                        <li>生命值為 51~100 時：完成每日任務可於結算時間獲得 1 BUG。</li>
+                        <li>生命值為 11~50 時：完成每日任務可於結算時間獲得 0.6 BUG。</li>
+                        <li>生命值為 1~10 時：完成每日任務可於結算時間獲得 0.2 BUG。</li>
+                        <li>生命值為 0 時：將無法獲得日常任務 BUG。</li>
+                    </ul>
+                </div>
+                <div class="mission">
+                    <p>日常</p>
+                    <div class="bar">
+                        <div class="progress progress-100"></div>
+                        <div class="progress progress-51"></div>
+                        <div class="progress progress-11"></div>
+                        <div class="progress progress-0"></div>
+                    </div>
+                    <div class="earn">
+                        <span class="earn-100">1 BUG</span>
+                        <span class="earn-51">0.6 BUG</span>
+                        <span class="earn-11">0.2 BUG</span>
+                    </div>
+                </div>
+                <div>
+                    <p>【 長期任務 】</p>
+                    <ul>
+                        <li>生命值 > 0 時：挑戰成功皆可獲得 BUG 獎勵。</li>
+                        <li>生命值 = 0 時：將無法獲得長期任務 BUG。</li>
+                    </ul>
+                </div>
+                <div class="mission">
+                    <p>長期</p>
+                    <div class="bar longterm">
+                        <div class="progress progress-100"></div>
+                        <div class="progress progress-0"></div>
+                    </div>
+                    <div class="earn longterm">
+                        <span class="earn-100">on</span>
+                        <span class="earn-11">off</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- pop up 修復生命值 -->
+    <div id="repair--popUp" class="popUp">
+        <div class="popUp--container">
+            <button id="repair--close" class="popUp--close"><img src="images/icon/icon-minus.svg"></button>
+            <h2>修復生命值</h2>
+            <div class="repair">
+                <div id="level"><span style="color: #CC47A6;">5</span> / 100</div>
+                <!-- ↑↑↑ span內容數值為當前生命值。當使用者點選修復生命值時，數值及色彩跟著更動 ↑↑↑ -->
+                <!-- 51~100% 時 backgroung-color:「#7EF09E」，11~50 時 backgroung-color:「#D8B42C」，1~10 時 backgroung-color:「#CC47A6」 -->
+                <button id="reset"><img src="images/icon/icon-reset.svg"> 重置</button>
+                <div class="bar">
+                    <div id="bar--new" style="width: 5%; min-width: 5%;"></div>
+                    <div id="bar--origin" style="background-color: #CC47A6; width: 5%;"></div>
+                </div>
+                <div class="btns">
+                    <button id="btn--minus">-5</button>
+                    <button id="btn--plus">+5</button>
+                    <button id="btn--max">MAX</button>
+                </div>
+            </div>
+            <div class="desc">
+                已選取的修復量： <span id="repaired">0</span>%<br>
+                修復成本：<span class="color"><span id="cost-bug">0</span> BUG</span> (目前擁有BUG: <span
+                    id="own-bug">8.00</span>)
+                <!-- span內文字色彩預設為#7EF09E，BUG不足時，改為#E08083 -->
+            </div>
+            <span id="warning">* 您的 BUG 不足，無法修復，請減少修復數值</span> <!-- BUG不足時顯示此訊息 -->
+            <a href="javascript:void(0)" id="repair--submit" class="button btn-gradient" disabled>修復</a>
+            <!-- 預設為disabled，若有變更且BUG數充足，才可點選確認(關閉disabled) -->
+        </div>
+    </div>
+
+    <!-- pop up 蟲蟲幣說明 -->
+    <div id="bugCoin--popUp" class="popUp popUp__button">
+        <div class="popUp--container">
+            <button id="bugCoin--close" class="popUp--close"><img src="images/icon/icon-minus.svg"></button>
+            <h2>蟲蟲幣說明</h2>
+            <div class="popUp--content">
+                <p>蟲蟲幣相關說明蟲蟲幣相關說明蟲蟲幣相關說明蟲蟲幣相關說明蟲蟲幣相關說明。</p>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt consectetur nisi repudiandae sit
+                    tenetur, magni et asperiores nihil possimus porro consequuntur corporis, excepturi, aperiam cum
+                    officiis delectus obcaecati quaerat pariatur? ipsum dolor sit amet consectetur adipisicing elit.
+                    Error id doloribus qui, enim temporibus ipsa minima dolorem natus modi quisquam distinctio fugiat
+                    pariatur est repellat aliquam earum perferendis impedit. Temporibus. ipsum dolor sit amet
+                    consectetur adipisicing elit. Inventore, sed aperiam, quam aspernatur tenetur vitae commodi nostrum
+                    totam, doloremque ducimus eveniet? Ex minus est eaque unde numquam culpa laudantium fugiat?</p>
+                <p class="warning">一些比較重要的說明可以是紅色。</p>
+            </div>
+            <button id="bugCoin--submit" class="popUp--submit">確認</button>
+        </div>
+    </div>
+
+    <!-- pop up 存入 -->
+    <div id="deposit--popUp" class="popUp popUp__button">
+        <div class="popUp--container">
+            <button id="deposit--close" class="popUp--close"><img src="images/icon/icon-minus.svg"></button>
+            <h2>存入BUG幣</h2>
+            <div class="popUp--content">
+                <p>請輸入欲存入的BUG幣數量：</p>
+                <div class="input-group">
+                    <input type="text" class="input-warning">
+                    <span class="warning">* 錢包內之BUG幣不足</span>
+                </div>
+            </div>
+            <button id="deposit--submit" class="popUp--submit">確認</button>
+        </div>
+    </div>
+
+    <!-- pop up NFT說明 -->
+    <div id="nftinfo--popUp" class="popUp">
+        <div class="popUp--container">
+            <button id="nftinfo--close" class="popUp--close"><img src="images/icon/icon-minus.svg"></button>
+            <h2>開啟 MetaMask 匯入NFT吧！</h2>
+            <div class="popUp--content">
+                <p>STEP 1. 進入MetaMask後點擊收藏品分頁，並選擇最下方的「添加收藏品」</p>
+                <p class="desc"><img src="images/nft-step1.png"></p>
+                <p>STEP 2. 請輸入遊戲完蛋了NFT的合約地址及編號</p>
+                <ul>
+                    <li>
+                        合約地址：
+                        <a href="">
+                            0x090F...E0DA
+                            <img src="images/icon/icon-copy.svg">
+                        </a>
+                        <!-- click時複製整串完整的合約地址，並跳出toast顯示「複製成功」 -->
+                    </li>
+                    <li>NFT編號：請見個人資產頁 NFT 下方編號（如下圖）</li>
+                </ul>
+                <p class="desc"><img src="images/nft-step2.png"></p>
+                <p>STEP 3. 進入MetaMask後點擊收藏品分頁，並選擇最下方的「添加收藏品」</p>
+                <p class="desc"><img src="images/nft-step3.png"></p>
+            </div>
+        </div>
+    </div>
+
+    <!-- pop up NFT細節 -->
+    <!-- ↓此處因應每個<li>點開的 pop up 內容都不一樣 -->
+    <div id="nftHerosBirth--popUp" class="popUp">
+        <div class="popUp--container">
+            <button id="nftHerosBirth--close" class="popUp--close"><img src="images/icon/icon-minus.svg"></button>
+            <h2>Hero's Birth NFT</h2>
+            <div class="popUp--content">
+                <p>紀念你首次誕生為bugged勇者的卡牌</p>
+                <p class="desc"><img src="images/nft/HerosBirth.png"></p>
+            </div>
+        </div>
+    </div>
+
+    <div id="nftHonorLevel--popUp" class="popUp">
+        <div class="popUp--container">
+            <button id="nftHonorLevel--close" class="popUp--close"><img src="images/icon/icon-minus.svg"></button>
+            <h2>即將開放</h2>
+            <div class="popUp--content">
+                <p>紀念你在遊戲中達到指定等級的榮譽</p>
+                <p class="desc"><img src="images/nft/HonorLevel.png"></p>
+            </div>
+        </div>
+    </div>
+
+    <div id="nftHonorRanking--popUp" class="popUp">
+        <div class="popUp--container">
+            <button id="nftHonorRanking--close" class="popUp--close"><img src="images/icon/icon-minus.svg"></button>
+            <h2>即將開放</h2>
+            <div class="popUp--content">
+                <p>限定期間進入 5vs5 與 10vs10 競技場，達到指定排行</p>
+                <p class="desc"><img src="images/nft/HonorRanking.png"></p>
+            </div>
+        </div>
+    </div>
+</body>
+
+
+<!-- popup bg-->
+<!-- 20220704 -->
+<div class="hidden w-full h-full fixed top-0 left-0 z-40 opacity-88 bg-121212 popup-bg"></div>
+
+<!-- 連接錢包 8-1 -->
+<div
+    class="hidden w-11/12 p-10 mx-auto fixed top-1/4 left-1/2 z-40 transform -translate-x-1/2 rounded-3xl text-center text-xs tracking-wider z-20 border border-solid bg-1f1f1f color-efefef border-color-353535 popup-wrap w-469px">
+    <div>
+        <div class="mb-7 text-lg font-bold">連接錢包</div>
+        <div class="mb-7 text-sm font-noraml text-left color-efefef max-h-64 overflow-y-auto scroll-style">
+            請先連結MetaMask錢包。</div>
+        <a href="##"
+            class="block w-full py-3 px-6 border-transparent rounded-full text-sm font-bold color-efefef bg-from-e63eb6-to-749ff5">連接錢包</a>
+    </div>
+    <button class="absolute top-5 right-5 btn-close">
+        <img src="images/icon/icon-close.svg" alt="">
+    </button>
+</div>
+
+<!-- 功能維護中 8-2-11 -->
+<div
+    class="hidden w-11/12 p-10 mx-auto fixed top-1/4 left-1/2 z-40 transform -translate-x-1/2 rounded-3xl text-center text-xs tracking-wider z-20 border border-solid bg-1f1f1f color-efefef border-color-353535 popup-wrap w-469px">
+    <div>
+        <div class="mb-7 text-lg font-bold">功能維護中</div>
+        <div class="mb-7 text-sm font-noraml text-left color-efefef">功能維護中，暫時關閉。</div>
+        <a href="##"
+            class="block w-full py-3 px-6 border-transparent rounded-full text-sm font-bold color-efefef bg-from-e63eb6-to-749ff5">確認</a>
+    </div>
+</div>
+
+<!-- 系統發生問題 8-2-13 -->
+<div
+    class="hidden w-11/12 p-10 mx-auto fixed top-1/4 left-1/2 z-40 transform -translate-x-1/2 rounded-3xl text-center text-xs tracking-wider z-20 border border-solid bg-1f1f1f color-efefef border-color-353535 popup-wrap w-469px">
+    <div>
+        <div class="mb-7 text-lg font-bold">系統發生問題</div>
+        <div class="mb-7 text-sm font-noraml text-left color-efefef">錯誤代碼(ERRXXXXXXX)，請重新嘗試或 <a href="##"
+                target="_blank" class="font-bold color-7e97f0">洽客服</a></div>
+        <a href="##"
+            class="block w-full py-3 px-6 border-transparent rounded-full text-sm font-bold color-efefef bg-from-e63eb6-to-749ff5">確認</a>
+    </div>
+</div>
+
+<!-- 功能建置中 8-2-16 -->
+<div
+    class="hidden w-11/12 p-10 mx-auto fixed top-1/4 left-1/2 z-40 transform -translate-x-1/2 rounded-3xl text-center text-xs tracking-wider z-20 border border-solid bg-1f1f1f color-efefef border-color-353535 popup-wrap coming-soon-wrap w-469px">
+    <div>
+        <div class="mb-7 text-lg font-bold">功能建置中</div>
+        <div class="mb-7 text-sm font-noraml text-left color-efefef">功能建置中，敬請期待！</div>
+        <a href="##"
+            class="block w-full py-3 px-6 border-transparent rounded-full text-sm font-bold color-efefef bg-from-e63eb6-to-749ff5 btn-confirm">確認</a>
+    </div>
+</div>
+
+<!-- 等待確認中 8-3-1 -->
+<div
+    class="hidden w-11/12 p-10 mx-auto fixed top-1/4 left-1/2 z-40 transform -translate-x-1/2 rounded-3xl text-center text-xs tracking-wider z-20 border border-solid bg-1f1f1f color-efefef border-color-353535 popup-wrap w-469px">
+    <div>
+        <div class="mb-7 text-lg font-bold">等待確認中</div>
+        <div class="mb-7 text-sm font-noraml text-center color-efefef">等待MetaMask錢包確認中，請稍候。</div>
+        <div class="text-sm font-noraml text-center color-efefef">還沒下載MetaMask錢包? <a href="##" target="_blank"
+                class="font-bold color-7e97f0">前往下載</a></div>
+    </div>
+</div>
+
+<!-- 個人資產的table 3-1-2-->
+<div
+    class="hidden w-11/12 p-10 mx-auto fixed top-1/4 left-1/2 z-40 transform -translate-x-1/2 rounded-3xl text-center text-xs tracking-wider z-20 border border-solid bg-1f1f1f color-efefef border-color-353535 popup-wrap w-469px">
+    <div>
+        <div class="mb-7 text-lg font-bold">狀態說明</div>
+        <div class="mb-7 text-sm font-noraml text-left color-efefef max-h-64 overflow-y-auto scroll-style"><span
+                class="inline-block w-1 h-1 mx-1 align-middle rounded-full bg-7ef09e"></span>成功 - Are you sure you want
+            to deactivate your account</div>
+        <div class="mb-7 text-sm font-noraml text-left color-efefef max-h-64 overflow-y-auto scroll-style"><span
+                class="inline-block w-1 h-1 mx-1 align-middle rounded-full bg-cc47a6"></span>失敗 - Are you sure you want
+            to deactivate your account</div>
+        <div class="mb-7 text-sm font-noraml text-left color-efefef max-h-64 overflow-y-auto scroll-style"><span
+                class="inline-block w-1 h-1 mx-1 align-middle rounded-full bg-d8b42c"></span>提領中 - Are you sure you want
+            to deactivate your account</div>
+        <div class="mb-7 text-sm font-noraml text-left color-efefef max-h-64 overflow-y-auto scroll-style"><span
+                class="inline-block w-1 h-1 mx-1 align-middle rounded-full bg-d8b42c"></span>存入中 - Are you sure you want
+            to deactivate your account</div>
+    </div>
+    <button class="absolute top-5 right-5 btn-close">
+        <img src="images/icon/icon-close.svg" alt="">
+    </button>
+</div>
+
+<!-- 右邊蟲蟲幣的提領按鈕 8-2-15 -->
+<div
+    class="hidden w-11/12 p-10 mx-auto fixed top-1/4 left-1/2 z-40 transform -translate-x-1/2 rounded-3xl text-center text-xs tracking-wider z-20 border border-solid bg-1f1f1f color-efefef border-color-353535 popup-wrap w-469px">
+    <div>
+        <div class="mb-7 text-lg font-bold">提醒</div>
+        <div class="mb-7 text-sm font-noraml text-left color-efefef max-h-64 overflow-y-auto scroll-style">
+            免費試玩等級不開放提領功能。<a href="##" target="_blank" class="font-bold color-7e97f0">購買入場券</a></div>
+        <a href="##"
+            class="block w-full py-3 px-6 border-transparent rounded-full text-sm font-bold color-efefef bg-from-e63eb6-to-749ff5">確認</a>
+    </div>
+</div>
+
+<!-- 入場券等級 8-2-12 -->
+<div
+    class="hidden w-11/12 p-10 mx-auto fixed top-1/4 left-1/2 z-40 transform -translate-x-1/2 rounded-3xl text-center text-xs tracking-wider z-20 border border-solid bg-1f1f1f color-efefef border-color-353535 popup-wrap w-469px">
+    <div>
+        <div class="mb-7 text-lg font-bold">入場券等級</div>
+        <div class="text-sm font-noraml text-left color-efefef max-h-64 overflow-y-auto scroll-style">待營運確認中</div>
+    </div>
+    <button class="absolute top-5 right-5 btn-close">
+        <img src="images/icon/icon-close.svg" alt="">
+    </button>
+</div>
+
+<script>
+    // NFT tab
+    $(function () {
+        for (let i = 1; i <= 5; i++) {
+            let nftTab = $('#nft-tab-' + i)
+            let nftList = $('#nft-list-' + i)
+            $(nftTab).click(function () {
+                $('.nft-tab li').removeClass('active')
+                $(this).addClass('active')
+                $('.nft-list').removeClass('active')
+                $(nftList).addClass('active')
+            })
+        }
+    })
+
+    // pop up 生命值說明
+    $('#passlevel--open').click(function () {
+        $('#passlevel--popUp').addClass('active')
+    })
+    $('#passlevel--close').click(function () {
+        $('#passlevel--popUp').removeClass('active')
+    })
+
+
+    // pop up 生命值說明
+    $('#gamepass--open').click(function () {
+        $('#gamepass--popUp').addClass('active')
+    })
+    $('#gamepass--close').click(function () {
+        $('#gamepass--popUp').removeClass('active')
+    })
+
+
+    // pop up 修復生命值
+    let originLength = $('#bar--new').css('width')
+    let originText = parseInt($('#level span').html())
+    let nowLength = $('#bar--new').css('width')
+    let nowText = parseInt($('#level span').html())
+    let repaired = parseInt($('#repaired').html())
+    let costBug = parseFloat($('#cost-bug').html()).toFixed(2)
+    let ownBug = parseFloat($('#own-bug').html()).toFixed(2)
+    let maxColor = '#7EF09E'
+    let mediumColor = '#D8B42C'
+    let minColor = '#CC47A6'
+    /* 修復生命值 開啟彈窗 */
+    $('#repair--open').click(function () {
+        $('#repair--popUp').addClass('active')
+    })
+    /* 生命值-5 */
+    $('#btn--minus').click(function () {
+        nowLength = $('#bar--new').css('width')
+        nowText = parseInt($('#level span').html())
+        costBug = parseFloat($('#cost-bug').html())
+        ownBug = parseFloat($('#own-bug').html())
+
+        if (nowText > originText) {
+            $('#bar--new').css('width', 'calc(' + nowLength + ' - 5%)')
+            $('#level span').html(nowText - 5)
+            $('#cost-bug').html(costBug - 0.5)
+            costBug = parseFloat($('#cost-bug').html())
+            nowText = parseInt($('#level span').html())
+            $('#repaired').html(nowText - originText)
+
+            if (nowText < 51) {
+                $('#level span').css('color', mediumColor)
+                $('#bar--new').css('background-color', mediumColor)
+            }
+            if (nowText < 11) {
+                $('#level span').css('color', minColor)
+                $('#bar--new').css('background-color', minColor)
+            }
+            if (costBug <= ownBug) {
+                $('#cost-bug').parent().css('color', maxColor)
+                $('#warning').css('display', 'none')
+                $('#repair--submit').removeAttr('disabled')
+            }
+        }
+        if (nowText === originText) {
+            $('#cost-bug').parent().css('color', '#EFEFEF')
+            $('#cost-bug').parent().css('font-size', '14px')
+            $('#cost-bug').css('font-size', '14px')
+            $('#repair--submit').attr('disabled', '')
+        }
+    })
+    /* 生命值+5 */
+    $('#btn--plus').click(function () {
+        nowLength = $('#bar--new').css('width')
+        nowText = parseInt($('#level span').html())
+        ownBug = parseFloat($('#own-bug').html())
+        costBug = parseFloat($('#cost-bug').html())
+
+        if (nowText < 100) {
+            $('#bar--new').css('width', 'calc(' + nowLength + ' + 5%)')
+            $('#level span').html(nowText + 5)
+            $('#cost-bug').html(costBug + 0.5)
+            $('#level span').css('color', maxColor)
+            $('#bar--new').css('background-color', maxColor)
+            $('#repair--submit').removeAttr('disabled')
+            $('#cost-bug').parent().css('color', maxColor)
+            $('#cost-bug').parent().css('font-size', '16px')
+            $('#cost-bug').css('font-size', '16px')
+            costBug = parseFloat($('#cost-bug').html())
+            nowText = parseInt($('#level span').html())
+            $('#repaired').html(nowText - originText)
+            if (nowText < 51) {
+                $('#level span').css('color', mediumColor)
+                $('#bar--new').css('background-color', mediumColor)
+            }
+            if (nowText < 11) {
+                $('#level span').css('color', minColor)
+                $('#bar--new').css('background-color', minColor)
+            }
+            if (costBug > ownBug) {
+                $('#cost-bug').parent().css('color', '#E08083')
+                $('#warning').css('display', 'inline-block')
+                $('#repair--submit').attr('disabled', '')
+            }
+        }
+    })
+    /* 生命值補滿 */
+    $('#btn--max').click(function () {
+        costBug = parseFloat($('#cost-bug').html())
+        ownBug = parseFloat($('#own-bug').html())
+        $('#bar--new').css('width', '100%')
+        $('#level span').css('color', maxColor)
+        $('#level span').html('100')
+        $('#cost-bug').parent().css('color', maxColor)
+        $('#cost-bug').parent().css('font-size', '16px')
+        $('#cost-bug').css('font-size', '16px')
+        $('#cost-bug').html(('100' - originText) / 10)
+        $('#bar--new').css('background-color', maxColor)
+        costBug = parseFloat($('#cost-bug').html())
+        nowText = parseInt($('#level span').html())
+        $('#repair--submit').removeAttr('disabled')
+        $('#repaired').html(nowText - originText)
+        if (costBug > ownBug) {
+            $('#cost-bug').parent().css('color', '#E08083')
+            $('#warning').css('display', 'inline-block')
+            $('#repair--submit').attr('disabled', '')
+        }
+    })
+    /* 生命值重設 */
+    $('#reset').click(function () {
+        $('#bar--new').css('width', originLength)
+        $('#level span').css('color', minColor)
+        $('#level span').html(originText)
+        $('#cost-bug').html(0)
+        $('#warning').css('display', 'none')
+        $('#repair--submit').attr('disabled', '')
+        $('#cost-bug').parent().css('color', '#EFEFEF')
+        $('#cost-bug').parent().css('font-size', '14px')
+        $('#cost-bug').css('font-size', '14px')
+        $('#repaired').html(0)
+    })
+    /* 修復生命值 關閉彈窗 */
+    $('#repair--close').click(function () {
+        $('#repair--popUp').removeClass('active')
+        $('#bar--new').css('width', originLength)
+        $('#level span').css('color', mediumColor)
+        $('#level span').html(originText)
+        $('#cost-bug').html(0)
+        $('#warning').css('display', 'none')
+        $('#repair--submit').attr('disabled', '')
+        $('#cost-bug').parent().css('color', '#EFEFEF')
+        $('#cost-bug').parent().css('font-size', '14px')
+        $('#cost-bug').css('font-size', '14px')
+    })
+    /* 修復生命值 送出資料 */
+    $('#repair--submit').click(function () {
+        $('#repair--popUp').removeClass('active')
+        $('#repair--toast').addClass('active')
+        setTimeout(() => {
+            $('#repair--toast').removeClass('active')
+        }, 6000);
+    })
+
+    // pop up 蟲蟲幣說明
+    $('#bugCoin--open').click(function () {
+        $('#bugCoin--popUp').addClass('active')
+    })
+    $('#bugCoin--close').click(function () {
+        $('#bugCoin--popUp').removeClass('active')
+    })
+    $('#bugCoin--submit').click(function () {
+        $('#bugCoin--popUp').removeClass('active')
+    })
+
+    // pop up 存入
+    $('#deposit--open').click(function () {
+        $('#deposit--popUp').addClass('active')
+    })
+    $('#deposit--close').click(function () {
+        $('#deposit--popUp').removeClass('active')
+    })
+    $('#deposit--submit').click(function () {
+        location.href = "deposit-processing.html"
+    })
+
+    // pop up NFT說明
+    $('#nftinfo--open').click(function () {
+        $('#nftinfo--popUp').addClass('active')
+    })
+    $('#nftinfo--close').click(function () {
+        $('#nftinfo--popUp').removeClass('active')
+    })
+
+    // pop up NFT卡片
+    // $('.nft-list').slice(1).children('li').click(function () {
+    //     if (!$(this).hasClass('stay_tuned')) {
+    //         $('#nftdetail--popUp').addClass('active')
+    //     }
+    // })
+    $('.HerosBirth').click(function () {
+        $('#nftHerosBirth--popUp').addClass('active')
+    })
+    $('#nftHerosBirth--close').click(function () {
+        $('#nftHerosBirth--popUp').removeClass('active')
+    })
+
+    $('.HonorLevel').click(function () {
+        $('#nftHonorLevel--popUp').addClass('active')
+    })
+    $('#nftHonorLevel--close').click(function () {
+        $('#nftHonorLevel--popUp').removeClass('active')
+    })
+
+    $('.HonorRanking').click(function () {
+        $('#nftHonorRanking--popUp').addClass('active')
+    })
+    $('#nftHonorRanking--close').click(function () {
+        $('#nftHonorRanking--popUp').removeClass('active')
+    })
+</script>
+
+</html>

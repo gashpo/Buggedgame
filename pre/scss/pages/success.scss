@@ -1,0 +1,216 @@
+@import "../variable";
+@import "../mixin";
+
+.success-page {
+    width: 500px;
+    margin: 48px auto 0 auto;
+
+    .message {
+        text-align: center;
+        margin-bottom: 36px;
+
+        img {
+            margin: 0 auto 16px auto;
+        }
+
+        p {
+            font-weight: $UltraBold;
+        }
+    }
+
+    .product {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 20px;
+        padding-bottom: 20px;
+        margin-bottom: 36px;
+        border-bottom: solid 0.5px $grey;
+
+        .pic {
+            flex: 100px;
+            border-radius: 8px;
+            overflow: hidden;
+        }
+
+        .info {
+            flex: calc(100% - 120px);
+
+            p {
+                margin-bottom: 8px;
+
+                &.title {
+                    font-weight: $UltraBold;
+                    font-size: calc($fontSize * 1.4);
+                }
+            }
+
+            ul {
+                font-size: calc($fontSize * 1.2);
+                color: $lighter;
+                line-height: 1.6;
+            }
+        }
+    }
+
+    .calculate {
+        font-size: calc($fontSize * 1.2);
+        display: flex;
+        width: 100%;
+        justify-content: flex-end;
+        margin-bottom: 32px;
+
+        ul {
+            li {
+                margin-bottom: 8px;
+
+                span {
+                    font-weight: $UltraBold;
+                }
+
+                img {
+                    display: inline-block;
+                    transform: translateY(-4px);
+                    width: 20px;
+                    margin-right: 6px;
+                }
+            }
+        }
+    }
+
+    .card {
+        background-color: $dark;
+        background-image: url(../images/product/qrc-bg.png);
+        background-repeat: no-repeat;
+        background-position: right;
+        border-radius: 16px;
+        padding: 20px 24px;
+
+        p {
+            font-size: calc($fontSize * 1.2);
+            margin-top: 12px;
+
+            a {
+                @include a-color($primaryC);
+                text-decoration: none;
+            }
+
+            &:last-child {
+                margin-top: 16px;
+                font-weight: $UltraBold;
+                text-align: right;
+
+                a {
+                    @include a-color($lightGrey, $lighter);
+                }
+            }
+        }
+    }
+
+    .btns {
+        margin-top: 32px;
+        display: flex;
+        gap: 16px;
+
+        a {
+            text-align: center;
+            line-height: 40px;
+            flex: 1;
+        }
+    }
+}
+
+#download--popUp {
+    .popUp--container {
+        max-height: max-content;
+
+        .mobile {
+            display: none;
+        }
+
+        p.desc {
+            font-size: calc($fontSize * 1.4);
+            color: $lighter;
+        }
+
+        .qrc {
+            max-width: 120px;
+            margin: 28px auto;
+        }
+
+        .btns {
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            justify-content: center;
+            gap: 12px;
+
+            button {
+                flex: 100%;
+                max-width: 280px;
+                height: 44px;
+                background-color: $primaryC;
+                transition: all .5s;
+                font-size: calc($fontSize * 1.4);
+                font-weight: $UltraBold;
+
+                &:hover {
+                    background-color: #7087D8;
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 515px) {
+    .success-page {
+        max-width: 90vw;
+
+        .product {
+            margin-bottom: 20px;
+
+            .pic {
+                flex: 80px;
+                max-width: 80px;
+            }
+
+            .info {
+                flex: calc(100% - 100px);
+
+                p.title {
+                    font-size: calc($fontSize * 1.6);
+                }
+
+                ul {
+                    font-size: calc($fontSize * 1.4);
+                }
+            }
+        }
+
+        .calculate {
+            margin-bottom: 28px;
+            font-size: calc($fontSize * 1.4);
+        }
+
+        .card {
+            padding: 16px 20px;
+
+            p {
+                margin-top: 0;
+                font-size: calc($fontSize * 1.4);
+            }
+        }
+
+        .btns {
+            flex-wrap: wrap;
+            gap: 12px;
+            flex-direction: column-reverse;
+
+            a {
+                flex: 100%;
+                font-weight: $UltraBold;
+            }
+        }
+    }
+}
+
+// mobile

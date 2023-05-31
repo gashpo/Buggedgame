@@ -1,0 +1,475 @@
+.dashboard {
+  display: flex;
+  justify-content: space-between;
+  align-items: stretch;
+  margin-bottom: 70px;
+}
+.dashboard li {
+  flex: 1;
+  margin-right: 16px;
+  padding: 20px;
+  border: 1px solid #353535;
+  border-radius: 24px;
+  position: relative;
+}
+.dashboard li:last-child {
+  margin-right: 0;
+}
+.dashboard li .info > p {
+  display: flex;
+  align-items: center;
+  color: #EFEFEF;
+  margin-top: 4px;
+}
+.dashboard li .info > p img {
+  margin-right: 8px;
+}
+.dashboard li .info > p a {
+  margin-left: 4px;
+}
+.dashboard li .info > p:last-child {
+  font-size: 18px;
+  font-weight: 700;
+}
+.dashboard li .desc {
+  margin: 12px 0;
+  color: #BDBDBD;
+  font-size: 12px;
+  margin-bottom: 90px;
+}
+.dashboard li .bottom {
+  position: absolute;
+  bottom: 20px;
+  width: calc(100% - 40px);
+  margin-top: 16px;
+}
+.dashboard li .btns {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 15px;
+}
+.dashboard li .btns a {
+  display: inline-block;
+  flex: 1;
+  height: 44px;
+  line-height: 44px;
+  font-size: 14px;
+  font-weight: 700;
+  text-align: center;
+}
+.dashboard li.account {
+  min-height: 240px;
+}
+.dashboard li.account .account__info {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  padding-bottom: 12px;
+  margin-bottom: 12px;
+  border-bottom: 1px solid #353535;
+}
+.dashboard li.account .account__info > div {
+  flex: 1;
+  color: #EFEFEF;
+  font-size: 16px;
+  font-weight: 700;
+}
+.dashboard li.account .account__info > div.passlevel {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  min-width: -moz-max-content;
+  min-width: max-content;
+}
+.dashboard li.account .account__info > div.passlevel img {
+  margin-right: 8px;
+}
+.dashboard li.account .account__info > div.passlevel a {
+  width: 18px;
+}
+.dashboard li.account .account__info > div.address {
+  text-align: right;
+  word-break: break-all;
+}
+.dashboard li.account .account__info > span {
+  flex: 100%;
+  color: #BDBDBD;
+}
+.dashboard li.account .account__info a {
+  font-weight: 700;
+  color: #8AA3FF;
+  transition: color 0.5s;
+}
+.dashboard li.account .account__info a:hover {
+  color: #718fff;
+}
+.dashboard li.account .account__gamepass {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.dashboard li.account .account__gamepass--title {
+  display: flex;
+  align-items: center;
+  font-size: 16px;
+  font-weight: 700;
+  color: #BDBDBD;
+}
+.dashboard li.account .account__gamepass--title a {
+  margin-left: 4px;
+}
+.dashboard li.account .account__gamepass--repair a {
+  display: inline-block;
+  background-color: #7B61FF;
+  padding: 4px 12px;
+  border-radius: 24px;
+  height: 30px;
+  line-height: 22px;
+  transition: all 0.15s ease;
+  font-size: 14px;
+  min-height: auto;
+}
+.dashboard li.account .account__gamepass--repair a:hover {
+  background-color: #6e52ff;
+}
+.dashboard li.account .account__gamepass--repair a > * {
+  display: inline-block;
+}
+.dashboard li.account .bottom {
+  color: #BDBDBD;
+  display: inline;
+}
+.dashboard li.account .bottom .bar {
+  position: relative;
+  width: 100%;
+  height: 6px;
+  border-radius: 10px;
+  background-color: #353535;
+  margin: 6px 0;
+}
+.dashboard li.account .bottom .bar > div {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 6px;
+  border-radius: 10px;
+}
+.dashboard li.bugCoin .bugCoin--password {
+  display: inline-block;
+  margin-right: 16px;
+  font-size: 12px;
+  line-height: 20px;
+  font-weight: 400;
+  padding-bottom: 12px;
+}
+.dashboard li.bugCoin .bugCoin--password a {
+  text-decoration: underline;
+  color: #BDBDBD;
+  transition: color 0.5s;
+}
+.dashboard li.bugCoin .bugCoin--password a:hover {
+  color: #898989;
+}
+
+.myNft {
+  margin-bottom: 70px;
+}
+.myNft .title {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  margin-bottom: 28px;
+}
+.myNft .nft-tab {
+  max-width: 100%;
+  overflow-x: auto;
+  margin-bottom: 28px;
+}
+.myNft .nft-tab::-webkit-scrollbar {
+  display: none;
+}
+.myNft .nft-tab::-webkit-scrollbar-thumb {
+  display: none;
+}
+.myNft .nft-tab ul {
+  min-width: -moz-max-content;
+  min-width: max-content;
+  display: flex;
+  gap: 20px;
+  border-bottom: 1px solid #353535;
+}
+.myNft .nft-tab ul li {
+  font-size: 12px;
+  font-weight: 700;
+  color: #898989;
+  border-bottom: 3px solid transparent;
+  transition: all 0.5s;
+}
+.myNft .nft-tab ul li a {
+  display: inline-block;
+  padding: 12px 16px 9px;
+}
+.myNft .nft-tab ul li.active {
+  color: #EFEFEF;
+  border-color: #8AA3FF;
+}
+.myNft .nft-tab ul li:hover {
+  color: #EFEFEF;
+}
+.myNft .nft-list {
+  display: none;
+  flex-wrap: wrap;
+  gap: 24px 15px;
+}
+.myNft .nft-list li {
+  flex: 25%;
+  max-width: calc((100% - 45px) / 4);
+  border-radius: 20px;
+  border: 1px solid #353535;
+  padding: 20px 20px 44px;
+  position: relative;
+}
+.myNft .nft-list li .img {
+  position: relative;
+  background-color: #1F1F1F;
+  border-radius: 8px;
+}
+.myNft .nft-list li .desc {
+  margin-top: 12px;
+  overflow: hidden;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4px;
+}
+.myNft .nft-list li .desc .nft--name {
+  flex: 100%;
+  color: #EFEFEF;
+  font-weight: 700;
+  font-size: 16px;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+.myNft .nft-list li .desc .nft--id {
+  align-self: flex-end;
+  flex-grow: 1;
+  color: #898989;
+  position: absolute;
+  bottom: 20px;
+}
+.myNft .nft-list li .desc .nft--num {
+  flex-shrink: 1;
+  max-width: -moz-max-content;
+  max-width: max-content;
+}
+.myNft .nft-list li .desc .nft--num span {
+  display: inline-block;
+  margin-top: 8px;
+  padding: 2px 11px;
+  color: #8AA3FF;
+  border: 1px solid #8AA3FF;
+  border-radius: 40px;
+  font-size: 14px;
+  font-weight: 700;
+}
+.myNft .nft-list li .desc .nft--num span:before {
+  content: "x ";
+}
+.myNft .nft-list li.pledging .img span, .myNft .nft-list li.coming_soon .img span, .myNft .nft-list li.stay_tuned .img span {
+  position: absolute;
+  width: -moz-max-content;
+  width: max-content;
+  min-width: -moz-max-content;
+  min-width: max-content;
+  bottom: 8px;
+  left: 50%;
+  transform: translateX(-50%);
+  padding: 4px 12px;
+  border-radius: 8px;
+  background-color: rgba(126, 151, 240, 0.85);
+  color: #EFEFEF;
+  font-weight: 700;
+}
+.myNft .nft-list li.coming_soon .img img, .myNft .nft-list li.stay_tuned .img img {
+  filter: grayscale(1);
+}
+.myNft .nft-list li.coming_soon .img span {
+  background-color: rgba(126, 240, 158, 0.85);
+  color: #7B61FF;
+}
+.myNft .nft-list.active {
+  display: flex;
+}
+.myNft .nft-list:not(.myNft .nft-list#nft-list-1) li:not(.myNft .nft-list:not(.myNft .nft-list#nft-list-1) li.stay_tuned) {
+  cursor: pointer;
+  transition: all 0.5s;
+}
+.myNft .nft-list:not(.myNft .nft-list#nft-list-1) li:not(.myNft .nft-list:not(.myNft .nft-list#nft-list-1) li.stay_tuned):hover {
+  transform: translateY(-8px);
+}
+
+@media screen and (max-width: 1069px) {
+  .dashboard li.bugCoin {
+    min-height: 200px;
+  }
+  .dashboard li.bugCoin .info {
+    flex-wrap: wrap;
+  }
+  .dashboard li.bugCoin .info p {
+    flex: 100%;
+  }
+}
+@media screen and (max-width: 991px) {
+  .dashboard li.account {
+    min-height: 300px;
+  }
+  .dashboard li.account .account__gamepass {
+    flex-wrap: wrap;
+  }
+  .dashboard li.account .account__gamepass--title, .dashboard li.account .account__gamepass--repair {
+    flex: 100%;
+  }
+  .dashboard li.account .account__gamepass--repair {
+    margin-top: 12px;
+  }
+  .myNft .nft-list li {
+    padding: 16px 16px 68px;
+  }
+  .myNft .nft-list li .desc .nft--num {
+    flex: 100%;
+    max-width: 100%;
+    text-align: right;
+  }
+  .myNft .nft-list li .desc .nft--num span {
+    margin-top: 0;
+  }
+}
+@media screen and (max-width: 767px) {
+  .dashboard {
+    flex-wrap: wrap;
+  }
+  .dashboard li {
+    flex: 100%;
+    margin: 0;
+    margin-bottom: 22px;
+  }
+  .dashboard li .desc {
+    margin-bottom: 16px;
+  }
+  .dashboard li.account {
+    min-height: auto;
+  }
+  .dashboard li.account .account__gamepass {
+    flex-wrap: nowrap;
+  }
+  .dashboard li.account .account__gamepass--title, .dashboard li.account .account__gamepass--repair {
+    flex: auto;
+  }
+  .dashboard li.account .account__gamepass--title {
+    word-break: break-all;
+    padding-right: 12px;
+  }
+  .dashboard li.account .account__gamepass--repair {
+    margin-top: 0;
+    min-width: -moz-max-content;
+    min-width: max-content;
+    text-align: right;
+  }
+  .dashboard li.account .bottom {
+    width: 100%;
+    display: block;
+    position: inherit;
+    bottom: auto;
+    margin-top: 4px;
+  }
+  .dashboard li.account .bottom p {
+    font-size: 14px;
+  }
+  .dashboard li.bugCoin {
+    min-height: auto;
+  }
+  .dashboard li.bugCoin .info {
+    flex-wrap: nowrap;
+    justify-content: space-between;
+  }
+  .dashboard li.bugCoin .info p {
+    flex: unset;
+  }
+  .dashboard li.bugCoin .bottom {
+    position: inherit;
+    bottom: auto;
+    width: 100%;
+  }
+  .dashboard li.pledge {
+    min-height: auto;
+  }
+  .dashboard li.pledge .bottom {
+    position: inherit;
+    bottom: auto;
+    width: 100%;
+  }
+  .myNft .nft-list li {
+    padding: 16px 16px 64px;
+  }
+}
+@media screen and (max-width: 515px) {
+  .dashboard {
+    margin-bottom: 40px;
+  }
+  .dashboard li .desc {
+    font-size: 14px;
+  }
+  .dashboard li.bugCoin .info p span {
+    font-size: 14px;
+  }
+  .dashboard li.bugCoin .bugCoin--password {
+    font-size: 14px;
+  }
+  .myNft .title {
+    margin-bottom: 16px;
+  }
+  .myNft .nft-tab {
+    justify-content: space-between;
+    margin-bottom: 16px;
+  }
+  .myNft .nft-tab ul {
+    gap: 16px;
+  }
+  .myNft .nft-tab ul li a {
+    font-size: 14px;
+  }
+  .myNft .nft-list {
+    margin-top: 16px;
+  }
+  .myNft .nft-list li {
+    flex: calc(50% - 8px);
+    max-width: calc(50% - 8px);
+    padding: 16px 16px 70px;
+  }
+  .myNft .nft-list li .desc .nft--id {
+    font-size: 14px;
+  }
+}
+@media screen and (max-width: 375px) {
+  .dashboard li.account .account__gamepass {
+    flex-wrap: wrap;
+  }
+  .dashboard li.account .account__gamepass--repair {
+    margin: 8px 0;
+    text-align: left;
+  }
+  .dashboard li.bugCoin {
+    min-height: 200px;
+  }
+  .dashboard li.bugCoin .info {
+    flex-wrap: wrap;
+  }
+  .dashboard li.bugCoin .info p {
+    flex: 100%;
+  }
+}

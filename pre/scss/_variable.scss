@@ -1,0 +1,35 @@
+// 色彩定義
+$white: #ffffff !default;
+$lightGrey: #EFEFEF !default;
+$lighter: #BDBDBD !default;
+$grey: #898989 !default;
+$dark: #353535 !default;
+$frameBg: #1F1F1F !default;
+$darkBg: #121212 !default;
+
+$primaryA: #7B61FF !default;
+$primaryB: #E142B9 !default;
+$primaryC: #8AA3FF !default;
+$gamefiPass: #AAF3F5 !default;
+$gradient: linear-gradient(to right, #E63EB6, #749FF5) !default;
+$gradient-hover: linear-gradient(to right, #cf36a3, #658ad6) !default;
+
+$neutral: #D8B42C !default;
+$success: #7EF09E !default;
+$error: #CC47A6 !default;
+$warning: #E08083 !default;
+
+
+// 字級
+$fontSize: 10px !default;
+
+// 字重
+$UltraThin: 100 !default;
+$Thin: 200 !default;
+$Lite: 300 !default;
+$Regular: 400 !default;
+$Medium: 500 !default;
+$Bold: 600 !default;
+$UltraBold: 700 !default;
+$Black: 800 !default;
+$ExtraBlack: 900 !default;

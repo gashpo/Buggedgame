@@ -1,0 +1,690 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="format-detection" content="telephone=no">
+    <title>遊戲完蛋了</title>
+    <link rel="icon" href="images/icon/favicon.ico" type="images/icon/favicon.ico" />
+    <link rel="shortcut icon" href="images/icon/favicon.ico" type="images/icon/favicon.ico" />
+
+    <!-- tailwind css -->
+    <link rel="stylesheet" href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css">
+
+    <!-- Custom styles -->
+    <link rel="stylesheet" href="css/custom-style.css">
+    <link rel="stylesheet" href="css/custom-animation.css">
+    <link rel="stylesheet" href="css/global.css">
+    <link rel="stylesheet" href="css/checkout.css">
+    <link rel="stylesheet" href="css/pop-up.css">
+
+    <!-- jQuery -->
+    <script src="js/jquery-3.4.1.min.js"></script>
+
+    <!-- tailwind js -->
+    <!-- <script src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.3.5/dist/alpine.min.js" defer></script> -->
+
+    <script src="js/cookie.js"></script>
+    <script src="js/step.js"></script>
+    <script src="js/tabs.js"></script>
+    <script src="js/switch.js"></script>
+    <script src="js/dropdown.js"></script>
+    <script src="js/mobile-menu.js"></script>
+    <script src="js/mobile-wallet.js"></script>
+    <script src="js/wallet-text-change.js"></script>
+    <script src="js/faq.js"></script>
+    <script src="js/table-show.js"></script>
+    <script src="js/nav-blur.js"></script>
+    <script src="js/shopping-cart-form.js"></script>
+    <script src="js/popup.js"></script>
+</head>
+
+<body class="font-sans overflow-x-hidden bg-121212">
+
+    <!-- header -->
+    <div class="min-h-full">
+        <!-- 20220620 -->
+        <nav id="navH" class="bg-opacity-0 w-full fixed top-0 z-10">
+            <div class="max-w-7xl mx-auto px-5 sm:px-6 lg:px-8">
+                <div class="flex items-center h-20">
+                    <div class="flex items-center justify-between w-full">
+                        <!-- 20220628 20220629-->
+                        <div class="w-24 lg:w-32 flex-shrink-0 lg:w-auto">
+                            <a href="index.html">
+                                <img src="images/product/logo.png" alt="">
+                            </a>
+                        </div>
+                        <!-- pc and mobile menu -->
+                        <div class="flex items-center">
+                            <ul class="items-center text-base text-white font-bold hidden lg:flex">
+                                <!-- pc -->
+                                <li class="-ty-3">
+                                    <a href="shop.html" class="block px-5">商城</a>
+                                </li>
+                                <li class="-ty-3">
+                                    <a href="##" class="block px-5">白皮書</a>
+                                </li>
+                                <li class="-ty-3">
+                                    <a href="pledge.html" class="block px-5">質押</a>
+                                </li>
+                                <li class="-ty-3">
+                                    <a href="##" class="block px-5">DEX</a>
+                                </li>
+                                <li class="relative font-bold">
+                                    <a href="##" class="px-5 flex items-center space-x-1 btn-language">
+                                        <img src="images/icon/icon-language.svg" alt="">
+                                        <span class="text-sm">繁體中文</span>
+                                        <img src="images/icon/icon-arrow-bottom.svg" alt="" class="icon-arrow-bottom">
+                                    </a>
+                                    <ul
+                                        class="hidden w-40 py-6 text-center font-bold mt-3 border border-solid text-sm absolute top-9 left-1/2 transform -translate-x-1/2 rounded-xl bg-1f1f1f border-color-353535 color-898989 language-menu">
+                                        <li>
+                                            <a href="##" class="block p-2 text-white">繁體中文</a>
+                                        </li>
+                                        <li>
+                                            <a href="##" class="block p-2 text-white">简体中文</a>
+                                        </li>
+                                        <li>
+                                            <a href="##" class="block p-2 text-white">English</a>
+                                        </li>
+                                        <li>
+                                            <a href="##" class="block p-2 text-white">한국어</a>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li class="hidden mr-10 relative font-normal coin-box">
+                                    <span class="flex space-x-2">
+                                        <span><img src="images/icon/icon-coin.svg" alt=""></span>
+                                        <span class="coin">300,000.00</span>
+                                    </span>
+                                    <div
+                                        class="hidden absolute left-1/2 top-9 transform -translate-x-1/2 z-20 coin-info">
+                                        <div class="relative left-1/2 top-px transform -translate-x-1/2 z-30 triangle">
+                                        </div>
+                                        <div
+                                            class="w-56 px-6 py-5 text-sm font-normal rounded-xl absolute left-1/2 transform -translate-x-1/2 z-20 bg-1f1f1f border border-solid border-color-353535">
+                                            唉呀~您已少賺了6,666顆蛋幣，趕快來 Play and Earn! <a href="shop.html"
+                                                class="font-bold color-7e97f0">我想賺幣！</a></div>
+                                    </div>
+                                </li>
+                            </ul>
+                            <ul class="flex items-center sm:flex lg:hidden">
+                                <!-- mobile -->
+                                <!-- 20220621 -->
+                                <li class="flex justify-center items-center w-10 h-10 mx-1 block">
+                                    <a href="##" class="block w-full" target="_blank">
+                                        <img src="images/icon/icon-discord.svg" alt="" class="w-full">
+                                    </a>
+                                </li>
+                                <li class="flex justify-center items-center w-10 h-10 mx-1 btn-hamburger">
+                                    <a href="##" class="block w-full">
+                                        <img src="images/icon/icon-menu.svg" alt="" class="w-full">
+                                    </a>
+                                </li>
+                                <li class="flex justify-center items-center w-11 h-11 mx-1 mr-0 hidden">
+                                    <a href="##" class="w-full">
+                                        <img src="images/icon/personal.svg" alt="" class="w-full">
+                                    </a>
+                                </li>
+                            </ul>
+                            <!-- pc btn wallet -->
+                            <div class="relative">
+                                <a href="##" id="btn-change"
+                                    class="hidden text-sm rounded-full py-3 px-6 text-white font-bold whitespace-nowrap bg-from-e63eb6-to-749ff5 btn-wallet sm:block lg:text-xs">連接錢包</a>
+                                <ul
+                                    class="hidden w-40 py-6 text-center mt-3 border border-solid absolute top-11 left-1/2 transform -translate-x-1/2 rounded-xl text-sm font-bold color-898989 hover:color-white bg-1f1f1f border-color-353535 panel-wallet">
+                                    <li class="">
+                                        <a href="personal.html" onclick="textChange1()"
+                                            class="block p-2 text-white whitespace-nowrap">個人資產</a>
+                                    </li>
+                                    <li class="">
+                                        <a href="record.html" class="block p-2 text-white whitespace-nowrap">歷史紀錄</a>
+                                    </li>
+                                    <li class="">
+                                        <a href="##" onclick="textChange2()"
+                                            class="block p-2 hover:text-white whitespace-nowrap">登出</a>
+                                    </li>
+                                </ul>
+                            </div>
+                            <!-- mobile btn wallet -->
+                            <div>
+                                <a href="javascript:void(0)"
+                                    class="mr-0 text-sm font-bold rounded-full py-3 px-5 mx-1 text-white whitespace-nowrap bg-from-e63eb6-to-749ff5 btn-m-wallet sm:hidden">連接錢包</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </nav>
+
+        <!-- mobile menu -->
+        <div class="hidden w-full h-full text-lg fixed top-0 left-0 z-30 bg-121212 m-menu lg:hidden">
+            <ul class="text-center relative font-bold top-24 color-efefef">
+                <li class="py-4">
+                    <a href="shop.html" class="block">商城</a>
+                </li>
+                <li class="py-4">
+                    <a href="##" class="block">白皮書</a>
+                </li>
+                <li class="py-4">
+                    <a href="pledge.html" class="block">質押</a>
+                </li>
+                <li class="py-4">
+                    <a href="##" class="block">DEX</a>
+                </li>
+                <li class="py-4 relative top-60">
+                    <a href="##" class="block space-x-1  btn-m-language">
+                        <img src="images/icon/icon-language.svg" alt="" class="inline-block align-middle">
+                        <span class="inline-block align-middle text-sm">繁體中文</span>
+                        <img src="images/icon/icon-arrow-top.svg" alt="" class="inline-block align-middle">
+                    </a>
+                    <ul
+                        class="hidden w-40 py-6 text-sm font-bold text-center border border-solid absolute -top-48 left-1/2 transform -translate-x-1/2 rounded-xl bg-1f1f1f border-color-353535 m-language-menu">
+                        <li class="">
+                            <a href="##" class="block p-2 color-898989 focus:text-white">繁體中文</a>
+                        </li>
+                        <li class="">
+                            <a href="##" class="block p-2 color-898989 focus:text-white">简体中文</a>
+                        </li>
+                        <li class="">
+                            <a href="##" class="block p-2 color-898989 focus:text-white">English</a>
+                        </li>
+                        <li class="">
+                            <a href="##" class="block p-2 color-898989 focus:text-white">한국어</a>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+            <button class="absolute top-4 right-4 btn-close">
+                <img src="images/icon/icon-close.svg" alt="">
+            </button>
+        </div>
+
+        <!-- mobile wallet -->
+        <div class="hidden w-full h-full fixed top-0 left-0 z-30 bg-353535 bg-353535-80 m-bg-wallet lg:hidden">
+            <div class="w-full p-6 absolute bottom-0 z-20 rounded-t-2xl bg-1f1f1f m-panel-wallet">
+                <div
+                    class="flex flex-col items-center justify-between px-5 py-4 mt-11 mb-7 border border-solid rounded-3xl bg-5e5e5e-30 color-efefef border-color-353535">
+                    <div class="w-full flex items-center space-x-3 mb-2">
+                        <div><img src="images/icon/icon-account.svg" alt=""></div>
+                        <div class="text-base font-bold">0x130...123D</div>
+                    </div>
+                    <div class="w-full flex flex-row-reverse space-x-2">
+                        <div class="flex">
+                            <div class="mr-2"><img src="images/icon/icon-coin.svg" alt=""></div>
+                            <div class="text-base font-bold">300,000</div>
+                        </div>
+                    </div>
+                </div>
+                <div
+                    class="mb-3 rounded-full border border-solid border-transparent text-sm text-center border-linear-gradient-1f1f1f-e63eb6-749ff5">
+                    <a href="personal.html"
+                        class="w-full flex items-center justify-center py-3 px-6 border-transparent font-bold color-efefef">個人資產</a>
+                </div>
+                <div
+                    class="mb-3 rounded-full border border-solid border-transparent text-sm text-center border-linear-gradient-1f1f1f-e63eb6-749ff5">
+                    <a href="record.html"
+                        class="w-full flex items-center justify-center py-3 px-6 border-transparent font-bold color-efefef">歷史紀錄</a>
+                </div>
+                <div
+                    class="text-center border border-solid rounded-full text-sm font-bold color-efefef border-color-353535">
+                    <a href="##" class="w-full flex items-center justify-center py-3 px-6">登出</a>
+                </div>
+                <button class="absolute top-4 right-4 btn-wallet-close">
+                    <img src="images/icon/icon-close.svg" alt="">
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- 背景漸層色 -->
+    <div class="w-full absolute top-0 left-0 -z-1">
+        <img src="images/product/bg-gradient.svg" alt="" class="w-full">
+    </div>
+
+    <div class="max-w-6xl mx-auto mb-20 px-5 sm:px-6 lg:px-8">
+        <!-- 結帳步驟 -->
+        <div class="checkout-step">
+            <span>1 填寫付款資料</span>
+            <img src="images/icon/icon-arrow-right.svg">
+            2 信用卡付款
+            <img src="images/icon/icon-arrow-right.svg">
+            3 交易完成
+        </div>
+
+        <!-- 結帳+發票頁 -->
+        <div class="checkout">
+            <div class="product">
+                <div class="pic"><img src="images/product/gamefi-pass-01.png"></div>
+                <div class="info">
+                    <p class="title">商品名稱可以好長好長依據寬度超過會點點點但這裡會有全部會有全部</p>
+                    <p>數量：1</p>
+                    <p>支付方式：信用卡</p>
+                    <p class="amount">結帳總額： <span>300,000</span> <span class="currency">TWD</span></p>
+                </div>
+            </div>
+            <div class="warning-badge">唉呀~您的BNB還差 599，餘額不足 <a href="#" target="_blank">獲得BNB教學</a></div>
+            <form action="success.html">
+                <p class="title">發票資料* <a href="javascript:void(0)" id="invoiceInfo--open"><img
+                            src="images/icon/icon-info.svg"></a></p>
+                <div class="checkbox">
+                    <label>
+                        <input type="checkbox" id="no-invoice">
+                        <span>我不需要索取發票，請直接捐贈給指定社團法人( 捐贈碼：510 )</span>
+                    </label>
+                </div>
+                <div id="invoice" class="active">
+                    <div id="invoice-select" class="selector">
+                        <span>請選擇發票類型</span>
+                        <div>
+                            <ul>
+                                <li id="invoice-select-1">我要捐贈</li>
+                                <li id="invoice-select-2">個人發票</li>
+                                <li id="invoice-select-3">公司用發票</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div id="invoice-select-content-1" class="invoice-type">
+                        <label>
+                            <span>受捐贈機關或團體之捐贈碼 <a href="https://www.einvoice.nat.gov.tw/APCONSUMER/BTC603W/"
+                                    target="_blank"><img src="images/icon/icon-info.svg"></a></span>
+                            <input type="text" value="510" placeholder="請輸入捐贈碼(限數字)">
+                        </label>
+                        <label>
+                            <span>Email 信箱 (選填)</span>
+                            <input type="text" placeholder="請輸入Email信箱">
+                        </label>
+                    </div>
+                    <div id="invoice-select-content-2" class="invoice-type">
+                        <label>
+                            <span>*電子發票載具類別 <a href="https://www.einvoice.nat.gov.tw/" target="_blank"><img
+                                        src="images/icon/icon-info.svg"></a></span>
+                        </label>
+                        <div id="carrier-select" class="selector">
+                            <span>未持有</span>
+                            <div>
+                                <ul>
+                                    <li id="carrier-select-1">未持有</li>
+                                    <li id="carrier-select-2">手機條碼</li>
+                                    <li id="carrier-select-3">自然憑證條碼</li>
+                                </ul>
+                            </div>
+                            <input type="text" id="carrier-select-content-2" class="carrier-select-content"
+                                placeholder="請輸入手機條碼">
+                            <input type="text" id="carrier-select-content-3" class="carrier-select-content"
+                                placeholder="請輸入自然憑證條碼">
+                        </div>
+                        <label>
+                            <span>*Email 信箱</span>
+                            <input type="text" class="input-warning" placeholder="請輸入Email信箱" required>
+                            <!-- required欄位資料錯誤時，增加.input-warning，顯示為紅框  -->
+                            <span class="note warning">* 未填寫完成或格式錯誤</span>
+                            <!-- required欄位資料錯誤時，增加此行錯誤訊息 -->
+                            <span class="note">*此Email信箱僅供寄送電子發票開立通知使用。</span>
+                        </label>
+                    </div>
+                    <div id="invoice-select-content-3" class="invoice-type">
+                        <label>
+                            <span>*公司抬頭或姓名</span>
+                            <input type="text" placeholder="請輸入公司抬頭或姓名" required>
+                        </label>
+                        <label>
+                            <span>*統一編號</span>
+                            <input type="text" placeholder="請輸入統一編號" required>
+                        </label>
+                        <label>
+                            <span>*Email 信箱</span>
+                            <input type="text" placeholder="請輸入Email信箱" required>
+                        </label>
+                        <label><span>*寄送地址(即日起不主動寄送紙本發票)</span></label>
+                        <div id="county-select" class="selector" required>
+                            <span>請選擇縣市</span>
+                            <div>
+                                <ul>
+                                    <li id="county-1">臺北市</li>
+                                    <li id="county-2">新北市</li>
+                                    <li id="county-3">基隆市</li>
+                                    <li id="county-4">桃園市</li>
+                                    <li id="county-5">新竹縣</li>
+                                    <li id="county-6">苗栗縣</li>
+                                    <li id="county-7">臺中市</li>
+                                    <li id="county-8">彰化縣</li>
+                                    <li id="county-9">南投縣</li>
+                                    <li id="county-10">雲林縣</li>
+                                    <li id="county-11">嘉義縣</li>
+                                    <li id="county-12">臺南市</li>
+                                    <li id="county-13">高雄市</li>
+                                    <li id="county-14">屏東縣</li>
+                                    <li id="county-15">宜蘭縣</li>
+                                    <li id="county-16">花蓮縣</li>
+                                    <li id="county-17">臺東縣</li>
+                                    <li id="county-18">澎湖縣</li>
+                                    <li id="county-19">綠島</li>
+                                    <li id="county-20">蘭嶼</li>
+                                    <li id="county-21">金門縣</li>
+                                    <li id="county-22">馬祖</li>
+                                    <li id="county-23">連江縣</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div id="city-select" class="selector">
+                            <span>請選擇鄉鎮市區</span>
+                            <div>
+                                <ul>
+                                    <li id="city-1">松山區</li>
+                                    <li id="city-2">信義區</li>
+                                    <li id="city-3">中正區</li>
+                                    <li id="city-4">大同區</li>
+                                    <li id="city-5">中山區</li>
+                                    <li id="city-6">大安區</li>
+                                    <li id="city-7">萬華區</li>
+                                    <li id="city-8">士林區</li>
+                                    <li id="city-9">北投區</li>
+                                    <li id="city-10">內湖區</li>
+                                    <li id="city-11">南港區</li>
+                                    <li id="city-12">文山區</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <label>
+                            <input type="text" placeholder="輸入寄送地址，請勿填寫郵政信箱" required>
+                        </label>
+                    </div>
+                </div>
+                <label class="agree">
+                    <input type="checkbox" class="input-warning">
+                    <!-- 若未勾選，點選購買時增加input-warning -->
+                    <span>我已閱讀並同意 <a id="notice--open" href="javascript:void(0)">免責聲明</a> 與 <a id="privacy--open"
+                            href="https://the-game-is-bugged.gitbook.io/whitepaper_zh/yin-si-quan-zheng-ce"
+                            target="_blank">隱私權政策</a></span>
+                </label>
+                <button class="btn btn-gradient">確認購買 (30s)</button>
+                <!-- ↑↑請RD協助做曹狀資料驗證，並於進入頁面時開始倒數30秒，超過30秒則按鈕功能改變，且文字變成「刷新」↑↑ -->
+            </form>
+        </div>
+    </div>
+
+
+    <!-- footer -->
+    <footer>
+        <div class="copyright">
+            <dl>
+                <dt><img src="images/product/Logo_GASH.png"></dt>
+                <dt><img src="images/product/Logo_Naddic.png"></dt>
+                <dd>© 2022 GASH POINT Co., Ltd. All right reserved</dd>
+            </dl>
+            <div><img src="images/icon/icon-pg-12.svg"></div>
+        </div>
+    </footer>
+
+
+    <!-- social link -->
+    <div class="hidden fixed right-16 bottom-11 sm:hidden lg:block">
+        <a href="##" class="block" target="_blank">
+            <img src="images/icon/icon-dioscord-pc.svg" alt="">
+        </a>
+    </div>
+
+    <!-- pop up 發票說明 -->
+    <div id="invoiceInfo--popUp" class="popUp">
+        <div class="popUp--container">
+            <button id="invoiceInfo--close" class="popUp--close"><img src="images/icon/icon-minus.svg"></button>
+            <h2>發票說明</h2>
+            <div class="popUp--content">
+                <p class="note">
+                    財政部於2013年1月1日起正式推動電子發票虛實合一政策！<br>
+                    此政策讓持有共通性載具之消費者，可於消費時作為電子發票之載具，並提供消費者以捐贈碼捐贈予特定受捐贈機關或團體之管道。<br>
+                    有關【共通性載具】與【捐贈碼】詳細介紹與資訊，詳見<a href="https://www.einvoice.nat.gov.tw/index"
+                        target="_blank">財政部電子發票整合服務平台</a>說明。
+                </p>
+                <p class="note">
+                    注意：<br>
+                    如資料有誤導致無法寄達，我們將直接把發票捐贈給「社團法人台灣一起夢想公益協會」。<br>
+                    因應財政部推廣無紙化作業，即日起將不再主動寄送紙本發票，若仍有索取紙本需求請與樂點客服聯繫。
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <!-- pop up 免責聲明 -->
+    <div id="notice--popUp" class="popUp">
+        <div class="popUp--container">
+            <button id="notice--close" class="popUp--close"><img src="images/icon/icon-minus.svg"></button>
+            <h2>免責聲明</h2>
+            <div class="popUp--content">
+                <ul>
+                    <li>
+                        第一條 風險提示<br>
+                        用戶進行遊戲過程應當自行控制風險，加密貨幣資產是易波動的產品，具有產生損失的高風險。價格在任何一天都可能大幅波動。由於這些價格波動，用戶持有的資產可能在任何特定時刻價值顯著增加或減少，這可能會導致您在遊戲中損失投入的資金，故用戶應瞭解並評估自行承擔匯損或交易過程波動等損失之能力。用戶知悉其進行遊戲及使用遊戲內各項服務是基於個人意願，並同意自負因此產生之任何風險。
+                    </li>
+                    <li>
+                        第二條 免責聲明
+                        <ul>
+                            <li>
+                                （一）用戶瞭解並同意，在任何情況下，樂點就以下事項不承擔任何損害賠償責任：
+                                <ul>
+                                    <li>1. 虛擬貨幣波動的損失。</li>
+                                    <li>2. 交易匯差的損失。</li>
+                                    <li>3. 業務中斷。</li>
+                                    <li>4. 資料的損失。</li>
+                                    <li>5. 用戶的預期利益、商譽或聲譽的損失。</li>
+                                    <li>6. 終端設備的故障。</li>
+                                    <li>7. 數據資料的外洩及其損失。</li>
+                                    <li>8. 虛擬貨幣消亡或退出市場。</li>
+                                    <li>9. 用戶對遊戲內容、服務條款的誤解。</li>
+                                    <li>10. 區塊鏈相關軟體、伺服器服務（如虛擬錢包、智能合約等）產生之任何異常。</li>
+                                    <li>11. 用戶自行發佈之資訊所造成之損害。</li>
+                                    <li>12. 因法律、法規和規範的制定或者修改，導致虛擬貨幣的交易被暫停、或者禁止。</li>
+                                    <li>13. 任何不可抗力之情況，例如伺服器意外故障、系統故障、外部攻擊和自然災害等。</li>
+                                    <li>14. 任何非可單獨歸責樂點的原因而引起的其它損失。</li>
+                                </ul>
+                            </li>
+                            <li>（二）用戶理解本免責聲明僅能簡要闡述所可能涉及的部分風險事項，無法窮盡列舉所有在遊戲中獲得、購買、持有、買賣或交易虛擬貨幣過程中所會涉及的所有風險及各種相關面向。</li>
+                        </ul>
+                    </li>
+                    <li>
+                        第三條 其他
+                        <ul>
+                            <li>（一）樂點有權隨時對遊戲提供之服務、購買規則、資訊內容、聲明等進行變更，且於變更後內容發布時即刻生效。</li>
+                            <li>（二）如本免責聲明的規定與遊戲服務條款中的其他條款相衝突，免責聲明的規定應當取代其他規定。</li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <!-- pop up 隱私權政策 -->
+    <div id="privacy--popUp" class="popUp">
+        <div class="popUp--container">
+            <button id="privacy--close" class="popUp--close"><img src="images/icon/icon-minus.svg"></button>
+            <h2>隱私權政策</h2>
+            <div class="popUp--content">
+                <p class="note">隱私權政策說明隱私權政策說明隱私權政策說明隱私權政策說明隱私權政策說明<a href="#" target="_blank">相關連結</a>。</p>
+                <p class="note">
+                    隱私權政策說明隱私權政策說明隱私權政策說明隱私權政策說明隱私權政策說明隱私權政策說明隱私權政策說明隱私權政策說明隱私權政策說明隱私權政策說明隱私權政策說明隱私權政策說明隱私權政策說明隱私權政策說明隱私權政策說明。
+                </p>
+            </div>
+        </div>
+    </div>
+
+</body>
+
+
+<!-- popup bg-->
+<!-- 20220704 -->
+<div class="hidden w-full h-full fixed top-0 left-0 z-40 opacity-88 bg-121212 popup-bg"></div>
+
+<!-- 連接錢包 8-1 -->
+<div
+    class="hidden w-11/12 p-10 mx-auto fixed top-1/4 left-1/2 z-40 transform -translate-x-1/2 rounded-3xl text-center text-xs tracking-wider z-20 border border-solid bg-1f1f1f color-efefef border-color-353535 popup-wrap w-469px">
+    <div>
+        <div class="mb-7 text-lg font-bold">連接錢包</div>
+        <div class="mb-7 text-sm font-noraml text-left color-efefef max-h-64 overflow-y-auto scroll-style">
+            請先連結MetaMask錢包。</div>
+        <a href="##"
+            class="block w-full py-3 px-6 border-transparent rounded-full text-sm font-bold color-efefef bg-from-e63eb6-to-749ff5">連接錢包</a>
+    </div>
+    <button class="absolute top-5 right-5 btn-close">
+        <img src="images/icon/icon-close.svg" alt="">
+    </button>
+</div>
+
+<!-- 功能維護中 8-2-11 -->
+<div
+    class="hidden w-11/12 p-10 mx-auto fixed top-1/4 left-1/2 z-40 transform -translate-x-1/2 rounded-3xl text-center text-xs tracking-wider z-20 border border-solid bg-1f1f1f color-efefef border-color-353535 popup-wrap w-469px">
+    <div>
+        <div class="mb-7 text-lg font-bold">功能維護中</div>
+        <div class="mb-7 text-sm font-noraml text-left color-efefef">功能維護中，暫時關閉。</div>
+        <a href="##"
+            class="block w-full py-3 px-6 border-transparent rounded-full text-sm font-bold color-efefef bg-from-e63eb6-to-749ff5">確認</a>
+    </div>
+</div>
+
+<!-- 系統發生問題 8-2-13 -->
+<div
+    class="hidden w-11/12 p-10 mx-auto fixed top-1/4 left-1/2 z-40 transform -translate-x-1/2 rounded-3xl text-center text-xs tracking-wider z-20 border border-solid bg-1f1f1f color-efefef border-color-353535 popup-wrap w-469px">
+    <div>
+        <div class="mb-7 text-lg font-bold">系統發生問題</div>
+        <div class="mb-7 text-sm font-noraml text-left color-efefef">錯誤代碼(ERRXXXXXXX)，請重新嘗試或 <a href="##"
+                target="_blank" class="font-bold color-7e97f0">洽客服</a></div>
+        <a href="##"
+            class="block w-full py-3 px-6 border-transparent rounded-full text-sm font-bold color-efefef bg-from-e63eb6-to-749ff5">確認</a>
+    </div>
+</div>
+
+<!-- 功能建置中 8-2-16 -->
+<div
+    class="hidden w-11/12 p-10 mx-auto fixed top-1/4 left-1/2 z-40 transform -translate-x-1/2 rounded-3xl text-center text-xs tracking-wider z-20 border border-solid bg-1f1f1f color-efefef border-color-353535 popup-wrap coming-soon-wrap w-469px">
+    <div>
+        <div class="mb-7 text-lg font-bold">功能建置中</div>
+        <div class="mb-7 text-sm font-noraml text-left color-efefef">功能建置中，敬請期待！</div>
+        <a href="##"
+            class="block w-full py-3 px-6 border-transparent rounded-full text-sm font-bold color-efefef bg-from-e63eb6-to-749ff5 btn-confirm">確認</a>
+    </div>
+</div>
+
+<!-- 等待確認中 8-3-1 -->
+<div
+    class="hidden w-11/12 p-10 mx-auto fixed top-1/4 left-1/2 z-40 transform -translate-x-1/2 rounded-3xl text-center text-xs tracking-wider z-20 border border-solid bg-1f1f1f color-efefef border-color-353535 popup-wrap w-469px">
+    <div>
+        <div class="mb-7 text-lg font-bold">等待確認中</div>
+        <div class="mb-7 text-sm font-noraml text-center color-efefef">等待MetaMask錢包確認中，請稍候。</div>
+        <div class="text-sm font-noraml text-center color-efefef">還沒下載MetaMask錢包? <a href="##" target="_blank"
+                class="font-bold color-7e97f0">前往下載</a></div>
+    </div>
+</div>
+
+
+<script>
+    // 下拉選單
+    $('.selector > span').click(function () {
+        $(this).parent().toggleClass('open')
+    })
+
+    // 發票說明彈窗
+    $('#invoiceInfo--open').click(function () {
+        $('#invoiceInfo--popUp').addClass('active')
+    })
+    $('#invoiceInfo--close').click(function () {
+        $('#invoiceInfo--popUp').removeClass('active')
+    })
+
+    // 我要捐贈
+    $('#no-invoice').click(function () {
+        $('#invoice').toggleClass('active')
+    })
+
+    // 發票類型下拉
+    $('#invoice-select > span').click(function () {
+        $('#carrier-select').removeClass('open')
+        $('#county-select').removeClass('open')
+        $('#city-select').removeClass('open')
+    })
+    $(function () {
+        for (let i = 1; i <= 3; i++) {
+            let clickedButton = $('#invoice-select-' + i);
+            let listContent = $('#invoice-select-content-' + i);
+            $(clickedButton).click(function () {
+                $('#invoice-select span').html($(this).html())
+                $('#invoice-select span').css('color', '#EFEFEF')
+                $('#invoice-select').removeClass('open')
+                $('.invoice-type').removeClass('show')
+                $(listContent).addClass('show')
+                $('#submit').removeAttr('disabled')
+            })
+        }
+    });
+
+    // 載具下拉
+    $('#carrier-select > span').click(function () {
+        $('#invoice-select').removeClass('open')
+    })
+    $(function () {
+        for (let i = 1; i <= 3; i++) {
+            let clickedButton = $('#carrier-select-' + i);
+            let listContent = $('#carrier-select-content-' + i);
+            $(clickedButton).click(function () {
+                $('#carrier-select span').html($(this).html())
+                $('#carrier-select span').css('color', '#EFEFEF')
+                $('#carrier-select').removeClass('open')
+                $('.carrier-select-content').removeClass('show')
+                $(listContent).addClass('show')
+                $('#submit').removeAttr('disabled')
+            })
+        }
+    });
+
+    // 地址(縣市)下拉
+    $('#county-select').click(function () {
+        $('#invoice-select').removeClass('open')
+        $('#city-select').removeClass('open')
+    })
+    $(function () {
+        for (let i = 1; i <= 23; i++) {
+            let clickedButton = $("#county-" + i);
+            $(clickedButton).click(function () {
+                $('#county-select span').html($(this).html())
+                $('#county-select span').css('color', '#EFEFEF')
+                $('#county-select').removeClass('open')
+            })
+        }
+    });
+
+    // 地址(鄉鎮市區)下拉
+    $('#city-select').click(function () {
+        $('#invoice-select').removeClass('open')
+        $('#county-select').removeClass('open')
+    })
+    $(function () {
+        for (let i = 1; i <= 12; i++) {
+            let clickedButton = $("#city-" + i);
+            $(clickedButton).click(function () {
+                $('#city-select span').html($(this).html())
+                $('#city-select span').css('color', '#EFEFEF')
+                $('#city-select').removeClass('open')
+            })
+        }
+    });
+
+    // 免責聲明彈窗
+    $('#notice--open').click(function () {
+        $('#notice--popUp').addClass('active')
+    })
+    $('#notice--close').click(function () {
+        $('#notice--popUp').removeClass('active')
+    })
+
+    // 隱私權彈窗
+    // $('#privacy--open').click(function(){
+    //     $('#privacy--popUp').addClass('active')
+    // })
+    // $('#privacy--close').click(function(){
+    //     $('#privacy--popUp').removeClass('active')
+    // })
+</script>
+
+
+</html>

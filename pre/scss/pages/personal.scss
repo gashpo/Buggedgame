@@ -1,0 +1,637 @@
+@import "../variable";
+@import "../mixin";
+
+.dashboard {
+    display: flex;
+    justify-content: space-between;
+    align-items: stretch;
+    margin-bottom: 70px;
+
+    li {
+        flex: 1;
+        margin-right: 16px;
+        padding: 20px;
+        border: 1px solid $dark;
+        border-radius: 24px;
+        position: relative;
+
+        &:last-child {
+            margin-right: 0;
+        }
+
+        .info {
+            >p {
+                display: flex;
+                align-items: center;
+                color: $lightGrey;
+                margin-top: 4px;
+
+                img {
+                    margin-right: 8px;
+                }
+
+                a {
+                    margin-left: 4px;
+                }
+
+                &:last-child {
+                    font-size: calc($fontSize * 1.8);
+                    font-weight: $UltraBold;
+                }
+            }
+        }
+
+        .desc {
+            margin: 12px 0;
+            color: $lighter;
+            font-size: calc($fontSize * 1.2);
+            margin-bottom: 90px;
+        }
+
+        .bottom {
+            position: absolute;
+            bottom: 20px;
+            width: calc(100% - 40px);
+            margin-top: 16px;
+        }
+
+        .btns {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 15px;
+
+            a {
+                display: inline-block;
+                flex: 1;
+                height: 44px;
+                line-height: 44px;
+                font-size: calc($fontSize * 1.4);
+                font-weight: $UltraBold;
+                text-align: center;
+            }
+        }
+
+        &.account {
+            min-height: 240px;
+
+            .account {
+                &__info {
+                    display: flex;
+                    flex-wrap: wrap;
+                    gap: 16px;
+                    align-items: center;
+                    justify-content: space-between;
+                    width: 100%;
+                    padding-bottom: 12px;
+                    margin-bottom: 12px;
+                    border-bottom: 1px solid $dark;
+
+                    >div {
+                        flex: 1;
+                        color: $lightGrey;
+                        font-size: calc($fontSize * 1.6);
+                        font-weight: $UltraBold;
+
+                        &.passlevel {
+                            display: flex;
+                            align-items: center;
+                            gap: 4px;
+                            min-width: max-content;
+
+                            img {
+                                margin-right: 8px;
+
+                            }
+
+                            a {
+                                width: 18px;
+                            }
+                        }
+
+                        &.address {
+                            text-align: right;
+                            word-break: break-all;
+                        }
+                    }
+
+                    >span {
+                        flex: 100%;
+                        color: $lighter;
+                    }
+
+                    a {
+                        font-weight: $UltraBold;
+                        @include a-color($primaryC);
+                    }
+                }
+
+                &__gamepass {
+                    display: flex;
+                    align-items: center;
+                    justify-content: space-between;
+
+                    &--title {
+                        display: flex;
+                        align-items: center;
+                        font-size: calc($fontSize * 1.6);
+                        font-weight: $UltraBold;
+                        color: $lighter;
+
+                        a {
+                            margin-left: 4px;
+                        }
+                    }
+
+                    &--repair {
+                        a {
+                            display: inline-block;
+                            background-color: $primaryA;
+                            padding: 4px 12px;
+                            border-radius: 24px;
+                            height: 30px;
+                            line-height: 22px;
+                            transition: all .15s ease;
+                            font-size: calc($fontSize * 1.4);
+                            min-height: auto;
+
+                            &:hover {
+                                background-color: darken($primaryA, 3%);
+                            }
+
+                            >* {
+                                display: inline-block;
+                            }
+                        }
+                    }
+                }
+            }
+
+            .bottom {
+                color: $lighter;
+                display: inline;
+
+                .bar {
+                    position: relative;
+                    width: 100%;
+                    height: 6px;
+                    border-radius: 10px;
+                    background-color: $dark;
+                    margin: 6px 0;
+
+                    >div {
+                        position: absolute;
+                        top: 0;
+                        left: 0;
+                        height: 6px;
+                        border-radius: 10px;
+                    }
+                }
+            }
+        }
+
+        &.bugCoin {
+            .bugCoin--password {
+                display: inline-block;
+                margin-right: 16px;
+                font-size: calc($fontSize * 1.2);
+                line-height: 20px;
+                font-weight: 400;
+                padding-bottom: 12px;
+
+                a {
+                    text-decoration: underline;
+                    @include a-color($lighter, $grey);
+                }
+            }
+        }
+    }
+}
+
+.myNft {
+    margin-bottom: 70px;
+
+    .title {
+        display: flex;
+        align-items: center;
+        gap: 4px;
+        margin-bottom: 28px;
+    }
+
+    .nft-tab {
+        max-width: 100%;
+        overflow-x: auto;
+        margin-bottom: 28px;
+
+        &::-webkit-scrollbar {
+            display: none;
+        }
+
+        &::-webkit-scrollbar-thumb {
+            display: none;
+        }
+
+        ul {
+            min-width: max-content;
+            display: flex;
+            gap: 20px;
+            border-bottom: 1px solid $dark;
+
+            li {
+                font-size: calc($fontSize * 1.2);
+                font-weight: $UltraBold;
+                color: $grey;
+                border-bottom: 3px solid transparent;
+                transition: all .5s;
+
+                a {
+                    display: inline-block;
+                    padding: 12px 16px 9px;
+                }
+
+                &.active {
+                    color: $lightGrey;
+                    border-color: $primaryC;
+                }
+
+                &:hover {
+                    color: $lightGrey;
+                }
+            }
+        }
+    }
+
+    .nft-list {
+        display: none;
+        flex-wrap: wrap;
+        gap: 24px 15px;
+
+        li {
+            flex: 25%;
+            max-width: calc((100% - 45px) / 4);
+            border-radius: 20px;
+            border: 1px solid $dark;
+            padding: 20px 20px 44px;
+            position: relative;
+
+            .img {
+                position: relative;
+                background-color: $frameBg;
+                border-radius: 8px;
+            }
+
+            .desc {
+                margin-top: 12px;
+                overflow: hidden;
+                display: flex;
+                flex-wrap: wrap;
+                gap: 4px;
+
+                .nft--name {
+                    flex: 100%;
+                    color: $lightGrey;
+                    font-weight: $UltraBold;
+                    font-size: calc($fontSize * 1.6);
+                    display: -webkit-box;
+                    -webkit-box-orient: vertical;
+                    // -webkit-line-clamp: 1;
+                    text-overflow: ellipsis;
+                    overflow: hidden;
+                }
+
+                .nft--id {
+                    align-self: flex-end;
+                    flex-grow: 1;
+                    color: $grey;
+                    position: absolute;
+                    bottom: 20px;
+                }
+
+                .nft--num {
+                    flex-shrink: 1;
+                    max-width: max-content;
+
+                    span {
+                        display: inline-block;
+                        margin-top: 8px;
+                        padding: 2px 11px;
+                        color: $primaryC;
+                        border: 1px solid $primaryC;
+                        border-radius: 40px;
+                        font-size: calc($fontSize * 1.4);
+                        font-weight: $UltraBold;
+
+                        &:before {
+                            content: 'x ';
+                        }
+                    }
+                }
+            }
+
+            &.pledging,
+            &.coming_soon,
+            &.stay_tuned {
+                .img {
+                    span {
+                        position: absolute;
+                        width: max-content;
+                        min-width: max-content;
+                        bottom: 8px;
+                        left: 50%;
+                        transform: translateX(-50%);
+                        padding: 4px 12px;
+                        border-radius: 8px;
+                        background-color: rgba(#7E97F0, .85);
+                        color: $lightGrey;
+                        font-weight: $UltraBold;
+                    }
+                }
+            }
+
+            &.coming_soon,
+            &.stay_tuned {
+                .img {
+                    img {
+                        filter: grayscale(1);
+                    }
+                }
+            }
+
+            &.coming_soon {
+                .img {
+                    span {
+                        background-color: rgba($success, .85);
+                        color: $primaryA;
+                    }
+                }
+            }
+
+            // &.stay_tuned {
+            //     cursor: not-allowed !important;
+            // }
+        }
+
+        &.active {
+            display: flex;
+        }
+
+        &:not(&#nft-list-1) {
+            li {
+                &:not(&.stay_tuned) {
+                    cursor: pointer;
+                    transition: all .5s;
+
+                    &:hover {
+                        transform: translateY(-8px);
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+
+@media screen and (max-width:1069px) {
+    .dashboard {
+        li {
+            &.bugCoin {
+                min-height: 200px;
+
+                .info {
+                    flex-wrap: wrap;
+
+                    p {
+                        flex: 100%;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width:991px) {
+    .dashboard {
+        li {
+            &.account {
+                min-height: 300px;
+
+                .account__gamepass {
+                    flex-wrap: wrap;
+
+                    &--title,
+                    &--repair {
+                        flex: 100%;
+                    }
+
+                    &--repair {
+                        margin-top: 12px;
+                    }
+                }
+            }
+        }
+    }
+
+    .myNft {
+        .nft-list {
+            li {
+                padding: 16px 16px 68px;
+
+                .desc {
+                    .nft--num {
+                        flex: 100%;
+                        max-width: 100%;
+                        text-align: right;
+
+                        span {
+                            margin-top: 0;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 767px) {
+    .dashboard {
+        flex-wrap: wrap;
+
+        li {
+            flex: 100%;
+            margin: 0;
+            margin-bottom: 22px;
+
+            .desc {
+                margin-bottom: 16px;
+            }
+
+            &.account {
+                min-height: auto;
+
+                .account {
+                    &__gamepass {
+                        flex-wrap: nowrap;
+
+                        &--title,
+                        &--repair {
+                            flex: auto;
+                        }
+
+                        &--title {
+                            word-break: break-all;
+                            padding-right: 12px;
+                        }
+
+                        &--repair {
+                            margin-top: 0;
+                            min-width: max-content;
+                            text-align: right;
+                        }
+                    }
+                }
+
+                .bottom {
+                    width: 100%;
+                    display: block;
+                    position: inherit;
+                    bottom: auto;
+                    margin-top: 4px;
+
+                    p {
+                        font-size: calc($fontSize * 1.4);
+                    }
+                }
+            }
+
+            &.bugCoin {
+                min-height: auto;
+
+                .info {
+                    flex-wrap: nowrap;
+                    justify-content: space-between;
+
+                    p {
+                        flex: unset;
+                    }
+                }
+
+                .bottom {
+                    position: inherit;
+                    bottom: auto;
+                    width: 100%;
+                }
+            }
+
+            &.pledge {
+                min-height: auto;
+
+                .bottom {
+                    position: inherit;
+                    bottom: auto;
+                    width: 100%;
+                }
+            }
+        }
+    }
+
+    .myNft {
+        .nft-list {
+            li {
+                padding: 16px 16px 64px;
+            }
+        }
+    }
+}
+
+@media screen and (max-width:515px) {
+    .dashboard {
+        margin-bottom: 40px;
+
+        li {
+            .desc {
+                font-size: calc($fontSize * 1.4);
+            }
+
+            &.bugCoin {
+                .info {
+                    p {
+                        span {
+                            font-size: calc($fontSize * 1.4);
+                        }
+                    }
+                }
+
+                .bugCoin--password {
+                    font-size: calc($fontSize * 1.4);
+                }
+            }
+        }
+    }
+
+    .myNft {
+        .title {
+            margin-bottom: 16px;
+        }
+
+        .nft-tab {
+            justify-content: space-between;
+            margin-bottom: 16px;
+
+            ul {
+                gap: 16px;
+
+                li {
+                    a {
+                        font-size: calc($fontSize * 1.4);
+                    }
+                }
+            }
+        }
+
+        .nft-list {
+            margin-top: 16px;
+
+            li {
+                flex: calc(50% - 8px);
+                max-width: calc(50% - 8px);
+                padding: 16px 16px 70px;
+
+                .desc {
+                    .nft--id {
+                        font-size: calc($fontSize * 1.4);
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width:375px) {
+    .dashboard {
+        li {
+            &.account {
+                .account__gamepass {
+                    flex-wrap: wrap;
+
+                    &--repair {
+                        margin: 8px 0;
+                        text-align: left;
+                    }
+                }
+            }
+
+            &.bugCoin {
+                min-height: 200px;
+
+                .info {
+                    flex-wrap: wrap;
+
+                    p {
+                        flex: 100%;
+                    }
+                }
+            }
+        }
+    }
+}

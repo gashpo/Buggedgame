@@ -1,0 +1,2186 @@
+@charset "UTF-8";
+.record {
+  margin-bottom: 64px;
+}
+.record h2 {
+  margin-bottom: 32px;
+}
+.record .record-tab {
+  display: flex;
+  gap: 24px;
+  border-bottom: 1px solid #353535;
+}
+.record .record-tab li {
+  border-bottom: 3px solid transparent;
+  font-size: 12px;
+  font-weight: 700;
+}
+.record .record-tab li a {
+  display: inline-block;
+  padding: 12px 16px;
+  color: #898989;
+  transition: color 0.5s;
+  transition: all 0.5s;
+}
+.record .record-tab li a:hover {
+  color: #7c7c7c;
+}
+.record .record-tab li.active {
+  border-color: #8AA3FF;
+}
+.record .record-tab li.active a, .record .record-tab li:hover a {
+  color: #EFEFEF;
+}
+.record .no-record {
+  width: 190px;
+  margin: 100px auto 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+.record .no-record .title {
+  font-weight: 700;
+  margin-bottom: 4px;
+}
+.record .no-record .desc {
+  font-size: 12px;
+  color: #898989;
+}
+.record .no-record button {
+  width: 135px;
+  padding: 12px;
+  color: #EFEFEF;
+  font-size: 12px;
+  font-weight: 700;
+  margin-top: 28px;
+}
+.record .record-content .filter {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 28px;
+  color: #BDBDBD;
+  font-size: 12px;
+  margin: 16px 0;
+}
+.record .record-content .filter .days,
+.record .record-content .filter .pages {
+  position: relative;
+}
+.record .record-content .filter .days button,
+.record .record-content .filter .pages button {
+  font-size: 14px;
+  font-weight: 700;
+  color: #8AA3FF;
+  padding: 8px;
+  margin-left: 12px;
+  cursor: pointer;
+  transition: all 0.5s;
+}
+.record .record-content .filter .days button img,
+.record .record-content .filter .pages button img {
+  display: inline-block;
+  margin-left: 12px;
+  transition: all 0.5s;
+}
+.record .record-content .filter .days button:hover,
+.record .record-content .filter .pages button:hover {
+  filter: brightness(80%);
+}
+.record .record-content .filter .days .items,
+.record .record-content .filter .pages .items {
+  position: absolute;
+  border: 1px solid transparent;
+  border-radius: 12px;
+  padding: 0 8px;
+  width: 144px;
+  right: 0;
+  transition: all 0.5s;
+}
+.record .record-content .filter .days .items ul,
+.record .record-content .filter .pages .items ul {
+  overflow: hidden;
+  max-height: 0;
+  text-align: center;
+  font-size: 14px;
+  font-weight: 700;
+  color: #EFEFEF;
+  transition: all 0.3s;
+}
+.record .record-content .filter .days .items ul li,
+.record .record-content .filter .pages .items ul li {
+  cursor: pointer;
+  padding: 8px;
+  border-radius: 4px;
+}
+.record .record-content .filter .days .items ul li:hover,
+.record .record-content .filter .pages .items ul li:hover {
+  background-color: #353535;
+}
+.record .record-content .filter .days.active button img,
+.record .record-content .filter .pages.active button img {
+  transform: rotate(180deg);
+}
+.record .record-content .filter .days.active .items,
+.record .record-content .filter .pages.active .items {
+  border: 1px solid #353535;
+  background-color: #1F1F1F;
+  padding: 8px;
+  z-index: 100;
+}
+.record .record-content .filter .days.active .items ul,
+.record .record-content .filter .pages.active .items ul {
+  max-height: 13em;
+}
+.record .record-content .filter .days.active .items ul::-webkit-scrollbar,
+.record .record-content .filter .pages.active .items ul::-webkit-scrollbar {
+  width: 2px;
+  border-radius: 2px;
+}
+.record .record-content .filter .days.active .items ul::-webkit-scrollbar-track,
+.record .record-content .filter .pages.active .items ul::-webkit-scrollbar-track {
+  background-color: #353535;
+  border-radius: 2px;
+}
+.record .record-content .filter .days.active .items ul::-webkit-scrollbar-thumb,
+.record .record-content .filter .pages.active .items ul::-webkit-scrollbar-thumb {
+  background-color: #BDBDBD;
+  border-radius: 2px;
+}
+.record .record-content .filter .pages.active .items ul {
+  overflow-y: auto;
+}
+.record .record-content .filter .status {
+  display: none;
+}
+.record .record-content .filter .status img {
+  display: inline-block;
+  margin-left: 4px;
+  transition: all 0.5s;
+  transform: translateY(-1px);
+}
+.record .record-content .filter .status img:hover {
+  filter: brightness(130%);
+}
+.record .record-content table {
+  width: 100%;
+  display: none;
+}
+.record .record-content table.active {
+  display: table;
+}
+.record .record-content table thead {
+  margin-bottom: 16px;
+}
+.record .record-content table thead tr th {
+  text-align: left;
+  padding: 8px;
+  background-color: #1F1F1F;
+  color: #BDBDBD;
+  font-size: 14px;
+  font-weight: 400;
+}
+.record .record-content table thead tr th:first-child {
+  border-top-left-radius: 12px;
+  border-bottom-left-radius: 12px;
+  padding-left: 24px;
+}
+.record .record-content table thead tr th:last-child {
+  border-top-right-radius: 12px;
+  border-bottom-right-radius: 12px;
+}
+.record .record-content table thead tr th img {
+  display: inline-block;
+  margin-left: 4px;
+  transform: translateY(-1px);
+  transition: all 0.5s;
+}
+.record .record-content table thead tr th img:hover {
+  filter: brightness(120%);
+}
+.record .record-content table tbody tr.win td.title-name, .record .record-content table tbody tr.win td.title-price, .record .record-content table tbody tr.win td.title-total {
+  color: #AAF3F5;
+}
+.record .record-content table tbody tr td {
+  height: 52px;
+  color: #EFEFEF;
+  font-size: 14px;
+  font-weight: 400;
+  padding: 16px 8px;
+}
+.record .record-content table tbody tr td img {
+  display: inline-block;
+  width: 20px;
+  margin-right: 6px;
+  transform: translateY(-2px);
+}
+.record .record-content table tbody tr td a {
+  color: #BDBDBD;
+  text-decoration: underline;
+}
+.record .record-content table tbody tr td a:hover {
+  color: #898989;
+}
+.record .record-content table tbody tr td .currency {
+  display: inline-block;
+  font-size: 14px;
+}
+.record .record-content table tbody tr td.title-price, .record .record-content table tbody tr td.title-price-plus, .record .record-content table tbody tr td.title-fee, .record .record-content table tbody tr td.title-total, .record .record-content table tbody tr td.title-benefit {
+  min-width: 120px;
+  word-break: break-all;
+}
+.record .record-content table tbody tr td.title-time {
+  min-width: 120px;
+  max-width: 172px;
+}
+.record .record-content table tbody tr td.title-trackno {
+  width: 216px;
+  min-width: 216px;
+  word-break: break-all;
+}
+.record .record-content table tbody tr td.title-trackno a {
+  text-decoration: none;
+  color: #898989;
+  transition: color 0.5s;
+  transition: color 0.3s ease;
+}
+.record .record-content table tbody tr td.title-trackno a:hover {
+  color: #7c7c7c;
+}
+.record .record-content table tbody tr td.title-trackno a img {
+  width: 16px;
+}
+.record .record-content table tbody tr td.title-name {
+  width: 100%;
+  min-width: 136px;
+}
+.record .record-content table tbody tr td.title-number {
+  width: 48px;
+  min-width: 48px;
+}
+.record .record-content table tbody tr td.title-fee {
+  width: 86px;
+  min-width: 86px;
+}
+.record .record-content table tbody tr td.title-status {
+  width: 98px;
+  min-width: 98px;
+}
+.record .record-content table tbody tr td.title-status span {
+  display: flex;
+  gap: 0 8px;
+}
+.record .record-content table tbody tr td.title-status a {
+  word-break: keep-all;
+  padding-left: 12px;
+}
+.record .record-content table tbody tr td:first-child {
+  padding-left: 24px;
+}
+.record .record-content table tbody tr:first-child td {
+  padding-top: 32px;
+}
+
+#win--popUp .popUp--content img,
+#fail--popUp .popUp--content img {
+  border-radius: 8px;
+  width: 320px;
+  max-width: 100%;
+  margin: 0 auto;
+}
+#win--popUp .button,
+#fail--popUp .button {
+  display: block;
+  width: 100%;
+  height: 44px;
+  line-height: 44px;
+  margin-top: 28px;
+}
+
+.win_ribbon canvas {
+  height: 100vh;
+  pointer-events: none;
+  position: fixed;
+  width: 100%;
+  z-index: 2;
+}
+.win_ribbon .btn-win {
+  display: none;
+}
+
+.fail_ribbon {
+  position: relative;
+  min-height: 100vh;
+  max-width: 500px;
+  margin: auto;
+  transform: translateX(-8%);
+}
+.fail_ribbon [class|=confetti] {
+  position: absolute;
+}
+.fail_ribbon .confetti-0 {
+  width: 3px;
+  height: 1.2px;
+  background-color: #353535;
+  top: -10%;
+  left: 1%;
+  opacity: 0.985415782;
+  transform: rotate(148.3593008779deg);
+  animation: drop-0 4.508323263s 0.5879258503s;
+}
+@keyframes drop-0 {
+  100% {
+    top: 110%;
+    left: 6%;
+    opacity: 0;
+  }
+}
+.fail_ribbon .confetti-1 {
+  width: 8px;
+  height: 3.2px;
+  background-color: #BDBDBD;
+  top: -10%;
+  left: 17%;
+  opacity: 0.6364811674;
+  transform: rotate(71.4948577529deg);
+  animation: drop-1 4.1517086285s 0.1020693845s;
+}
+@keyframes drop-1 {
+  100% {
+    top: 110%;
+    left: 20%;
+    opacity: 0;
+  }
+}
+.fail_ribbon .confetti-2 {
+  width: 5px;
+  height: 2px;
+  background-color: #898989;
+  top: -10%;
+  left: 94%;
+  opacity: 0.7384958665;
+  transform: rotate(276.9853150351deg);
+  animation: drop-2 4.8284934973s 0.8641530042s;
+}
+@keyframes drop-2 {
+  100% {
+    top: 110%;
+    left: 102%;
+    opacity: 0;
+  }
+}
+.fail_ribbon .confetti-3 {
+  width: 4px;
+  height: 1.6px;
+  background-color: #BDBDBD;
+  top: -10%;
+  left: 43%;
+  opacity: 0.9668551291;
+  transform: rotate(173.8719440591deg);
+  animation: drop-3 4.0234119938s 0.4605780894s;
+}
+@keyframes drop-3 {
+  100% {
+    top: 110%;
+    left: 47%;
+    opacity: 0;
+  }
+}
+.fail_ribbon .confetti-4 {
+  width: 7px;
+  height: 2.8px;
+  background-color: #898989;
+  top: -10%;
+  left: 83%;
+  opacity: 0.7518198113;
+  transform: rotate(80.8897670446deg);
+  animation: drop-4 4.995838109s 0.6171774094s;
+}
+@keyframes drop-4 {
+  100% {
+    top: 110%;
+    left: 95%;
+    opacity: 0;
+  }
+}
+.fail_ribbon .confetti-5 {
+  width: 1px;
+  height: 0.4px;
+  background-color: #898989;
+  top: -10%;
+  left: 52%;
+  opacity: 0.9956873943;
+  transform: rotate(269.5734340689deg);
+  animation: drop-5 4.2597158566s 0.1914162397s;
+}
+@keyframes drop-5 {
+  100% {
+    top: 110%;
+    left: 66%;
+    opacity: 0;
+  }
+}
+.fail_ribbon .confetti-6 {
+  width: 6px;
+  height: 2.4px;
+  background-color: #BDBDBD;
+  top: -10%;
+  left: 12%;
+  opacity: 1.0472224409;
+  transform: rotate(31.0088307237deg);
+  animation: drop-6 4.8910407415s 0.9229576729s;
+}
+@keyframes drop-6 {
+  100% {
+    top: 110%;
+    left: 13%;
+    opacity: 0;
+  }
+}
+.fail_ribbon .confetti-7 {
+  width: 6px;
+  height: 2.4px;
+  background-color: #898989;
+  top: -10%;
+  left: 66%;
+  opacity: 0.96824723;
+  transform: rotate(102.6591139063deg);
+  animation: drop-7 4.1066550191s 0.55565439s;
+}
+@keyframes drop-7 {
+  100% {
+    top: 110%;
+    left: 72%;
+    opacity: 0;
+  }
+}
+.fail_ribbon .confetti-8 {
+  width: 7px;
+  height: 2.8px;
+  background-color: #353535;
+  top: -10%;
+  left: 88%;
+  opacity: 0.6586861929;
+  transform: rotate(295.1132356301deg);
+  animation: drop-8 4.8917999403s 0.2273180558s;
+}
+@keyframes drop-8 {
+  100% {
+    top: 110%;
+    left: 101%;
+    opacity: 0;
+  }
+}
+.fail_ribbon .confetti-9 {
+  width: 6px;
+  height: 2.4px;
+  background-color: #353535;
+  top: -10%;
+  left: 50%;
+  opacity: 1.4759713478;
+  transform: rotate(288.8904846408deg);
+  animation: drop-9 4.355286888s 0.0645602379s;
+}
+@keyframes drop-9 {
+  100% {
+    top: 110%;
+    left: 63%;
+    opacity: 0;
+  }
+}
+.fail_ribbon .confetti-10 {
+  width: 3px;
+  height: 1.2px;
+  background-color: #353535;
+  top: -10%;
+  left: 94%;
+  opacity: 0.9342896167;
+  transform: rotate(318.9051973522deg);
+  animation: drop-10 4.6895931053s 0.9066663656s;
+}
+@keyframes drop-10 {
+  100% {
+    top: 110%;
+    left: 107%;
+    opacity: 0;
+  }
+}
+.fail_ribbon .confetti-11 {
+  width: 2px;
+  height: 0.8px;
+  background-color: #898989;
+  top: -10%;
+  left: 24%;
+  opacity: 0.7339259601;
+  transform: rotate(19.7652940531deg);
+  animation: drop-11 4.7668231659s 0.3107168105s;
+}
+@keyframes drop-11 {
+  100% {
+    top: 110%;
+    left: 30%;
+    opacity: 0;
+  }
+}
+.fail_ribbon .confetti-12 {
+  width: 5px;
+  height: 2px;
+  background-color: #353535;
+  top: -10%;
+  left: 84%;
+  opacity: 0.779623485;
+  transform: rotate(359.1738602354deg);
+  animation: drop-12 4.1905720868s 0.7227982835s;
+}
+@keyframes drop-12 {
+  100% {
+    top: 110%;
+    left: 98%;
+    opacity: 0;
+  }
+}
+.fail_ribbon .confetti-13 {
+  width: 1px;
+  height: 0.4px;
+  background-color: #BDBDBD;
+  top: -10%;
+  left: 95%;
+  opacity: 1.2492636335;
+  transform: rotate(239.6173509997deg);
+  animation: drop-13 4.8145401204s 0.8947743922s;
+}
+@keyframes drop-13 {
+  100% {
+    top: 110%;
+    left: 102%;
+    opacity: 0;
+  }
+}
+.fail_ribbon .confetti-14 {
+  width: 6px;
+  height: 2.4px;
+  background-color: #353535;
+  top: -10%;
+  left: 41%;
+  opacity: 1.2580513044;
+  transform: rotate(281.6151683977deg);
+  animation: drop-14 4.2746944782s 0.3404259032s;
+}
+@keyframes drop-14 {
+  100% {
+    top: 110%;
+    left: 50%;
+    opacity: 0;
+  }
+}
+.fail_ribbon .confetti-15 {
+  width: 7px;
+  height: 2.8px;
+  background-color: #BDBDBD;
+  top: -10%;
+  left: 35%;
+  opacity: 0.5166052686;
+  transform: rotate(224.4308726884deg);
+  animation: drop-15 4.8813446137s 0.3365228363s;
+}
+@keyframes drop-15 {
+  100% {
+    top: 110%;
+    left: 39%;
+    opacity: 0;
+  }
+}
+.fail_ribbon .confetti-16 {
+  width: 2px;
+  height: 0.8px;
+  background-color: #353535;
+  top: -10%;
+  left: 45%;
+  opacity: 0.7874015598;
+  transform: rotate(182.3869068229deg);
+  animation: drop-16 4.5278605591s 0.2957420708s;
+}
+@keyframes drop-16 {
+  100% {
+    top: 110%;
+    left: 55%;
+    opacity: 0;
+  }
+}
+.fail_ribbon .confetti-17 {
+  width: 2px;
+  height: 0.8px;
+  background-color: #898989;
+  top: -10%;
+  left: 32%;
+  opacity: 1.2326273317;
+  transform: rotate(357.7992952822deg);
+  animation: drop-17 4.3869506302s 0.8446503009s;
+}
+@keyframes drop-17 {
+  100% {
+    top: 110%;
+    left: 38%;
+    opacity: 0;
+  }
+}
+.fail_ribbon .confetti-18 {
+  width: 5px;
+  height: 2px;
+  background-color: #898989;
+  top: -10%;
+  left: 6%;
+  opacity: 1.3619969424;
+  transform: rotate(304.4969675649deg);
+  animation: drop-18 4.6098740809s 0.8429887981s;
+}
+@keyframes drop-18 {
+  100% {
+    top: 110%;
+    left: 10%;
+    opacity: 0;
+  }
+}
+.fail_ribbon .confetti-19 {
+  width: 6px;
+  height: 2.4px;
+  background-color: #BDBDBD;
+  top: -10%;
+  left: 11%;
+  opacity: 1.2354186216;
+  transform: rotate(233.0730122822deg);
+  animation: drop-19 4.6571219795s 0.560121478s;
+}
+@keyframes drop-19 {
+  100% {
+    top: 110%;
+    left: 17%;
+    opacity: 0;
+  }
+}
+.fail_ribbon .confetti-20 {
+  width: 5px;
+  height: 2px;
+  background-color: #898989;
+  top: -10%;
+  left: 52%;
+  opacity: 0.7353630607;
+  transform: rotate(139.3198567843deg);
+  animation: drop-20 4.2881537781s 0.7892436836s;
+}
+@keyframes drop-20 {
+  100% {
+    top: 110%;
+    left: 63%;
+    opacity: 0;
+  }
+}
+.fail_ribbon .confetti-21 {
+  width: 8px;
+  height: 3.2px;
+  background-color: #BDBDBD;
+  top: -10%;
+  left: 35%;
+  opacity: 0.5426181449;
+  transform: rotate(293.6169206609deg);
+  animation: drop-21 4.3453682076s 0.9799671706s;
+}
+@keyframes drop-21 {
+  100% {
+    top: 110%;
+    left: 40%;
+    opacity: 0;
+  }
+}
+.fail_ribbon .confetti-22 {
+  width: 2px;
+  height: 0.8px;
+  background-color: #353535;
+  top: -10%;
+  left: 9%;
+  opacity: 1.0013544104;
+  transform: rotate(178.8693853863deg);
+  animation: drop-22 4.5329882461s 0.7364708538s;
+}
+@keyframes drop-22 {
+  100% {
+    top: 110%;
+    left: 11%;
+    opacity: 0;
+  }
+}
+.fail_ribbon .confetti-23 {
+  width: 8px;
+  height: 3.2px;
+  background-color: #BDBDBD;
+  top: -10%;
+  left: 9%;
+  opacity: 0.973718357;
+  transform: rotate(253.474889478deg);
+  animation: drop-23 4.4862036337s 0.1218228151s;
+}
+@keyframes drop-23 {
+  100% {
+    top: 110%;
+    left: 14%;
+    opacity: 0;
+  }
+}
+.fail_ribbon .confetti-24 {
+  width: 4px;
+  height: 1.6px;
+  background-color: #898989;
+  top: -10%;
+  left: 25%;
+  opacity: 1.1194628297;
+  transform: rotate(119.0538033112deg);
+  animation: drop-24 4.0698952507s 0.6518660652s;
+}
+@keyframes drop-24 {
+  100% {
+    top: 110%;
+    left: 37%;
+    opacity: 0;
+  }
+}
+.fail_ribbon .confetti-25 {
+  width: 3px;
+  height: 1.2px;
+  background-color: #898989;
+  top: -10%;
+  left: 4%;
+  opacity: 0.6124369814;
+  transform: rotate(112.0620581942deg);
+  animation: drop-25 4.4719745124s 0.7651766485s;
+}
+@keyframes drop-25 {
+  100% {
+    top: 110%;
+    left: 13%;
+    opacity: 0;
+  }
+}
+.fail_ribbon .confetti-26 {
+  width: 6px;
+  height: 2.4px;
+  background-color: #353535;
+  top: -10%;
+  left: 7%;
+  opacity: 1.4773638394;
+  transform: rotate(105.0557314114deg);
+  animation: drop-26 4.3376712682s 0.9092652742s;
+}
+@keyframes drop-26 {
+  100% {
+    top: 110%;
+    left: 21%;
+    opacity: 0;
+  }
+}
+.fail_ribbon .confetti-27 {
+  width: 1px;
+  height: 0.4px;
+  background-color: #353535;
+  top: -10%;
+  left: 94%;
+  opacity: 0.934786711;
+  transform: rotate(29.4749436588deg);
+  animation: drop-27 4.4240105193s 0.4503006987s;
+}
+@keyframes drop-27 {
+  100% {
+    top: 110%;
+    left: 103%;
+    opacity: 0;
+  }
+}
+.fail_ribbon .confetti-28 {
+  width: 6px;
+  height: 2.4px;
+  background-color: #353535;
+  top: -10%;
+  left: 75%;
+  opacity: 1.2568051439;
+  transform: rotate(258.8824091342deg);
+  animation: drop-28 4.9235996706s 0.0200568816s;
+}
+@keyframes drop-28 {
+  100% {
+    top: 110%;
+    left: 89%;
+    opacity: 0;
+  }
+}
+.fail_ribbon .confetti-29 {
+  width: 8px;
+  height: 3.2px;
+  background-color: #898989;
+  top: -10%;
+  left: 77%;
+  opacity: 0.6845484041;
+  transform: rotate(109.5938140575deg);
+  animation: drop-29 4.2697591967s 0.9566866141s;
+}
+@keyframes drop-29 {
+  100% {
+    top: 110%;
+    left: 92%;
+    opacity: 0;
+  }
+}
+.fail_ribbon .confetti-30 {
+  width: 7px;
+  height: 2.8px;
+  background-color: #BDBDBD;
+  top: -10%;
+  left: 25%;
+  opacity: 1.0130012256;
+  transform: rotate(27.2091932609deg);
+  animation: drop-30 4.6898565444s 0.4827130848s;
+}
+@keyframes drop-30 {
+  100% {
+    top: 110%;
+    left: 37%;
+    opacity: 0;
+  }
+}
+.fail_ribbon .confetti-31 {
+  width: 3px;
+  height: 1.2px;
+  background-color: #BDBDBD;
+  top: -10%;
+  left: 29%;
+  opacity: 1.3271689324;
+  transform: rotate(241.1907368327deg);
+  animation: drop-31 4.4149217692s 0.464042749s;
+}
+@keyframes drop-31 {
+  100% {
+    top: 110%;
+    left: 36%;
+    opacity: 0;
+  }
+}
+.fail_ribbon .confetti-32 {
+  width: 6px;
+  height: 2.4px;
+  background-color: #353535;
+  top: -10%;
+  left: 71%;
+  opacity: 0.8192547962;
+  transform: rotate(171.8608137483deg);
+  animation: drop-32 4.4354865872s 0.4935634635s;
+}
+@keyframes drop-32 {
+  100% {
+    top: 110%;
+    left: 76%;
+    opacity: 0;
+  }
+}
+.fail_ribbon .confetti-33 {
+  width: 7px;
+  height: 2.8px;
+  background-color: #898989;
+  top: -10%;
+  left: 23%;
+  opacity: 1.0053099719;
+  transform: rotate(344.5700928682deg);
+  animation: drop-33 4.5199274948s 0.4159278993s;
+}
+@keyframes drop-33 {
+  100% {
+    top: 110%;
+    left: 27%;
+    opacity: 0;
+  }
+}
+.fail_ribbon .confetti-34 {
+  width: 7px;
+  height: 2.8px;
+  background-color: #898989;
+  top: -10%;
+  left: 40%;
+  opacity: 1.0467932187;
+  transform: rotate(286.139139553deg);
+  animation: drop-34 4.3438885326s 0.1221554932s;
+}
+@keyframes drop-34 {
+  100% {
+    top: 110%;
+    left: 53%;
+    opacity: 0;
+  }
+}
+.fail_ribbon .confetti-35 {
+  width: 2px;
+  height: 0.8px;
+  background-color: #BDBDBD;
+  top: -10%;
+  left: 80%;
+  opacity: 0.8117402049;
+  transform: rotate(196.6655371442deg);
+  animation: drop-35 4.5181833807s 0.5145954549s;
+}
+@keyframes drop-35 {
+  100% {
+    top: 110%;
+    left: 94%;
+    opacity: 0;
+  }
+}
+.fail_ribbon .confetti-36 {
+  width: 3px;
+  height: 1.2px;
+  background-color: #353535;
+  top: -10%;
+  left: 52%;
+  opacity: 0.6519820215;
+  transform: rotate(241.1126366651deg);
+  animation: drop-36 4.993948752s 0.0546431956s;
+}
+@keyframes drop-36 {
+  100% {
+    top: 110%;
+    left: 54%;
+    opacity: 0;
+  }
+}
+.fail_ribbon .confetti-37 {
+  width: 5px;
+  height: 2px;
+  background-color: #BDBDBD;
+  top: -10%;
+  left: 56%;
+  opacity: 0.6407075067;
+  transform: rotate(89.1330613728deg);
+  animation: drop-37 4.1612711186s 0.1029839574s;
+}
+@keyframes drop-37 {
+  100% {
+    top: 110%;
+    left: 57%;
+    opacity: 0;
+  }
+}
+.fail_ribbon .confetti-38 {
+  width: 2px;
+  height: 0.8px;
+  background-color: #BDBDBD;
+  top: -10%;
+  left: 98%;
+  opacity: 1.2876694973;
+  transform: rotate(191.0078516066deg);
+  animation: drop-38 4.9753083847s 0.9936879278s;
+}
+@keyframes drop-38 {
+  100% {
+    top: 110%;
+    left: 104%;
+    opacity: 0;
+  }
+}
+.fail_ribbon .confetti-39 {
+  width: 3px;
+  height: 1.2px;
+  background-color: #353535;
+  top: -10%;
+  left: 55%;
+  opacity: 1.1815154932;
+  transform: rotate(168.2339759206deg);
+  animation: drop-39 4.0071531348s 0.2951647332s;
+}
+@keyframes drop-39 {
+  100% {
+    top: 110%;
+    left: 64%;
+    opacity: 0;
+  }
+}
+.fail_ribbon .confetti-40 {
+  width: 1px;
+  height: 0.4px;
+  background-color: #898989;
+  top: -10%;
+  left: 67%;
+  opacity: 0.5607835892;
+  transform: rotate(157.621067004deg);
+  animation: drop-40 4.185881652s 0.4302865498s;
+}
+@keyframes drop-40 {
+  100% {
+    top: 110%;
+    left: 80%;
+    opacity: 0;
+  }
+}
+.fail_ribbon .confetti-41 {
+  width: 4px;
+  height: 1.6px;
+  background-color: #898989;
+  top: -10%;
+  left: 58%;
+  opacity: 1.4692966602;
+  transform: rotate(287.7601424284deg);
+  animation: drop-41 4.0855074084s 0.0079438515s;
+}
+@keyframes drop-41 {
+  100% {
+    top: 110%;
+    left: 66%;
+    opacity: 0;
+  }
+}
+.fail_ribbon .confetti-42 {
+  width: 4px;
+  height: 1.6px;
+  background-color: #353535;
+  top: -10%;
+  left: 77%;
+  opacity: 1.1969111775;
+  transform: rotate(117.834414358deg);
+  animation: drop-42 4.6040334082s 0.5170672299s;
+}
+@keyframes drop-42 {
+  100% {
+    top: 110%;
+    left: 83%;
+    opacity: 0;
+  }
+}
+.fail_ribbon .confetti-43 {
+  width: 3px;
+  height: 1.2px;
+  background-color: #353535;
+  top: -10%;
+  left: 4%;
+  opacity: 0.9602555486;
+  transform: rotate(196.562393441deg);
+  animation: drop-43 4.0663167159s 0.8072789114s;
+}
+@keyframes drop-43 {
+  100% {
+    top: 110%;
+    left: 10%;
+    opacity: 0;
+  }
+}
+.fail_ribbon .confetti-44 {
+  width: 4px;
+  height: 1.6px;
+  background-color: #353535;
+  top: -10%;
+  left: 32%;
+  opacity: 0.7748020329;
+  transform: rotate(353.1354318046deg);
+  animation: drop-44 4.2895026167s 0.9412986347s;
+}
+@keyframes drop-44 {
+  100% {
+    top: 110%;
+    left: 35%;
+    opacity: 0;
+  }
+}
+.fail_ribbon .confetti-45 {
+  width: 3px;
+  height: 1.2px;
+  background-color: #BDBDBD;
+  top: -10%;
+  left: 63%;
+  opacity: 1.2366933136;
+  transform: rotate(82.8001909899deg);
+  animation: drop-45 4.0718934033s 0.0681222947s;
+}
+@keyframes drop-45 {
+  100% {
+    top: 110%;
+    left: 70%;
+    opacity: 0;
+  }
+}
+.fail_ribbon .confetti-46 {
+  width: 7px;
+  height: 2.8px;
+  background-color: #353535;
+  top: -10%;
+  left: 33%;
+  opacity: 0.6659251308;
+  transform: rotate(153.6297376372deg);
+  animation: drop-46 4.634474861s 0.921829726s;
+}
+@keyframes drop-46 {
+  100% {
+    top: 110%;
+    left: 46%;
+    opacity: 0;
+  }
+}
+.fail_ribbon .confetti-47 {
+  width: 7px;
+  height: 2.8px;
+  background-color: #BDBDBD;
+  top: -10%;
+  left: 23%;
+  opacity: 1.1216480354;
+  transform: rotate(38.723993107deg);
+  animation: drop-47 4.4619680582s 0.8477841265s;
+}
+@keyframes drop-47 {
+  100% {
+    top: 110%;
+    left: 31%;
+    opacity: 0;
+  }
+}
+.fail_ribbon .confetti-48 {
+  width: 7px;
+  height: 2.8px;
+  background-color: #353535;
+  top: -10%;
+  left: 59%;
+  opacity: 1.4931063479;
+  transform: rotate(310.9659747253deg);
+  animation: drop-48 4.0278967788s 0.1507433637s;
+}
+@keyframes drop-48 {
+  100% {
+    top: 110%;
+    left: 61%;
+    opacity: 0;
+  }
+}
+.fail_ribbon .confetti-49 {
+  width: 4px;
+  height: 1.6px;
+  background-color: #353535;
+  top: -10%;
+  left: 70%;
+  opacity: 1.4244058248;
+  transform: rotate(267.6279528431deg);
+  animation: drop-49 4.8869610662s 0.7469173532s;
+}
+@keyframes drop-49 {
+  100% {
+    top: 110%;
+    left: 73%;
+    opacity: 0;
+  }
+}
+.fail_ribbon .confetti-50 {
+  width: 4px;
+  height: 1.6px;
+  background-color: #353535;
+  top: -10%;
+  left: 67%;
+  opacity: 1.0069423794;
+  transform: rotate(163.9854853335deg);
+  animation: drop-50 4.8518305045s 0.4762182047s;
+}
+@keyframes drop-50 {
+  100% {
+    top: 110%;
+    left: 80%;
+    opacity: 0;
+  }
+}
+.fail_ribbon .confetti-51 {
+  width: 3px;
+  height: 1.2px;
+  background-color: #353535;
+  top: -10%;
+  left: 45%;
+  opacity: 0.9829028309;
+  transform: rotate(186.2516467397deg);
+  animation: drop-51 4.6372756198s 0.2228862189s;
+}
+@keyframes drop-51 {
+  100% {
+    top: 110%;
+    left: 46%;
+    opacity: 0;
+  }
+}
+.fail_ribbon .confetti-52 {
+  width: 6px;
+  height: 2.4px;
+  background-color: #353535;
+  top: -10%;
+  left: 74%;
+  opacity: 0.5336861202;
+  transform: rotate(239.9815133894deg);
+  animation: drop-52 4.402893039s 0.2045196266s;
+}
+@keyframes drop-52 {
+  100% {
+    top: 110%;
+    left: 80%;
+    opacity: 0;
+  }
+}
+.fail_ribbon .confetti-53 {
+  width: 7px;
+  height: 2.8px;
+  background-color: #353535;
+  top: -10%;
+  left: 83%;
+  opacity: 1.0374528921;
+  transform: rotate(340.1149292701deg);
+  animation: drop-53 4.156165406s 0.5613185584s;
+}
+@keyframes drop-53 {
+  100% {
+    top: 110%;
+    left: 91%;
+    opacity: 0;
+  }
+}
+.fail_ribbon .confetti-54 {
+  width: 6px;
+  height: 2.4px;
+  background-color: #353535;
+  top: -10%;
+  left: 62%;
+  opacity: 1.159064903;
+  transform: rotate(354.9792652391deg);
+  animation: drop-54 4.8548653787s 0.0425851551s;
+}
+@keyframes drop-54 {
+  100% {
+    top: 110%;
+    left: 66%;
+    opacity: 0;
+  }
+}
+.fail_ribbon .confetti-55 {
+  width: 3px;
+  height: 1.2px;
+  background-color: #898989;
+  top: -10%;
+  left: 78%;
+  opacity: 1.4787315615;
+  transform: rotate(151.1268133673deg);
+  animation: drop-55 4.3477105838s 0.7873874884s;
+}
+@keyframes drop-55 {
+  100% {
+    top: 110%;
+    left: 92%;
+    opacity: 0;
+  }
+}
+.fail_ribbon .confetti-56 {
+  width: 5px;
+  height: 2px;
+  background-color: #353535;
+  top: -10%;
+  left: 14%;
+  opacity: 0.6086914226;
+  transform: rotate(5.1327746199deg);
+  animation: drop-56 4.4635241548s 0.6206016447s;
+}
+@keyframes drop-56 {
+  100% {
+    top: 110%;
+    left: 19%;
+    opacity: 0;
+  }
+}
+.fail_ribbon .confetti-57 {
+  width: 5px;
+  height: 2px;
+  background-color: #BDBDBD;
+  top: -10%;
+  left: 15%;
+  opacity: 1.360210441;
+  transform: rotate(94.4473289994deg);
+  animation: drop-57 4.0823767828s 0.4717183332s;
+}
+@keyframes drop-57 {
+  100% {
+    top: 110%;
+    left: 28%;
+    opacity: 0;
+  }
+}
+.fail_ribbon .confetti-58 {
+  width: 4px;
+  height: 1.6px;
+  background-color: #353535;
+  top: -10%;
+  left: 90%;
+  opacity: 1.1437787033;
+  transform: rotate(166.9942373154deg);
+  animation: drop-58 4.9708839853s 0.8576484126s;
+}
+@keyframes drop-58 {
+  100% {
+    top: 110%;
+    left: 93%;
+    opacity: 0;
+  }
+}
+.fail_ribbon .confetti-59 {
+  width: 5px;
+  height: 2px;
+  background-color: #353535;
+  top: -10%;
+  left: 39%;
+  opacity: 1.4266091356;
+  transform: rotate(302.5683056017deg);
+  animation: drop-59 4.4554375036s 0.4399801284s;
+}
+@keyframes drop-59 {
+  100% {
+    top: 110%;
+    left: 53%;
+    opacity: 0;
+  }
+}
+.fail_ribbon .confetti-60 {
+  width: 4px;
+  height: 1.6px;
+  background-color: #BDBDBD;
+  top: -10%;
+  left: 33%;
+  opacity: 0.7248959892;
+  transform: rotate(216.6919443934deg);
+  animation: drop-60 4.6037663487s 0.2879248006s;
+}
+@keyframes drop-60 {
+  100% {
+    top: 110%;
+    left: 44%;
+    opacity: 0;
+  }
+}
+.fail_ribbon .confetti-61 {
+  width: 6px;
+  height: 2.4px;
+  background-color: #353535;
+  top: -10%;
+  left: 71%;
+  opacity: 0.9878201591;
+  transform: rotate(113.7915807728deg);
+  animation: drop-61 4.8160146461s 0.7871942863s;
+}
+@keyframes drop-61 {
+  100% {
+    top: 110%;
+    left: 79%;
+    opacity: 0;
+  }
+}
+.fail_ribbon .confetti-62 {
+  width: 2px;
+  height: 0.8px;
+  background-color: #BDBDBD;
+  top: -10%;
+  left: 41%;
+  opacity: 1.1306901877;
+  transform: rotate(66.6185731651deg);
+  animation: drop-62 4.5494924795s 0.3797503425s;
+}
+@keyframes drop-62 {
+  100% {
+    top: 110%;
+    left: 55%;
+    opacity: 0;
+  }
+}
+.fail_ribbon .confetti-63 {
+  width: 3px;
+  height: 1.2px;
+  background-color: #898989;
+  top: -10%;
+  left: 60%;
+  opacity: 1.3441023772;
+  transform: rotate(103.404358662deg);
+  animation: drop-63 4.2274725044s 0.3588966319s;
+}
+@keyframes drop-63 {
+  100% {
+    top: 110%;
+    left: 63%;
+    opacity: 0;
+  }
+}
+.fail_ribbon .confetti-64 {
+  width: 6px;
+  height: 2.4px;
+  background-color: #353535;
+  top: -10%;
+  left: 39%;
+  opacity: 0.9949553266;
+  transform: rotate(124.8780316985deg);
+  animation: drop-64 4.9450182727s 0.1227520361s;
+}
+@keyframes drop-64 {
+  100% {
+    top: 110%;
+    left: 42%;
+    opacity: 0;
+  }
+}
+.fail_ribbon .confetti-65 {
+  width: 6px;
+  height: 2.4px;
+  background-color: #898989;
+  top: -10%;
+  left: 91%;
+  opacity: 1.1441418696;
+  transform: rotate(149.5623891111deg);
+  animation: drop-65 4.8545657492s 0.6738056079s;
+}
+@keyframes drop-65 {
+  100% {
+    top: 110%;
+    left: 97%;
+    opacity: 0;
+  }
+}
+.fail_ribbon .confetti-66 {
+  width: 1px;
+  height: 0.4px;
+  background-color: #353535;
+  top: -10%;
+  left: 70%;
+  opacity: 1.4472411432;
+  transform: rotate(281.6166329339deg);
+  animation: drop-66 4.8675671686s 0.8899517011s;
+}
+@keyframes drop-66 {
+  100% {
+    top: 110%;
+    left: 74%;
+    opacity: 0;
+  }
+}
+.fail_ribbon .confetti-67 {
+  width: 7px;
+  height: 2.8px;
+  background-color: #353535;
+  top: -10%;
+  left: 10%;
+  opacity: 1.4930890004;
+  transform: rotate(133.1261260313deg);
+  animation: drop-67 4.6583911218s 0.0807382923s;
+}
+@keyframes drop-67 {
+  100% {
+    top: 110%;
+    left: 11%;
+    opacity: 0;
+  }
+}
+.fail_ribbon .confetti-68 {
+  width: 1px;
+  height: 0.4px;
+  background-color: #BDBDBD;
+  top: -10%;
+  left: 78%;
+  opacity: 0.9599714547;
+  transform: rotate(180.8217435712deg);
+  animation: drop-68 4.5044396466s 0.5694159942s;
+}
+@keyframes drop-68 {
+  100% {
+    top: 110%;
+    left: 83%;
+    opacity: 0;
+  }
+}
+.fail_ribbon .confetti-69 {
+  width: 5px;
+  height: 2px;
+  background-color: #BDBDBD;
+  top: -10%;
+  left: 45%;
+  opacity: 1.0748638498;
+  transform: rotate(13.7418494237deg);
+  animation: drop-69 4.5784264873s 0.3238034021s;
+}
+@keyframes drop-69 {
+  100% {
+    top: 110%;
+    left: 49%;
+    opacity: 0;
+  }
+}
+.fail_ribbon .confetti-70 {
+  width: 1px;
+  height: 0.4px;
+  background-color: #BDBDBD;
+  top: -10%;
+  left: 64%;
+  opacity: 0.7851082167;
+  transform: rotate(43.0948806529deg);
+  animation: drop-70 4.668566345s 0.8448358093s;
+}
+@keyframes drop-70 {
+  100% {
+    top: 110%;
+    left: 78%;
+    opacity: 0;
+  }
+}
+.fail_ribbon .confetti-71 {
+  width: 2px;
+  height: 0.8px;
+  background-color: #898989;
+  top: -10%;
+  left: 84%;
+  opacity: 0.9556142318;
+  transform: rotate(37.5316188843deg);
+  animation: drop-71 4.7200205132s 0.0439136819s;
+}
+@keyframes drop-71 {
+  100% {
+    top: 110%;
+    left: 87%;
+    opacity: 0;
+  }
+}
+.fail_ribbon .confetti-72 {
+  width: 7px;
+  height: 2.8px;
+  background-color: #BDBDBD;
+  top: -10%;
+  left: 29%;
+  opacity: 1.4662153983;
+  transform: rotate(80.3990300913deg);
+  animation: drop-72 4.8798800927s 0.3219401289s;
+}
+@keyframes drop-72 {
+  100% {
+    top: 110%;
+    left: 41%;
+    opacity: 0;
+  }
+}
+.fail_ribbon .confetti-73 {
+  width: 1px;
+  height: 0.4px;
+  background-color: #BDBDBD;
+  top: -10%;
+  left: 36%;
+  opacity: 0.6757742316;
+  transform: rotate(194.4995514844deg);
+  animation: drop-73 4.8662913421s 0.6543728039s;
+}
+@keyframes drop-73 {
+  100% {
+    top: 110%;
+    left: 44%;
+    opacity: 0;
+  }
+}
+.fail_ribbon .confetti-74 {
+  width: 6px;
+  height: 2.4px;
+  background-color: #353535;
+  top: -10%;
+  left: 54%;
+  opacity: 1.4587359933;
+  transform: rotate(120.0276915261deg);
+  animation: drop-74 4.8958804931s 0.4221349787s;
+}
+@keyframes drop-74 {
+  100% {
+    top: 110%;
+    left: 67%;
+    opacity: 0;
+  }
+}
+.fail_ribbon .confetti-75 {
+  width: 7px;
+  height: 2.8px;
+  background-color: #BDBDBD;
+  top: -10%;
+  left: 88%;
+  opacity: 0.96142146;
+  transform: rotate(141.9839023229deg);
+  animation: drop-75 4.8017140477s 0.1002844201s;
+}
+@keyframes drop-75 {
+  100% {
+    top: 110%;
+    left: 101%;
+    opacity: 0;
+  }
+}
+.fail_ribbon .confetti-76 {
+  width: 1px;
+  height: 0.4px;
+  background-color: #353535;
+  top: -10%;
+  left: 98%;
+  opacity: 1.0164341969;
+  transform: rotate(42.2921114263deg);
+  animation: drop-76 4.7430021931s 0.0348538946s;
+}
+@keyframes drop-76 {
+  100% {
+    top: 110%;
+    left: 109%;
+    opacity: 0;
+  }
+}
+.fail_ribbon .confetti-77 {
+  width: 5px;
+  height: 2px;
+  background-color: #BDBDBD;
+  top: -10%;
+  left: 82%;
+  opacity: 1.3447838647;
+  transform: rotate(1.8256797885deg);
+  animation: drop-77 4.3726891905s 0.4953117524s;
+}
+@keyframes drop-77 {
+  100% {
+    top: 110%;
+    left: 93%;
+    opacity: 0;
+  }
+}
+.fail_ribbon .confetti-78 {
+  width: 3px;
+  height: 1.2px;
+  background-color: #BDBDBD;
+  top: -10%;
+  left: 3%;
+  opacity: 1.4773768383;
+  transform: rotate(97.4483451743deg);
+  animation: drop-78 4.7113436504s 0.9564653808s;
+}
+@keyframes drop-78 {
+  100% {
+    top: 110%;
+    left: 9%;
+    opacity: 0;
+  }
+}
+.fail_ribbon .confetti-79 {
+  width: 8px;
+  height: 3.2px;
+  background-color: #353535;
+  top: -10%;
+  left: 29%;
+  opacity: 0.938551358;
+  transform: rotate(13.5476580384deg);
+  animation: drop-79 4.5457062658s 0.2528413249s;
+}
+@keyframes drop-79 {
+  100% {
+    top: 110%;
+    left: 37%;
+    opacity: 0;
+  }
+}
+.fail_ribbon .confetti-80 {
+  width: 4px;
+  height: 1.6px;
+  background-color: #BDBDBD;
+  top: -10%;
+  left: 67%;
+  opacity: 0.6828872395;
+  transform: rotate(34.4013087673deg);
+  animation: drop-80 4.8191695097s 0.5499599301s;
+}
+@keyframes drop-80 {
+  100% {
+    top: 110%;
+    left: 78%;
+    opacity: 0;
+  }
+}
+.fail_ribbon .confetti-81 {
+  width: 7px;
+  height: 2.8px;
+  background-color: #898989;
+  top: -10%;
+  left: 16%;
+  opacity: 0.6764030751;
+  transform: rotate(231.9776936608deg);
+  animation: drop-81 4.0002257274s 0.3341219357s;
+}
+@keyframes drop-81 {
+  100% {
+    top: 110%;
+    left: 17%;
+    opacity: 0;
+  }
+}
+.fail_ribbon .confetti-82 {
+  width: 8px;
+  height: 3.2px;
+  background-color: #353535;
+  top: -10%;
+  left: 88%;
+  opacity: 1.4252324861;
+  transform: rotate(262.1506128223deg);
+  animation: drop-82 4.2468234792s 0.9650489624s;
+}
+@keyframes drop-82 {
+  100% {
+    top: 110%;
+    left: 99%;
+    opacity: 0;
+  }
+}
+.fail_ribbon .confetti-83 {
+  width: 6px;
+  height: 2.4px;
+  background-color: #BDBDBD;
+  top: -10%;
+  left: 84%;
+  opacity: 0.8401184713;
+  transform: rotate(39.8957576736deg);
+  animation: drop-83 4.1031735321s 0.2696059063s;
+}
+@keyframes drop-83 {
+  100% {
+    top: 110%;
+    left: 88%;
+    opacity: 0;
+  }
+}
+.fail_ribbon .confetti-84 {
+  width: 1px;
+  height: 0.4px;
+  background-color: #898989;
+  top: -10%;
+  left: 46%;
+  opacity: 1.0045368032;
+  transform: rotate(88.3975316132deg);
+  animation: drop-84 4.0740012736s 0.3368597599s;
+}
+@keyframes drop-84 {
+  100% {
+    top: 110%;
+    left: 61%;
+    opacity: 0;
+  }
+}
+.fail_ribbon .confetti-85 {
+  width: 4px;
+  height: 1.6px;
+  background-color: #898989;
+  top: -10%;
+  left: 19%;
+  opacity: 0.7727945381;
+  transform: rotate(76.4873730264deg);
+  animation: drop-85 4.8390492971s 0.3689934904s;
+}
+@keyframes drop-85 {
+  100% {
+    top: 110%;
+    left: 32%;
+    opacity: 0;
+  }
+}
+.fail_ribbon .confetti-86 {
+  width: 5px;
+  height: 2px;
+  background-color: #BDBDBD;
+  top: -10%;
+  left: 36%;
+  opacity: 1.1909600066;
+  transform: rotate(159.8460738321deg);
+  animation: drop-86 4.795472627s 0.8379045038s;
+}
+@keyframes drop-86 {
+  100% {
+    top: 110%;
+    left: 49%;
+    opacity: 0;
+  }
+}
+.fail_ribbon .confetti-87 {
+  width: 5px;
+  height: 2px;
+  background-color: #898989;
+  top: -10%;
+  left: 77%;
+  opacity: 1.3052330236;
+  transform: rotate(26.2316812093deg);
+  animation: drop-87 4.2921467527s 0.902705997s;
+}
+@keyframes drop-87 {
+  100% {
+    top: 110%;
+    left: 80%;
+    opacity: 0;
+  }
+}
+.fail_ribbon .confetti-88 {
+  width: 2px;
+  height: 0.8px;
+  background-color: #898989;
+  top: -10%;
+  left: 13%;
+  opacity: 0.5879008009;
+  transform: rotate(184.8855227917deg);
+  animation: drop-88 4.4775754138s 0.1485295143s;
+}
+@keyframes drop-88 {
+  100% {
+    top: 110%;
+    left: 28%;
+    opacity: 0;
+  }
+}
+.fail_ribbon .confetti-89 {
+  width: 3px;
+  height: 1.2px;
+  background-color: #898989;
+  top: -10%;
+  left: 81%;
+  opacity: 0.8522923938;
+  transform: rotate(112.4854301793deg);
+  animation: drop-89 4.4841292418s 0.1620391744s;
+}
+@keyframes drop-89 {
+  100% {
+    top: 110%;
+    left: 90%;
+    opacity: 0;
+  }
+}
+.fail_ribbon .confetti-90 {
+  width: 2px;
+  height: 0.8px;
+  background-color: #898989;
+  top: -10%;
+  left: 46%;
+  opacity: 1.2337894517;
+  transform: rotate(312.028455514deg);
+  animation: drop-90 4.8130484475s 0.8140538771s;
+}
+@keyframes drop-90 {
+  100% {
+    top: 110%;
+    left: 47%;
+    opacity: 0;
+  }
+}
+.fail_ribbon .confetti-91 {
+  width: 2px;
+  height: 0.8px;
+  background-color: #898989;
+  top: -10%;
+  left: 80%;
+  opacity: 0.8522750026;
+  transform: rotate(290.6245754528deg);
+  animation: drop-91 4.4226227481s 0.8906847567s;
+}
+@keyframes drop-91 {
+  100% {
+    top: 110%;
+    left: 83%;
+    opacity: 0;
+  }
+}
+.fail_ribbon .confetti-92 {
+  width: 6px;
+  height: 2.4px;
+  background-color: #BDBDBD;
+  top: -10%;
+  left: 90%;
+  opacity: 1.1464261117;
+  transform: rotate(12.7136823555deg);
+  animation: drop-92 4.5938512331s 0.9230867016s;
+}
+@keyframes drop-92 {
+  100% {
+    top: 110%;
+    left: 98%;
+    opacity: 0;
+  }
+}
+.fail_ribbon .confetti-93 {
+  width: 2px;
+  height: 0.8px;
+  background-color: #BDBDBD;
+  top: -10%;
+  left: 47%;
+  opacity: 1.3256929307;
+  transform: rotate(300.3571879687deg);
+  animation: drop-93 4.5247103575s 0.3278383017s;
+}
+@keyframes drop-93 {
+  100% {
+    top: 110%;
+    left: 49%;
+    opacity: 0;
+  }
+}
+.fail_ribbon .confetti-94 {
+  width: 5px;
+  height: 2px;
+  background-color: #898989;
+  top: -10%;
+  left: 2%;
+  opacity: 1.1246804591;
+  transform: rotate(18.4402526354deg);
+  animation: drop-94 4.7150041042s 0.7467135215s;
+}
+@keyframes drop-94 {
+  100% {
+    top: 110%;
+    left: 9%;
+    opacity: 0;
+  }
+}
+.fail_ribbon .confetti-95 {
+  width: 1px;
+  height: 0.4px;
+  background-color: #353535;
+  top: -10%;
+  left: 43%;
+  opacity: 1.4093943275;
+  transform: rotate(198.9936210901deg);
+  animation: drop-95 4.284273288s 0.052840684s;
+}
+@keyframes drop-95 {
+  100% {
+    top: 110%;
+    left: 57%;
+    opacity: 0;
+  }
+}
+.fail_ribbon .confetti-96 {
+  width: 1px;
+  height: 0.4px;
+  background-color: #353535;
+  top: -10%;
+  left: 75%;
+  opacity: 0.6587665872;
+  transform: rotate(22.8701068698deg);
+  animation: drop-96 4.6244457547s 0.2952563484s;
+}
+@keyframes drop-96 {
+  100% {
+    top: 110%;
+    left: 87%;
+    opacity: 0;
+  }
+}
+.fail_ribbon .confetti-97 {
+  width: 5px;
+  height: 2px;
+  background-color: #353535;
+  top: -10%;
+  left: 9%;
+  opacity: 1.4668488345;
+  transform: rotate(47.4425598151deg);
+  animation: drop-97 4.3529917655s 0.1098849064s;
+}
+@keyframes drop-97 {
+  100% {
+    top: 110%;
+    left: 19%;
+    opacity: 0;
+  }
+}
+.fail_ribbon .confetti-98 {
+  width: 6px;
+  height: 2.4px;
+  background-color: #353535;
+  top: -10%;
+  left: 73%;
+  opacity: 1.1274332832;
+  transform: rotate(179.9580539297deg);
+  animation: drop-98 4.9566284621s 0.542695404s;
+}
+@keyframes drop-98 {
+  100% {
+    top: 110%;
+    left: 74%;
+    opacity: 0;
+  }
+}
+.fail_ribbon .confetti-99 {
+  width: 1px;
+  height: 0.4px;
+  background-color: #898989;
+  top: -10%;
+  left: 76%;
+  opacity: 0.8215327975;
+  transform: rotate(80.146001937deg);
+  animation: drop-99 4.420991183s 0.020019929s;
+}
+@keyframes drop-99 {
+  100% {
+    top: 110%;
+    left: 89%;
+    opacity: 0;
+  }
+}
+.fail_ribbon .confetti-100 {
+  width: 2px;
+  height: 0.8px;
+  background-color: #353535;
+  top: -10%;
+  left: 20%;
+  opacity: 0.9531665026;
+  transform: rotate(251.5237379432deg);
+  animation: drop-100 4.942987468s 0.0544854767s;
+}
+@keyframes drop-100 {
+  100% {
+    top: 110%;
+    left: 35%;
+    opacity: 0;
+  }
+}
+
+@media screen and (max-width: 959px) {
+  .record .record-content table tbody tr td.title-trackno {
+    min-width: 84px;
+  }
+}
+@media screen and (max-width: 767px) {
+  .record .record-content .filter .status {
+    display: inline;
+  }
+  .record .record-content table thead {
+    display: none;
+  }
+  .record .record-content table tbody tr {
+    background-color: #1F1F1F;
+    margin: 0 -20px 12px;
+    padding: 12px 18px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0;
+  }
+  .record .record-content table tbody tr.win td.title-name:before, .record .record-content table tbody tr.win td.title-price:before, .record .record-content table tbody tr.win td.title-total:before {
+    color: #BDBDBD;
+  }
+  .record .record-content table tbody tr td {
+    align-items: center;
+    height: auto;
+    padding: 4px 0;
+  }
+  .record .record-content table tbody tr td .currency {
+    font-weight: 700;
+  }
+  .record .record-content table tbody tr td.title-time, .record .record-content table tbody tr td.title-trackno {
+    flex: calc(50% - 28px);
+    border-bottom: 1px solid #353535;
+    padding-bottom: 4px;
+    color: #898989;
+    padding-top: 0 !important;
+  }
+  .record .record-content table tbody tr td.title-trackno {
+    text-align: right;
+    width: -moz-max-content;
+    width: max-content;
+    min-width: auto;
+    word-break: keep-all;
+  }
+  .record .record-content table tbody tr td.title-name {
+    flex: 6;
+    flex-shrink: 1;
+    min-width: 30%;
+    font-size: 16px;
+    font-weight: 700;
+    margin: 12px 0;
+  }
+  .record .record-content table tbody tr td.title-price, .record .record-content table tbody tr td.title-price-plus, .record .record-content table tbody tr td.title-number, .record .record-content table tbody tr td.title-fee, .record .record-content table tbody tr td.title-total, .record .record-content table tbody tr td.title-benefit {
+    order: 2;
+    flex: 100%;
+    padding: 4px 12px 4px 4em;
+    text-align: right;
+    color: #BDBDBD;
+    position: relative;
+    font-weight: 700;
+    margin: 2px 0;
+  }
+  .record .record-content table tbody tr td.title-price:before, .record .record-content table tbody tr td.title-price-plus:before, .record .record-content table tbody tr td.title-number:before, .record .record-content table tbody tr td.title-fee:before, .record .record-content table tbody tr td.title-total:before, .record .record-content table tbody tr td.title-benefit:before {
+    position: absolute;
+    left: 12px;
+    font-weight: 400;
+  }
+  .record .record-content table tbody tr td.title-price-plus {
+    padding: 4px 12px 4px 6.5em;
+  }
+  .record .record-content table tbody tr td.title-price, .record .record-content table tbody tr td.title-price-plus, .record .record-content table tbody tr td.title-total {
+    background-color: #353535;
+    border-radius: 8px;
+  }
+  .record .record-content table tbody tr td.title-price:before {
+    content: "單價";
+  }
+  .record .record-content table tbody tr td.title-price-plus:before {
+    content: "單價 (加乘)";
+  }
+  .record .record-content table tbody tr td.title-number:before {
+    content: "數量";
+  }
+  .record .record-content table tbody tr td.title-fee:before {
+    content: "手續費";
+  }
+  .record .record-content table tbody tr td.title-total:before {
+    content: "總價";
+  }
+  .record .record-content table tbody tr td.title-status {
+    flex: 1;
+    flex-shrink: 0;
+    width: -moz-max-content;
+    width: max-content;
+    min-width: auto;
+    text-align: right;
+    margin: 12px 0;
+    padding-left: 20px;
+    align-self: flex-start;
+  }
+  .record .record-content table tbody tr td.title-status span {
+    word-break: keep-all;
+    justify-content: flex-end;
+  }
+  .record .record-content table tbody tr td.title-status a {
+    padding-left: 0;
+  }
+  .record .record-content table tbody tr td:first-child {
+    padding-left: 0;
+  }
+  .record .record-content table tbody tr:first-child td {
+    padding-top: 4px;
+  }
+  .record .record-content table#content-table-3 tbody tr td.title-fee {
+    background-color: #353535;
+    border-radius: 8px;
+  }
+  .record .record-content table#content-table-3 tbody tr td.title-benefit:before {
+    content: "收益";
+  }
+}
+@media screen and (max-width: 515px) {
+  .record h2 {
+    padding-top: 12px;
+    margin-bottom: 20px;
+  }
+  .record .record-tab {
+    gap: 12px;
+  }
+  .record .record-tab li {
+    font-size: 14px;
+  }
+  .record .record-content .filter {
+    justify-content: flex-start;
+    font-size: 14px;
+  }
+  .record .record-content .filter .days button,
+  .record .record-content .filter .pages button {
+    margin-left: 8px;
+  }
+}
+@media screen and (max-width: 400px) {
+  .record .record-content .filter {
+    gap: 12px;
+  }
+}

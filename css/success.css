@@ -1,0 +1,180 @@
+.success-page {
+  width: 500px;
+  margin: 48px auto 0 auto;
+}
+.success-page .message {
+  text-align: center;
+  margin-bottom: 36px;
+}
+.success-page .message img {
+  margin: 0 auto 16px auto;
+}
+.success-page .message p {
+  font-weight: 700;
+}
+.success-page .product {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  padding-bottom: 20px;
+  margin-bottom: 36px;
+  border-bottom: solid 0.5px #898989;
+}
+.success-page .product .pic {
+  flex: 100px;
+  border-radius: 8px;
+  overflow: hidden;
+}
+.success-page .product .info {
+  flex: calc(100% - 120px);
+}
+.success-page .product .info p {
+  margin-bottom: 8px;
+}
+.success-page .product .info p.title {
+  font-weight: 700;
+  font-size: 14px;
+}
+.success-page .product .info ul {
+  font-size: 12px;
+  color: #BDBDBD;
+  line-height: 1.6;
+}
+.success-page .calculate {
+  font-size: 12px;
+  display: flex;
+  width: 100%;
+  justify-content: flex-end;
+  margin-bottom: 32px;
+}
+.success-page .calculate ul li {
+  margin-bottom: 8px;
+}
+.success-page .calculate ul li span {
+  font-weight: 700;
+}
+.success-page .calculate ul li img {
+  display: inline-block;
+  transform: translateY(-4px);
+  width: 20px;
+  margin-right: 6px;
+}
+.success-page .card {
+  background-color: #353535;
+  background-image: url(../images/product/qrc-bg.png);
+  background-repeat: no-repeat;
+  background-position: right;
+  border-radius: 16px;
+  padding: 20px 24px;
+}
+.success-page .card p {
+  font-size: 12px;
+  margin-top: 12px;
+}
+.success-page .card p a {
+  color: #8AA3FF;
+  transition: color 0.5s;
+  text-decoration: none;
+}
+.success-page .card p a:hover {
+  color: #718fff;
+}
+.success-page .card p:last-child {
+  margin-top: 16px;
+  font-weight: 700;
+  text-align: right;
+}
+.success-page .card p:last-child a {
+  color: #EFEFEF;
+  transition: color 0.5s;
+}
+.success-page .card p:last-child a:hover {
+  color: #BDBDBD;
+}
+.success-page .btns {
+  margin-top: 32px;
+  display: flex;
+  gap: 16px;
+}
+.success-page .btns a {
+  text-align: center;
+  line-height: 40px;
+  flex: 1;
+}
+
+#download--popUp .popUp--container {
+  max-height: -moz-max-content;
+  max-height: max-content;
+}
+#download--popUp .popUp--container .mobile {
+  display: none;
+}
+#download--popUp .popUp--container p.desc {
+  font-size: 14px;
+  color: #BDBDBD;
+}
+#download--popUp .popUp--container .qrc {
+  max-width: 120px;
+  margin: 28px auto;
+}
+#download--popUp .popUp--container .btns {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+}
+#download--popUp .popUp--container .btns button {
+  flex: 100%;
+  max-width: 280px;
+  height: 44px;
+  background-color: #8AA3FF;
+  transition: all 0.5s;
+  font-size: 14px;
+  font-weight: 700;
+}
+#download--popUp .popUp--container .btns button:hover {
+  background-color: #7087D8;
+}
+
+@media screen and (max-width: 515px) {
+  .success-page {
+    max-width: 90vw;
+  }
+  .success-page .product {
+    margin-bottom: 20px;
+  }
+  .success-page .product .pic {
+    flex: 80px;
+    max-width: 80px;
+  }
+  .success-page .product .info {
+    flex: calc(100% - 100px);
+  }
+  .success-page .product .info p.title {
+    font-size: 16px;
+  }
+  .success-page .product .info ul {
+    font-size: 14px;
+  }
+  .success-page .calculate {
+    margin-bottom: 28px;
+    font-size: 14px;
+  }
+  .success-page .card {
+    padding: 16px 20px;
+  }
+  .success-page .card p {
+    margin-top: 0;
+    font-size: 14px;
+  }
+  .success-page .btns {
+    flex-wrap: wrap;
+    gap: 12px;
+    flex-direction: column-reverse;
+  }
+  .success-page .btns a {
+    flex: 100%;
+    font-weight: 700;
+  }
+}

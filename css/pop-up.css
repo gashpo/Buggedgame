@@ -1,0 +1,548 @@
+.popUp {
+  display: none;
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-color: rgba(18, 18, 18, 0.88);
+  z-index: 100;
+}
+.popUp .popUp--container {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translateX(-50%) translateY(-50%);
+  background-color: #1F1F1F;
+  color: #BDBDBD;
+  border-radius: 24px;
+  border: 1px solid #353535;
+  padding: 40px;
+  width: 510px;
+  max-height: 80vh;
+}
+.popUp .popUp--container .popUp--close {
+  position: absolute;
+  top: 40px;
+  right: 40px;
+  background-color: rgba(137, 137, 137, 0.3);
+  height: 36px;
+  width: 36px;
+  border-radius: 20px;
+  text-align: center;
+  transition: all 0.15s ease;
+}
+.popUp .popUp--container .popUp--close img {
+  width: 100%;
+}
+.popUp .popUp--container .popUp--close:hover {
+  background-color: rgba(137, 137, 137, 0.4);
+}
+.popUp .popUp--container h2 {
+  color: #EFEFEF;
+  margin-bottom: 28px;
+  padding: 0 40px;
+  text-align: center;
+}
+.popUp .popUp--container .popUp--content {
+  overflow-y: auto;
+  margin-right: -24px;
+  padding-right: 24px;
+  max-height: calc(80vh - 144px);
+  min-height: -moz-max-content;
+  min-height: max-content;
+}
+.popUp .popUp--container .popUp--content p {
+  margin-bottom: 16px;
+}
+.popUp .popUp--container .popUp--content ul {
+  font-size: 14px;
+  color: #BDBDBD;
+  margin-bottom: 8px;
+}
+.popUp .popUp--container .popUp--content ul li {
+  margin-bottom: 8px;
+}
+.popUp .popUp--container .popUp--content ul a {
+  font-weight: 700;
+  color: #8AA3FF;
+}
+.popUp .popUp--container .popUp--content::-webkit-scrollbar {
+  border-radius: 2px;
+  background-color: #898989;
+  width: 2px;
+}
+.popUp .popUp--container .popUp--content::-webkit-scrollbar-thumb {
+  border-radius: 2px;
+  background-color: #BDBDBD;
+  border-radius: 2px;
+}
+.popUp .popUp--container .popUp--submit {
+  position: relative;
+  display: inline-block;
+  height: 44px;
+  width: 100%;
+  margin-top: 28px;
+  border-radius: 22px;
+  text-shadow: 0 0 12px rgba(0, 0, 0, 0.4);
+  font-weight: 700;
+  line-height: 44px;
+  background: linear-gradient(to right, #E63EB6, #749FF5);
+  color: #EFEFEF;
+}
+.popUp .popUp--container .popUp--submit .count {
+  position: absolute;
+  right: 20px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #ffffff;
+  line-height: 1em;
+}
+.popUp .popUp--container .popUp--submit[disabled] .count {
+  color: #8AA3FF;
+}
+.popUp .popUp--container .popUp--submit:hover {
+  background: linear-gradient(to right, #cf36a3, #658ad6);
+}
+.popUp.active {
+  display: block;
+}
+.popUp__button .popUp--container .popUp--content {
+  max-height: calc(80vh - 216px);
+}
+.popUp__check .popUp--container .popUp--content {
+  max-height: calc(80vh - 252px);
+}
+
+#download--popUp .popUp--container {
+  max-height: 90vh;
+}
+#download--popUp .popUp--container .mobile {
+  display: none;
+}
+#download--popUp .popUp--container .desc {
+  text-align: center;
+}
+#download--popUp .popUp--container .desc p {
+  font-size: 14px;
+}
+#download--popUp .popUp--container .desc img {
+  margin: 16px auto 0;
+  border-radius: 8px;
+  width: 320px;
+  max-width: 100%;
+}
+#download--popUp .popUp--container .download-show {
+  display: none;
+  gap: 36px;
+  margin-top: 20px;
+}
+#download--popUp .popUp--container .download-show .qrc {
+  flex: 120px;
+  max-width: 120px;
+  align-self: center;
+  border-radius: 8px;
+  overflow: hidden;
+}
+#download--popUp .popUp--container .download-show .btns {
+  flex: 1;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+}
+#download--popUp .popUp--container .download-show .btns button {
+  flex: 100%;
+  height: 44px;
+  background-color: #8AA3FF;
+  transition: all 0.5s;
+  font-size: 14px;
+  font-weight: 700;
+  color: #EFEFEF;
+}
+#download--popUp .popUp--container .download-show .btns button:hover {
+  background-color: #7087D8;
+}
+
+#passlevel--popUp .popUp--container {
+  line-height: 1.6;
+}
+#passlevel--popUp .popUp--container .popUp--content p {
+  margin-bottom: 8px;
+}
+#passlevel--popUp .popUp--container .popUp--content img {
+  margin: 20px 0 12px;
+  max-height: 32px;
+}
+#passlevel--popUp ul {
+  list-style: disc;
+  padding-left: 1.5em;
+}
+#passlevel--popUp ul li {
+  text-align: left;
+}
+
+#gamepass--popUp .content {
+  color: #BDBDBD;
+}
+#gamepass--popUp .content > * {
+  margin-bottom: 28px;
+}
+#gamepass--popUp p {
+  text-align: left;
+}
+#gamepass--popUp ul {
+  list-style-type: disc;
+  padding-left: 2em;
+  font-size: 16px;
+  line-height: 1.6em;
+}
+#gamepass--popUp ul li {
+  text-align: left;
+}
+#gamepass--popUp .mission {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 14px 20px 28px 20px;
+  flex-wrap: wrap;
+  font-size: 12px;
+}
+#gamepass--popUp .mission p {
+  display: inline-block;
+  text-align: left;
+  flex: 5em;
+  max-width: 5em;
+}
+#gamepass--popUp .mission .bar {
+  flex: calc(100% - 6em);
+  height: 8px;
+  border-radius: 4px;
+  background-color: #353535;
+  position: relative;
+}
+#gamepass--popUp .mission .bar .progress {
+  position: absolute;
+  left: 0;
+  height: 8px;
+}
+#gamepass--popUp .mission .bar .progress:before {
+  position: absolute;
+  top: -24px;
+  right: 0;
+  transform: translateX(50%);
+}
+#gamepass--popUp .mission .bar .progress:after {
+  content: "";
+  position: absolute;
+  top: -2px;
+  right: -2px;
+  width: 12px;
+  height: 12px;
+  border-radius: 6px;
+}
+#gamepass--popUp .mission .bar .progress-100 {
+  width: 100%;
+  background-color: #7EF09E;
+}
+#gamepass--popUp .mission .bar .progress-100:before {
+  content: "100";
+  color: #7EF09E;
+  transform: translateX(30%);
+}
+#gamepass--popUp .mission .bar .progress-100:after {
+  background-color: #7EF09E;
+}
+#gamepass--popUp .mission .bar .progress-51 {
+  width: 75%;
+  background-color: #D8B42C;
+}
+#gamepass--popUp .mission .bar .progress-51:before {
+  content: "51";
+  color: #D8B42C;
+}
+#gamepass--popUp .mission .bar .progress-51:after {
+  background-color: #D8B42C;
+}
+#gamepass--popUp .mission .bar .progress-11 {
+  width: 25%;
+  background-color: #CC47A6;
+}
+#gamepass--popUp .mission .bar .progress-11:before {
+  content: "11";
+  color: #CC47A6;
+}
+#gamepass--popUp .mission .bar .progress-11:after {
+  background-color: #CC47A6;
+}
+#gamepass--popUp .mission .bar .progress-0 {
+  width: 0;
+}
+#gamepass--popUp .mission .bar .progress-0:before {
+  content: "0";
+  color: #898989;
+}
+#gamepass--popUp .mission .bar .progress-0:after {
+  background-color: #353535;
+}
+#gamepass--popUp .mission .bar.longterm .progress:before {
+  content: "";
+}
+#gamepass--popUp .mission .earn {
+  flex: calc(100% - 5em);
+  margin-left: 5em;
+  position: relative;
+}
+#gamepass--popUp .mission .earn-100, #gamepass--popUp .mission .earn-51, #gamepass--popUp .mission .earn-11 {
+  font-size: 12px;
+  position: absolute;
+  transform: translateX(-50%);
+}
+#gamepass--popUp .mission .earn-100 {
+  color: #7EF09E;
+  left: 87%;
+}
+#gamepass--popUp .mission .earn-51 {
+  color: #D8B42C;
+  left: 50%;
+}
+#gamepass--popUp .mission .earn-11 {
+  color: #CC47A6;
+  left: 16%;
+}
+#gamepass--popUp .mission .earn.longterm .earn-100 {
+  left: 55%;
+}
+#gamepass--popUp .mission .earn.longterm .earn-11 {
+  color: #7EF09E;
+  left: 6%;
+}
+#gamepass--popUp .mission:last-child {
+  padding-top: 0;
+}
+
+#repair--popUp .popUp--container {
+  max-height: -moz-max-content;
+  max-height: max-content;
+}
+#repair--popUp .repair {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 28px;
+}
+#repair--popUp .repair #level {
+  flex: 50%;
+  text-align: left;
+  font-size: 14px;
+  color: #BDBDBD;
+}
+#repair--popUp .repair #level span {
+  font-weight: 700;
+  font-size: 14px;
+}
+#repair--popUp .repair #reset {
+  flex: 50%;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 4px;
+  color: #BDBDBD;
+  transition: all 0.15s ease;
+}
+#repair--popUp .repair #reset:hover {
+  filter: brightness(110%);
+}
+#repair--popUp .repair .bar {
+  flex: 100%;
+  width: 100%;
+  height: 10px;
+  border-radius: 10px;
+  background-color: #353535;
+  margin: 6px 0;
+  position: relative;
+}
+#repair--popUp .repair .bar #bar--new,
+#repair--popUp .repair .bar #bar--origin {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 10px;
+  border-radius: 10px;
+}
+#repair--popUp .repair .bar #bar--new {
+  background-color: #7EF09E;
+  max-width: 100%;
+  transition: all 0.1s ease;
+}
+#repair--popUp .repair .bar #bar--origin {
+  background-color: #D8B42C;
+}
+#repair--popUp .repair .btns {
+  flex: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  text-align: center;
+  margin-top: 8px;
+}
+#repair--popUp .repair .btns button {
+  flex: 1;
+  height: 38px;
+  border-radius: 20px;
+  border: 1px solid #EFEFEF;
+  font-weight: 700;
+  color: #EFEFEF;
+  font-size: 14px;
+  transition: all 0.15s ease;
+}
+#repair--popUp .repair .btns button:hover {
+  background-color: #EFEFEF;
+  color: #353535;
+}
+#repair--popUp .desc {
+  background-color: #353535;
+  border-radius: 16px;
+  padding: 16px 20px;
+  color: #EFEFEF;
+  font-size: 14px;
+  text-align: left;
+  margin-bottom: 8px;
+}
+#repair--popUp .desc .color {
+  font-weight: 700;
+  font-size: 14px;
+}
+#repair--popUp .desc .color #cost-bug {
+  font-weight: 700;
+  font-size: 14px;
+}
+#repair--popUp #warning {
+  display: none;
+  text-align: left;
+  width: 100%;
+  color: #E08083;
+  font-size: 14px;
+  margin-bottom: 8px;
+}
+#repair--popUp #repair--submit {
+  display: inline-block;
+  margin: 8px 0;
+  width: 100%;
+  height: 44px;
+  line-height: 44px;
+  font-size: 14px;
+  font-weight: 700;
+}
+
+#deposit--popUp .popUp--container p {
+  color: #BDBDBD;
+  margin-bottom: 12px;
+}
+#deposit--popUp .popUp--container .input-group {
+  position: relative;
+}
+#deposit--popUp .popUp--container .input-group:after {
+  content: "BUG";
+  position: absolute;
+  top: 10px;
+  right: 24px;
+  color: #ffffff;
+  font-weight: 700;
+}
+#deposit--popUp .popUp--container .input-group input {
+  width: 100%;
+  font-size: 16px;
+  margin-bottom: 4px;
+  background-color: transparent;
+}
+
+#nftinfo--popUp .popUp--container .desc {
+  text-align: center;
+  margin-bottom: 28px;
+}
+#nftinfo--popUp .popUp--container .desc img {
+  display: inline;
+  max-height: 400px;
+}
+#nftinfo--popUp .popUp--container ul {
+  list-style: disc;
+  padding-left: 1.5em;
+  line-height: auto;
+  position: relative;
+}
+#nftinfo--popUp .popUp--container ul li {
+  text-align: left;
+}
+#nftinfo--popUp .popUp--container ul li a {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  color: #BDBDBD;
+}
+
+#nftdetail--popUp .popUp--container .desc img {
+  margin: 0 auto;
+  border-radius: 8px;
+}
+
+@media screen and (max-width: 515px) {
+  .popUp .popUp--container {
+    width: calc(100vw - 40px);
+    padding: 28px;
+  }
+  .popUp .popUp--container .popUp--close {
+    top: 20px;
+    right: 20px;
+  }
+  .popUp .popUp--container .popUp--content {
+    margin-right: -16px;
+    padding-right: 16px;
+    max-height: calc(80vh - 110px);
+  }
+  .popUp__button .popUp--container .popUp--content {
+    max-height: calc(80vh - 184px);
+  }
+  .popUp__check .popUp--container .popUp--content {
+    max-height: calc(80vh - 216px);
+  }
+  #download--popUp .popUp--container {
+    min-width: auto;
+  }
+  #download--popUp .popUp--container .web {
+    display: none;
+  }
+  #download--popUp .popUp--container .mobile {
+    display: inline;
+  }
+  #gamepass--popUp .mission {
+    padding: 0;
+    margin-bottom: 56px;
+  }
+  #gamepass--popUp .mission .bar {
+    flex: 100%;
+    margin: 32px 20px 4px 20px;
+  }
+  #gamepass--popUp .mission .bar.longterm {
+    margin-top: 16px;
+  }
+  #gamepass--popUp .mission .earn {
+    flex: 100%;
+    margin-left: 0;
+  }
+  #gamepass--popUp .mission .earn-100 {
+    left: 82%;
+  }
+  #repair--popUp .popUp--container {
+    min-width: auto;
+  }
+  #repair--popUp .repair #reset {
+    font-size: 14px;
+  }
+  #repair--popUp .desc #own-bug {
+    font-size: 14px;
+  }
+}

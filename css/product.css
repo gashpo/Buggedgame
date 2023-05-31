@@ -1,0 +1,380 @@
+main.product {
+  display: flex;
+  justify-content: center;
+}
+main.product .pic-box {
+  width: 50%;
+  max-width: 400px;
+  height: 400px;
+  margin-right: 50px;
+  position: sticky;
+  top: 10.3rem;
+}
+main.product .pic-box .pic {
+  width: 100%;
+  overflow: hidden;
+  border-radius: 24px;
+  margin-bottom: 24px;
+}
+main.product .pic-box .pic img {
+  width: 100%;
+  height: 100%;
+}
+main.product .pic-box .badge ul {
+  display: flex;
+  align-items: center;
+}
+main.product .pic-box .badge ul li {
+  padding: 0 4px;
+  font-size: 12px;
+  font-weight: 700;
+  color: #898989;
+}
+main.product .content-box {
+  width: calc(50% - 50px);
+  padding-top: 0.5rem;
+}
+main.product .content-box .box-title {
+  margin-bottom: 12px;
+  font-size: 16px;
+  font-weight: 700;
+  color: #EFEFEF;
+}
+main.product .content-box .product-name {
+  margin-bottom: 32px;
+  font-size: 18px;
+  font-weight: 700;
+  color: #EFEFEF;
+}
+main.product .content-box .product-txt {
+  margin-bottom: 32px;
+  font-size: 14px;
+  color: #BDBDBD;
+  line-height: 1.6;
+}
+main.product .content-box .product-txt a {
+  font-weight: 700;
+  color: #8AA3FF;
+  text-decoration: none;
+}
+main.product .content-box .product-txt a:hover {
+  color: #718fff;
+}
+main.product .content-box .currency-box {
+  margin-bottom: 36px;
+}
+main.product .content-box .currency-box .currency-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  gap: 12px 8px;
+}
+main.product .content-box .currency-box .currency-list .currency label.change-box {
+  padding: 0;
+}
+main.product .content-box .currency-box .currency-list .currency input {
+  display: none;
+}
+main.product .content-box .currency-box .currency-list .currency .pay {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  min-width: 105px;
+  padding: 8px 16px;
+  box-sizing: border-box;
+  align-items: center;
+  font-size: 14px;
+  font-weight: 700;
+  color: #EFEFEF;
+  text-align: center;
+  line-height: 1.6;
+  border: 1px #353535 solid;
+  border-radius: 24px;
+  transition: 0.5s ease;
+  vertical-align: middle;
+  cursor: pointer;
+}
+main.product .content-box .currency-box .currency-list .currency .pay img {
+  height: 20px;
+  margin-right: 8px;
+}
+main.product .content-box .currency-box .currency-list .currency input:checked + label .pay {
+  background-color: #BDBDBD;
+  color: #1F1F1F;
+  border: 1px #BDBDBD solid;
+}
+main.product .content-box .payment {
+  margin-bottom: 28px;
+}
+main.product .content-box .payment label {
+  font-weight: 700;
+}
+main.product .content-box .payment .payment-select li {
+  position: relative;
+  margin: 12px 0;
+  padding: 12px 24px;
+  border-radius: 24px;
+  border: 1px solid #898989;
+  cursor: pointer;
+  transition: all 0.5s;
+}
+main.product .content-box .payment .payment-select li:hover {
+  background-color: rgba(138, 163, 255, 0.1);
+}
+main.product .content-box .payment .payment-select li[checked] {
+  cursor: default;
+  color: #8AA3FF;
+  background-color: rgba(138, 163, 255, 0.2);
+  border-color: #8AA3FF;
+}
+main.product .content-box .payment .payment-select li[checked]:after {
+  position: absolute;
+  content: url(../images/icon/icon-check.svg);
+  right: 20px;
+}
+main.product .content-box .payment p + .desc {
+  margin-top: 12px;
+}
+main.product .content-box .payment .desc {
+  color: #BDBDBD;
+}
+main.product .content-box .payment .desc a {
+  color: #8AA3FF;
+  text-decoration: none;
+  font-weight: 700;
+  transition: all 0.5s;
+}
+main.product .content-box .payment .desc a:hover {
+  color: #718fff;
+}
+main.product .content-box .amount-box {
+  margin-bottom: 36px;
+}
+main.product .content-box .amount-box .amount {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  padding: 8px 24px;
+  box-sizing: border-box;
+  border: 1px #353535 solid;
+  border-radius: 24px;
+}
+main.product .content-box .amount-box .amount button {
+  width: 24px;
+}
+main.product .content-box .amount-box .amount button[disabled] {
+  background: transparent !important;
+}
+main.product .content-box .amount-box .amount button[disabled] img {
+  opacity: 0.3;
+  cursor: default;
+}
+main.product .content-box .amount-box .amount .input-amount {
+  display: block;
+  padding: 0;
+  height: 24px;
+  font-size: 14px;
+  color: #EFEFEF;
+  text-align: center;
+  background-color: transparent;
+  border: none;
+}
+main.product .content-box .amount-box .amount .input-amount[disabled] {
+  color: #898989;
+}
+main.product .content-box .amount-box p.note {
+  margin-top: 8px;
+}
+main.product .content-box .amount-box .input-invitation-code {
+  display: block;
+  width: 100%;
+  padding: 11px 24px;
+  font-size: 14px;
+  color: #EFEFEF;
+  line-height: 1.6;
+  border: 1px #353535 solid;
+  border-radius: 24px;
+  background-color: transparent;
+}
+main.product .content-box .amount-box .input-invitation-code::-moz-placeholder {
+  color: #898989;
+}
+main.product .content-box .amount-box .input-invitation-code::placeholder {
+  color: #898989;
+}
+main.product .content-box .note-box {
+  padding-bottom: 24px;
+}
+main.product .content-box .note-box .txt {
+  font-weight: 400;
+  color: #BDBDBD;
+  line-height: 1.6;
+}
+main.product .content-box .note-box .txt p {
+  font-size: 14px;
+}
+main.product .content-box .note-box .txt p a {
+  font-weight: 700;
+  color: #8AA3FF;
+  text-decoration: none;
+}
+main.product .content-box .note-box .txt p a:hover {
+  color: #718fff;
+}
+main.product .content-box .check-box {
+  padding: 24px 0 26px;
+  background-color: #121212;
+  box-shadow: 0px -10px 17px #121212;
+  position: sticky;
+  bottom: 0;
+}
+main.product .content-box .check-box .total {
+  display: flex;
+  align-items: center;
+  margin-bottom: 16px;
+  font-size: 14px;
+  color: #EFEFEF;
+}
+main.product .content-box .check-box .total span {
+  display: flex;
+  align-items: flex-end;
+  margin-left: 8px;
+  font-size: 24px;
+  font-weight: 700;
+}
+main.product .content-box .check-box .total span.ic-coin {
+  align-items: center;
+}
+main.product .content-box .check-box .total span.ic-coin img {
+  display: inline-block;
+  height: 24px;
+  margin-right: 8px;
+}
+main.product .content-box .check-box .total span span.currency {
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 2rem;
+}
+main.product .content-box .check-box a.btn {
+  display: block;
+  padding: 11px 24px;
+  font-size: 12px;
+  font-weight: 700;
+  color: #EFEFEF;
+  text-align: center;
+  border-radius: 24px;
+}
+main.product .check-box button,
+main.product .check-box a.button {
+  width: 100%;
+  display: block;
+  height: 40px;
+  text-align: center;
+  line-height: 40px;
+}
+
+.popUp .popUp--container .desc {
+  color: #BDBDBD;
+}
+.popUp .popUp--container .desc span {
+  color: #8AA3FF;
+  font-weight: 700;
+}
+.popUp .popUp--container .desc a {
+  color: #8AA3FF;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+.popUp .popUp--container .desc a:hover {
+  color: #718fff;
+}
+
+@media screen and (max-width: 1023px) {
+  .content-box {
+    padding-top: 2rem;
+  }
+}
+@media screen and (max-width: 515px) {
+  main.product {
+    display: block;
+    justify-content: center;
+    padding-bottom: 150px;
+  }
+  main.product .pic-box {
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+    margin: 0 0 40px 0;
+    position: relative;
+    top: 0;
+  }
+  main.product .content-box {
+    width: 100%;
+    padding: 0;
+  }
+  main.product .content-box .box-title {
+    font-size: 14px;
+  }
+  main.product .content-box .product-name {
+    font-size: 16px;
+  }
+  main.product .content-box .product-txt p {
+    font-size: 14px;
+  }
+  main.product .content-box .currency-box {
+    margin-bottom: 28px;
+  }
+  main.product .content-box .currency-box .currency-list .currency .pay {
+    min-width: 96px;
+    font-size: 16px;
+  }
+  main.product .content-box .currency-box .currency-list .currency .pay img {
+    height: 20px;
+  }
+  main.product .content-box .payment label {
+    font-size: 14px;
+  }
+  main.product .content-box .payment .payment-select li {
+    font-size: 14px;
+  }
+  main.product .content-box .payment p {
+    font-size: 14px;
+    margin-top: -4px;
+  }
+  main.product .content-box .payment p.desc {
+    margin-top: 4px;
+  }
+  main.product .content-box .amount-box {
+    margin-bottom: 28px;
+  }
+  main.product .content-box .check-box {
+    width: 100%;
+    padding: 16px 24px;
+    background-color: #1F1F1F;
+    border: 1px #353535 solid;
+    border-radius: 20px 20px 0px 0px;
+    box-shadow: none;
+    position: fixed;
+    left: 0;
+    bottom: 0;
+  }
+  main.product .content-box .check-box .total span {
+    font-size: 18px;
+  }
+  main.product .content-box .check-box .total span.ic-coin img {
+    height: 26px;
+  }
+  main.product .content-box .check-box .total span span.currency {
+    font-size: 14px;
+    line-height: 1.5rem;
+  }
+  main.product .content-box .check-box a.btn {
+    display: block;
+    padding: 12px 24px;
+    font-size: 12px;
+    font-weight: 700;
+    color: #EFEFEF;
+    text-align: center;
+    border-radius: 24px;
+  }
+}
